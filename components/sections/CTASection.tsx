@@ -15,16 +15,16 @@ export function CTASection() {
           Start a project
         </CtaLink>
         <div className="cta__sub">
-          <a className="link link--gold cta__phone" href={`tel:${SITE.phone}`}>
-            (713) 555 0142
+          <a className="link link--gold cta__phone" href={SITE.phoneHref}>
+            {SITE.phoneDisplay}
           </a>
           <span className="cta__sub-divider">·</span>
-          <a className="link link--gold" href={`mailto:${SITE.email}`}>
+          <a className="link link--gold" href={SITE.emailHref}>
             {SITE.email}
           </a>
         </div>
         <div className="cta__trust">
-          Licensed &amp; Bonded · TDLR‑RM42839 &nbsp;·&nbsp; 16 years in Houston
+          Houston, Texas &nbsp;·&nbsp; Monday–Saturday, 7:00 AM–7:00 PM
         </div>
       </div>
     </section>

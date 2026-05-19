@@ -1,6 +1,6 @@
 # UI Rules
 
-Actionable rules for building new pages and components in the Halden codebase. Read DESIGN_SYSTEM.md first for the token reference. These rules tell you *what to do* and *what to avoid*.
+Actionable rules for building new pages and components in the Nova Home Remodeling & Design codebase. Read DESIGN_SYSTEM.md first for the token reference. These rules tell you *what to do* and *what to avoid*.
 
 ---
 

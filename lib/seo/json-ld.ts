@@ -20,6 +20,14 @@ export function organizationJsonLd() {
     image: absoluteUrl(SITE.socialImage),
     email: SITE.email,
     telephone: SITE.phone,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: SITE.phone,
+      email: SITE.email,
+      contactType: 'customer service',
+      areaServed: 'Houston, TX',
+      availableLanguage: ['English', 'Spanish'],
+    },
     priceRange: '$$$',
     slogan: SITE.shortDescription,
     foundingDate: '2009',
@@ -36,6 +44,15 @@ export function organizationJsonLd() {
       addressRegion: SITE.region,
       addressCountry: 'US',
     },
+    openingHours: SITE.openingHours,
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '07:00',
+        closes: '19:00',
+      },
+    ],
     areaServed: SITE.serviceArea.map((name) => ({
       '@type': 'City',
       name,

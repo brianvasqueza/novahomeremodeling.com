@@ -1,6 +1,6 @@
-# Halden Design System
+# Nova Design System
 
-The living reference for the Halden remodeling website. Every future page must feel like it belongs here — premium, editorial, restrained.
+The living reference for the Nova Home Remodeling & Design website. Every future page must feel like it belongs here — premium, editorial, restrained.
 
 ---
 
@@ -320,7 +320,7 @@ Similar to tag but used inside forms. Border transitions to `--ink-900` on hover
 
 ### Link Underline
 ```html
-<a class="link">studio@halden.co</a>
+<a class="link">brivaqz@gmail.com</a>
 <a class="link link--gold">email text</a>
 ```
 Underline slides in via `::after` width `0 → 100%`. Gold variant uses `--gold-600`.

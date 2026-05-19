@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Button } from '@/components/ui/Button';
 import { SCOPE_OPTIONS, BUDGET_OPTIONS } from '@/data/content';
+import { SITE } from '@/data/site';
 
 interface FormState {
   name: string;
@@ -58,6 +59,20 @@ function ContactForm() {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
+    const subject = `Project inquiry from ${form.name}`;
+    const body = [
+      `Name: ${form.name}`,
+      `Email: ${form.email}`,
+      `Phone: ${form.phone || 'Not provided'}`,
+      `Project location: ${form.location || 'Not provided'}`,
+      `Timeline: ${form.timeline || 'Not selected'}`,
+      `Scope: ${form.scope.join(', ')}`,
+      `Investment range: ${form.budget}`,
+      '',
+      form.message,
+    ].join('\n');
+
+    window.location.href = `${SITE.emailHref}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   };
 
@@ -77,8 +92,9 @@ function ContactForm() {
           We&apos;ll be in touch <em>this week.</em>
         </h3>
         <p className="form__success-body">
-          Every inquiry is read by a senior member of our team. Expect a real reply within three
-          business days — a few questions, and a proposed time to walk the project together.
+          Your email app should open with the project details addressed to {SITE.email}. Once sent,
+          expect a real reply within three business days — a few questions, and a proposed time to
+          walk the project together.
         </p>
         <div style={{ marginTop: 24 }}>
           <Button
@@ -254,7 +270,8 @@ function ContactForm() {
       </div>
 
       <div className="form__trust-strip">
-        <span>Licensed &amp; Bonded · TDLR‑RM42839</span>
+        <span>Houston, Texas</span>
+        <span>{SITE.hoursDisplay}</span>
         <span>16 years in Houston</span>
         <span>No lists, no spam</span>
       </div>
@@ -283,7 +300,7 @@ export function Contact() {
             <div className="contact__info-group">
               <span className="label">Studio</span>
               <span className="value">
-                Houston, TX
+                {SITE.address}
                 <br />
                 Serving Greater Houston
               </span>
@@ -291,25 +308,25 @@ export function Contact() {
             <div className="contact__info-group">
               <span className="label">Hours</span>
               <span className="value">
-                Mon – Fri · 8 to 5
+                Monday–Saturday
                 <br />
-                By appointment only
+                7:00 AM – 7:00 PM
               </span>
             </div>
             <div className="contact__info-group">
               <span className="label">Prefer to call?</span>
-              <a className="contact__phone" href="tel:+17135550142">
-                (713) 555 0142
+              <a className="contact__phone" href={SITE.phoneHref}>
+                {SITE.phoneDisplay}
               </a>
-              <a className="link contact__email" href="mailto:studio@novahomeremodeling.com">
-                studio@novahomeremodeling.com
+              <a className="link contact__email" href={SITE.emailHref}>
+                {SITE.email}
               </a>
             </div>
             <div className="contact__info-group">
-              <span className="label">For press</span>
+              <span className="label">Prefer email?</span>
               <span className="value">
-                <a className="link" href="mailto:press@novahomeremodeling.com">
-                  press@novahomeremodeling.com
+                <a className="link" href={SITE.emailHref}>
+                  Send project details
                 </a>
               </span>
             </div>

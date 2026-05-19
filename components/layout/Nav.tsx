@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
+import { SITE } from '@/data/site';
 
 interface NavProps {
   light?: boolean;
@@ -59,6 +60,9 @@ export function Nav({ light = false, showProgress = true }: NavProps) {
           <Link href="/cities">Areas</Link>
           <Link href="/blog">Journal</Link>
         </nav>
+        <a className="nav__phone" href={SITE.phoneHref}>
+          {SITE.phoneDisplay}
+        </a>
         <Button
           variant={stuck ? 'primary' : 'tertiary'}
           as={Link}

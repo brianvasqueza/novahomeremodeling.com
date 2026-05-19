@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/Button';
 import { IconArrow } from '@/components/ui/icons';
 import { ResponsiveImage } from '@/components/common/ResponsiveImage';
 import { HERO_IMAGES } from '@/data/content';
+import { SITE } from '@/data/site';
 
 interface HeroProps {
   image?: keyof typeof HERO_IMAGES;
@@ -54,8 +55,8 @@ export function Hero({ image = 'kitchen' }: HeroProps) {
               <span>One hundred twenty‑seven projects</span>
             </div>
             <div>
-              <span>License</span>
-              <span>TDLR‑RM42839 · Bonded</span>
+              <span>Call</span>
+              <a href={SITE.phoneHref}>{SITE.phoneDisplay}</a>
             </div>
           </div>
           <a className="hero__scroll" href="#approach">

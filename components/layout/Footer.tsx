@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SITE } from '@/data/site';
 
 export function Footer() {
   return (
@@ -34,18 +35,19 @@ export function Footer() {
           <div className="footer__col">
             <h2 className="footer__col-heading">Contact</h2>
             <ul>
-              <li><a href="mailto:studio@novahomeremodeling.com">studio@novahomeremodeling.com</a></li>
-              <li><a href="tel:+17135550142">+1 (713) 555 0142</a></li>
+              <li><a href={SITE.emailHref}>{SITE.email}</a></li>
+              <li><a href={SITE.phoneHref}>{SITE.phoneDisplay}</a></li>
               <li>
                 <Link href="/cities/houston">
-                  Houston, TX
+                  {SITE.address}
                 </Link>
               </li>
+              <li>{SITE.hoursDisplay}</li>
             </ul>
           </div>
         </div>
         <div className="footer__bot">
-          <div>© 2009 — 2026 Nova Home Remodeling &amp; Design · License TDLR‑RM42839 · Bonded &amp; insured</div>
+          <div>© 2009 — 2026 {SITE.legalName} · Houston, Texas · Bonded &amp; insured</div>
           <div className="social">
             <Link className="link" href="/services">Services</Link>
             <Link className="link" href="/cities">Areas</Link>

@@ -298,6 +298,14 @@ button { font: inherit; color: inherit; }
   transition: transform var(--dur-base) var(--ease-out);
 }
 .nav__links a:hover::after { transform: scaleX(1); }
+.nav__phone {
+  font-size: 12px;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  transition: color var(--dur-base) var(--ease-out);
+}
+.nav__phone:hover { color: var(--gold-600); }
 
 .nav.is-light { color: var(--paper); }
 .nav.is-light.is-stuck { color: var(--ink-900); }
@@ -408,9 +416,11 @@ button { font: inherit; color: inherit; }
 .hero__meta-strip span:first-child {
   font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.65;
 }
-.hero__meta-strip span:last-child {
+.hero__meta-strip span:last-child,
+.hero__meta-strip a {
   font-size: 14px; letter-spacing: 0.02em;
 }
+.hero__meta-strip a:hover { color: var(--gold-500); }
 .hero__cta { margin-top: 48px; }
 
 .hero__scroll {
@@ -1537,6 +1547,7 @@ body.no-italic-accents em {
   .contact__l, .contact__r { grid-column: auto; padding-top: 0; }
   .hero__meta { grid-template-columns: 1fr; }
   .hero__meta-strip { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .nav__phone { display: none; }
   .craft__grid { grid-template-columns: repeat(6, 1fr); }
   .craft-item { grid-column: span 3; }
   .craft-item--wide { grid-column: span 6; }

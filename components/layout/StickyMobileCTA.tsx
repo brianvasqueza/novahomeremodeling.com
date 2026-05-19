@@ -17,8 +17,8 @@ export function StickyMobileCTA() {
 
   return (
     <div className={`sticky-cta${visible ? ' is-visible' : ''}`} aria-hidden={!visible}>
-      <a className="sticky-cta__phone" href={`tel:${SITE.phone}`} tabIndex={visible ? 0 : -1}>
-        (713) 555 0142
+      <a className="sticky-cta__phone" href={SITE.phoneHref} tabIndex={visible ? 0 : -1}>
+        {SITE.phoneDisplay}
       </a>
       <a className="sticky-cta__btn" href="#contact" tabIndex={visible ? 0 : -1}>
         Get a quote

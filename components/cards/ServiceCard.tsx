@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { RichText } from '@/components/common/RichText';
 import { IconArrow, SvcIcon } from '@/components/ui/icons';
 import type { ServiceCard as ServiceCardType } from '@/data/services';
@@ -10,10 +11,10 @@ type ServiceCardProps = {
 
 export function ServiceCard({ service, href = '#contact' }: ServiceCardProps) {
   return (
-    <a
+    <Link
       href={href}
       className={cn('svc-card', service.span === 2 && 'svc-card--span2')}
-      aria-label={`${service.titleText} service`}
+      aria-label={`${service.titleText} — view service details`}
     >
       <div className="svc-card__icon">
         <SvcIcon type={service.icon} />
@@ -24,6 +25,6 @@ export function ServiceCard({ service, href = '#contact' }: ServiceCardProps) {
       <div className="svc-card__arrow" aria-hidden="true">
         <IconArrow size={13} />
       </div>
-    </a>
+    </Link>
   );
 }

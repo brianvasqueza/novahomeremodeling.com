@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SiteShell } from '@/components/layout/SiteShell';
 import { PageHero } from '@/components/sections/PageHero';
 import { CTASection } from '@/components/sections/CTASection';
@@ -15,6 +16,8 @@ export const metadata: Metadata = createMetadata({
   description:
     'A structured overview of Nova remodeling services in Houston, including kitchens, bathrooms, whole-home renovations, carpentry, flooring, painting, and outdoor work.',
   path: '/services',
+  image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2000&q=82&auto=format&fit=crop',
+  imageAlt: 'Finished interior remodel detail representing Nova remodeling services in Houston.',
 });
 
 const breadcrumbs = [
@@ -45,9 +48,9 @@ export default function ServicesIndexPage() {
       <main>
         <PageHero
           eyebrow="Services"
-          title="Remodeling services"
-          description="A practical index of the remodeling work Nova takes on across Houston and the surrounding area."
-          image="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2400&q=85&auto=format&fit=crop"
+          title="Houston Remodeling Services"
+          description="A practical index of the kitchen, bathroom, painting, drywall, flooring, carpentry, outdoor, and whole-home remodeling work Nova takes on across Greater Houston."
+          image="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2000&q=82&auto=format&fit=crop"
           imageAlt="Finished interior remodel detail representing Nova remodeling services in Houston."
         />
         <Breadcrumbs items={breadcrumbs} />
@@ -55,11 +58,11 @@ export default function ServicesIndexPage() {
           <div className="container route-list">
             {SERVICE_PAGE_DATA.map((service) => (
               <article className="route-card" key={service.slug}>
-                <a href={serviceUrl(service.slug)}>
+                <Link href={serviceUrl(service.slug)}>
                   <div className="route-card__meta">{service.eyebrow}</div>
                   <h2>{service.title}</h2>
                   <p>{service.description}</p>
-                </a>
+                </Link>
               </article>
             ))}
           </div>

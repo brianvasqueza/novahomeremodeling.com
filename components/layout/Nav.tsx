@@ -70,7 +70,7 @@ export function Nav({ light = false, showProgress = true }: NavProps) {
           onDark={light && !stuck}
           arrow={false}
         >
-          Start a project
+          Free Estimate
         </Button>
       </div>
       {showProgress && (

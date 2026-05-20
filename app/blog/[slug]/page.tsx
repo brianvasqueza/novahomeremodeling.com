@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: post.excerpt,
     path: `/blog/${post.slug}`,
     image: post.image,
+    imageAlt: post.imageAlt,
     type: 'article',
     publishedTime: post.date,
     modifiedTime: post.modified ?? post.date,
@@ -51,7 +52,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           title={post.title}
           description={post.excerpt}
           image={post.image}
-          imageAlt={`${post.title} — remodeling journal image from Nova Home Remodeling & Design.`}
+          imageAlt={post.imageAlt}
         />
         <Breadcrumbs items={breadcrumbs} />
         <article className="section article-shell">

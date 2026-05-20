@@ -50,6 +50,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: landingContent.seoDescription,
     path: `/services/${service.slug}`,
     image: service.heroImage,
+    imageAlt: landingContent.imageAlt,
   });
 }
 
@@ -84,8 +85,8 @@ export default async function ServicePage({ params }: PageProps) {
           description={landingContent.heroDescription}
           image={service.heroImage}
           imageAlt={landingContent.imageAlt}
-          ctaLabel={isKitchenRemodeling ? 'Start a kitchen project' : undefined}
-          ctaHref={isKitchenRemodeling ? '#contact' : undefined}
+          ctaLabel={isKitchenRemodeling ? 'Start a kitchen project' : 'Get a Free Estimate'}
+          ctaHref="#contact"
         />
         <Breadcrumbs items={breadcrumbs} />
         {isKitchenRemodeling ? (
@@ -112,8 +113,8 @@ export default async function ServicePage({ params }: PageProps) {
         <ServiceFAQ service={service} />
         <RelatedServices slugs={service.related} currentServiceTitle={service.title} />
         <InternalLinkGrid
-          eyebrow="Houston area"
-          title={`Where we handle ${service.title.toLowerCase()}`}
+          eyebrow="Houston and surrounding areas"
+          title={`Where we handle ${service.title.toLowerCase()} near Houston`}
           links={areaLinks}
         />
         <ServiceConsultation content={landingContent} />

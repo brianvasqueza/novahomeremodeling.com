@@ -30,9 +30,9 @@ export function Process() {
           <div className="process__head-l">
             <Eyebrow dark gold>07 — Process</Eyebrow>
             <h2 className="process__h">
-              Four phases.
+              A remodeling process
               <br />
-              Honest <em>from day one.</em>
+              Houston homeowners <em>can follow.</em>
             </h2>
           </div>
           <div className="process__head-r">

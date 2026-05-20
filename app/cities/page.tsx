@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SiteShell } from '@/components/layout/SiteShell';
 import { PageHero } from '@/components/sections/PageHero';
 import { CTASection } from '@/components/sections/CTASection';
@@ -11,10 +12,12 @@ import { createMetadata } from '@/lib/seo/metadata';
 import { cityUrl } from '@/lib/seo/urls';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Houston Service Areas',
+  title: 'Houston Remodeling Service Areas',
   description:
-    'Houston and surrounding communities served by Nova Home Remodeling & Design, including Katy, Sugar Land, Cypress, Pearland, The Woodlands, Pasadena, Spring, Tomball, and Richmond.',
+    'Houston remodeling service areas for Nova Home Remodeling & Design, including Katy, Sugar Land, Cypress, Pearland, The Woodlands, Pasadena, Spring, Tomball, and Richmond.',
   path: '/cities',
+  image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2000&q=82&auto=format&fit=crop',
+  imageAlt: 'Houston area home exterior representing Nova service areas across Greater Houston.',
 });
 
 const breadcrumbs = [
@@ -45,9 +48,9 @@ export default function CitiesIndexPage() {
       <main>
         <PageHero
           eyebrow="Service areas"
-          title="Greater Houston"
-          description="Local service area pages for Houston and nearby communities, built around real coverage rather than duplicate city templates."
-          image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2400&q=85&auto=format&fit=crop"
+          title="Houston Remodeling Service Areas"
+          description="Local remodeling service area pages for Houston and nearby communities, with coverage for kitchens, bathrooms, painting, drywall, flooring, and whole-home projects."
+          image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2000&q=82&auto=format&fit=crop"
           imageAlt="Houston area home exterior representing Nova service areas across Greater Houston."
         />
         <Breadcrumbs items={breadcrumbs} />
@@ -55,11 +58,11 @@ export default function CitiesIndexPage() {
           <div className="container route-list">
             {CITY_PAGE_DATA.map((city) => (
               <article className="route-card" key={city.slug}>
-                <a href={cityUrl(city.slug)}>
+                <Link href={cityUrl(city.slug)}>
                   <div className="route-card__meta">{city.distance}</div>
                   <h2>{city.name}</h2>
                   <p>{city.description}</p>
-                </a>
+                </Link>
               </article>
             ))}
           </div>

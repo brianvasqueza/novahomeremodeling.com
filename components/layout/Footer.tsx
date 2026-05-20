@@ -9,13 +9,13 @@ export function Footer() {
           <div>
             <div className="footer__wm">NOVA</div>
             <p className="footer__motto">
-              A residential remodeling company in Houston, TX.
+              A residential remodeling company serving {SITE.serviceAreaDisplay}.
               <br />
-              Whole‑home renovations, additions, kitchen &amp; bath.
+              Kitchens, bathrooms, painting, drywall, flooring, and whole-home work.
             </p>
           </div>
           <div className="footer__col">
-            <h2 className="footer__col-heading">Company</h2>
+            <p className="footer__col-heading">Company</p>
             <ul>
               <li><Link href="/#approach">Approach</Link></li>
               <li><Link href="/#process">Process</Link></li>
@@ -24,22 +24,24 @@ export function Footer() {
             </ul>
           </div>
           <div className="footer__col">
-            <h2 className="footer__col-heading">Explore</h2>
+            <p className="footer__col-heading">Services</p>
             <ul>
-              <li><Link href="/#work">Selected projects</Link></li>
-              <li><Link href="/services">Services</Link></li>
-              <li><Link href="/cities">Service areas</Link></li>
-              <li><Link href="/services/home-renovations">Whole-home renovations</Link></li>
+              <li><Link href="/services/kitchen-remodeling">Kitchen Remodeling</Link></li>
+              <li><Link href="/services/bathroom-remodeling">Bathroom Remodeling</Link></li>
+              <li><Link href="/services/interior-painting">Interior Painting</Link></li>
+              <li><Link href="/services/flooring">Flooring Installation</Link></li>
+              <li><Link href="/services">All Remodeling Services</Link></li>
             </ul>
           </div>
           <div className="footer__col">
-            <h2 className="footer__col-heading">Contact</h2>
+            <p className="footer__col-heading">Contact</p>
             <ul>
-              <li><a href={SITE.emailHref}>{SITE.email}</a></li>
               <li><a href={SITE.phoneHref}>{SITE.phoneDisplay}</a></li>
+              <li><a href={SITE.emailHref}>{SITE.email}</a></li>
+              <li><a href={SITE.url}>{SITE.displayWebsite}</a></li>
               <li>
                 <Link href="/cities/houston">
-                  {SITE.address}
+                  {SITE.serviceAreaDisplay}
                 </Link>
               </li>
               <li>{SITE.hoursDisplay}</li>
@@ -47,7 +49,7 @@ export function Footer() {
           </div>
         </div>
         <div className="footer__bot">
-          <div>© 2009 — 2026 {SITE.legalName} · Houston, Texas · Bonded &amp; insured</div>
+          <div>© 2009 — 2026 {SITE.legalName} · {SITE.serviceAreaDisplay} · Bonded &amp; insured</div>
           <div className="social">
             <Link className="link" href="/services">Services</Link>
             <Link className="link" href="/cities">Areas</Link>

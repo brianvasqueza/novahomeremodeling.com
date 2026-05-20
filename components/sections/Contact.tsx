@@ -270,7 +270,7 @@ function ContactForm() {
       </div>
 
       <div className="form__trust-strip">
-        <span>Houston, Texas</span>
+        <span>{SITE.serviceAreaDisplay}</span>
         <span>{SITE.hoursDisplay}</span>
         <span>Est. 2009 · 17 years local</span>
         <span>Private — never shared</span>
@@ -294,7 +294,7 @@ export function Contact() {
         <div className="contact__l">
           <Eyebrow>11 — Contact</Eyebrow>
           <h2 className="contact__h">
-            Tell us about <em>the remodel.</em>
+            Tell us about your <em>Houston remodel.</em>
           </h2>
           <div className="contact__info">
             <div className="contact__info-group">
@@ -302,7 +302,7 @@ export function Contact() {
               <span className="value">
                 {SITE.address}
                 <br />
-                Serving Greater Houston
+                Serving {SITE.serviceAreaDisplay}
               </span>
             </div>
             <div className="contact__info-group">
@@ -327,6 +327,14 @@ export function Contact() {
               <span className="value">
                 <a className="link" href={SITE.emailHref}>
                   Send project details
+                </a>
+              </span>
+            </div>
+            <div className="contact__info-group">
+              <span className="label">Website</span>
+              <span className="value">
+                <a className="link" href={SITE.url}>
+                  {SITE.displayWebsite}
                 </a>
               </span>
             </div>

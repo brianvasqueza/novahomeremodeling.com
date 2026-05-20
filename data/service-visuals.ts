@@ -155,6 +155,17 @@ const image = (src: string, alt: string, aspect: VisualAspect = 'wide'): Service
   aspect,
 });
 
+const serviceAltSubject = (label: string) => label.toLowerCase();
+
+const processAlt = (label: string, stage: string) =>
+  `${label} ${stage} for a Houston-area remodeling project.`;
+
+const detailAlt = (label: string, index: number) =>
+  `${label} detail showing ${['material texture', 'hardware or finish selection', 'trim and transition work'][index]} in a Houston-area remodel.`;
+
+const galleryAlt = (label: string, index: number) =>
+  `${label} example showing ${['finished layout', 'material coordination', 'craftsmanship detail', 'completed room or outdoor space'][index]} for Houston homeowners.`;
+
 export const SERVICE_VISUAL_STORIES: ServiceVisualStory[] = profiles.map((profile) => ({
   slug: profile.slug,
   story: {
@@ -165,7 +176,7 @@ export const SERVICE_VISUAL_STORIES: ServiceVisualStory[] = profiles.map((profil
       profile.scene,
       profile.slug === 'kitchen-remodeling'
         ? 'Large kitchen remodel with island, wood cabinetry, stone counters, and open layout.'
-        : `${profile.label} inspiration in a warm Houston-area home.`
+        : `${profile.label} result in a warm, believable Houston-area home.`
     ),
     notes: {
       placement: 'Placed after the opening detail copy to move the page from explanation into a visual project narrative.',
@@ -177,8 +188,8 @@ export const SERVICE_VISUAL_STORIES: ServiceVisualStory[] = profiles.map((profil
   comparison: {
     eyebrow: 'Before and after opportunity',
     title: `From problem condition to finished work.`,
-    before: image(profile.before, `Before condition for a Houston ${profile.label.toLowerCase()} project.`),
-    after: image(profile.after, `Finished condition after ${profile.label.toLowerCase()} work by Nova Home Remodeling and Design.`),
+    before: image(profile.before, `Existing condition before ${serviceAltSubject(profile.label)} work in a Houston-area home.`),
+    after: image(profile.after, `Finished ${serviceAltSubject(profile.label)} work by Nova Home Remodeling and Design.`),
     caption: 'Recommended as a real project slider once Nova has matching before and after photography. Until then, this section establishes the transformation story and crop strategy.',
   },
   process: {
@@ -191,25 +202,25 @@ export const SERVICE_VISUAL_STORIES: ServiceVisualStory[] = profiles.map((profil
         'Mid-project imagery makes the company feel real and communicates skill without overexplaining it.',
         'Finish-stage visuals connect the technical work to the polished result homeowners are buying.',
       ][index],
-      image: image(src, `${profile.label} ${['preparation', 'installation', 'finish work'][index]} in progress.`),
+      image: image(src, processAlt(profile.label, ['preparation', 'installation', 'finish work'][index])),
     })),
   },
   materials: {
     eyebrow: 'Material closeups',
-    title: `Details that make the work feel premium.`,
+    title: `Details that make the work feel careful and complete.`,
     images: profile.materials.map((src, index) =>
-      image(src, `${profile.label} material and craftsmanship detail ${index + 1}.`, index === 1 ? 'square' : 'portrait')
+      image(src, detailAlt(profile.label, index), index === 1 ? 'square' : 'portrait')
     ),
   },
   gallery: {
     eyebrow: 'Micro gallery',
     title: `A tighter look at ${profile.label.toLowerCase()} possibilities.`,
     images: profile.gallery.map((src, index) =>
-      image(src, `${profile.label} gallery image ${index + 1} for Houston homeowners.`, index % 2 === 0 ? 'wide' : 'square')
+      image(src, galleryAlt(profile.label, index), index % 2 === 0 ? 'wide' : 'square')
     ),
   },
   visualBreak: {
-    image: image(profile.breakImage, `Full-width ${profile.label.toLowerCase()} lifestyle scene in a Houston-area home.`),
+    image: image(profile.breakImage, `Finished ${profile.label.toLowerCase()} scene in a Houston-area home.`),
     kicker: 'Built for Houston homes',
     title: `${profile.label} should look good and make daily life easier.`,
     body: 'The visual pacing shifts from proof to aspiration here, giving homeowners one more clear picture of what the project can feel like before they reach the decision points.',

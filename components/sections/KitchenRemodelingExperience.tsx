@@ -45,7 +45,7 @@ export function KitchenRemodelingExperience() {
         <div className="kitchen-page__split">
           <div className="kitchen-page__copy">
             <Eyebrow>Kitchen frustrations</Eyebrow>
-            <h2>Most kitchen problems are layout problems, not finish problems.</h2>
+            <h2>Most Houston kitchen remodeling problems start with layout, not finishes.</h2>
             <p>
               Houston homeowners often live with these frictions for years — convinced it is just the
               house. It usually is not.
@@ -76,7 +76,7 @@ export function KitchenRemodelingExperience() {
           />
           <div className="kitchen-page__copy">
             <Eyebrow>What the service includes</Eyebrow>
-            <h2>One coordinated scope — drawings to final walkthrough.</h2>
+            <h2>Kitchen remodeling planned from drawings to final walkthrough.</h2>
             <p>
               Materials, trades, and selections are planned before construction starts — not decided
               in the field.
@@ -99,7 +99,7 @@ export function KitchenRemodelingExperience() {
       <Section id="kitchen-remodeling-process" className="kitchen-page kitchen-page--process">
         <div className="kitchen-page__head">
           <Eyebrow>Construction process</Eyebrow>
-          <h2>The sequence is what keeps a remodel from feeling improvised.</h2>
+          <h2>A clear kitchen remodeling sequence keeps the work from feeling improvised.</h2>
           <p>
             Most remodeling sites show only finished rooms. We think the in-progress work — how things
             are sequenced and verified — tells a more honest story about long-term quality.
@@ -142,7 +142,7 @@ export function KitchenRemodelingExperience() {
         <div className="kitchen-page__detail-grid">
           <div className="kitchen-page__copy">
             <Eyebrow>Materials and finishes</Eyebrow>
-            <h2>The kitchen feels right because the details were decided, not assumed.</h2>
+            <h2>Kitchen materials and finish details are decided before the work begins.</h2>
             <p>
               Counter edges, drawer pull heights, tile terminations, cabinet reveals, and light
               temperature shape how the room feels every morning. We plan each one before the work
@@ -176,7 +176,7 @@ export function KitchenRemodelingExperience() {
       <Section id="kitchen-gallery" className="kitchen-page kitchen-page--gallery">
         <div className="kitchen-page__head">
           <Eyebrow>Finished kitchens</Eyebrow>
-          <h2>A kitchen remodel should last longer than the photos.</h2>
+          <h2>A Houston kitchen remodel should work long after the photos are taken.</h2>
           <p>
             The goal is a room that works better every morning — storage where hands reach, finishes
             that hold, light that makes the space feel calm.
@@ -188,7 +188,7 @@ export function KitchenRemodelingExperience() {
             [KITCHEN_IMAGES.galleryTwo, 'Bright kitchen remodel with warm wood cabinetry, white countertops, tile backsplash, and windows bringing in natural light.'],
             [KITCHEN_IMAGES.galleryThree, 'Finished Houston kitchen with white shaker cabinets, stainless appliances, open shelving, and hardwood flooring.'],
             [KITCHEN_IMAGES.galleryFour, 'Modern kitchen remodel with gray cabinetry, tile backsplash, under-cabinet lighting, and clean integrated storage.'],
-            [KITCHEN_IMAGES.galleryFive, 'Contemporary kitchen remodel featuring dark wood cabinetry, marble countertops, and a high-contrast premium finish palette.'],
+            [KITCHEN_IMAGES.galleryFive, 'Contemporary kitchen remodel featuring dark wood cabinetry, marble countertops, and a clean high-contrast finish palette.'],
           ].map(([src, alt], index) => (
             <Visual
               key={alt}
@@ -202,7 +202,7 @@ export function KitchenRemodelingExperience() {
         <div className="kitchen-page__cta">
           <div>
             <span>Kitchen remodeling in Houston</span>
-            <h2>Talk with us about your kitchen.</h2>
+            <h2>Talk with us about your Houston kitchen remodel.</h2>
           </div>
           <div>
             <p>

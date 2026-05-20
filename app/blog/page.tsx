@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SiteShell } from '@/components/layout/SiteShell';
 import { PageHero } from '@/components/sections/PageHero';
 import { Contact } from '@/components/sections/Contact';
@@ -10,9 +11,12 @@ import { createMetadata } from '@/lib/seo/metadata';
 import { blogUrl } from '@/lib/seo/urls';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Remodeling Journal',
-  description: 'Notes on remodeling process, materials, planning, and Houston homes.',
+  title: 'Houston Remodeling Journal',
+  description:
+    'Practical notes from Nova Home Remodeling & Design on Houston remodeling, planning, materials, budgets, permitting, and durable home finishes.',
   path: '/blog',
+  image: 'https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=2000&q=82&auto=format&fit=crop',
+  imageAlt: 'Carpentry work surface with drawings and tools for Houston remodeling journal articles.',
 });
 
 const breadcrumbs = [
@@ -40,23 +44,23 @@ export default function BlogIndexPage() {
       <main>
         <PageHero
           eyebrow="Journal"
-          title="Remodeling notes"
-          description="Process, materials, and planning notes from the studio."
-          image="https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=2400&q=85&auto=format&fit=crop"
-          imageAlt="Carpentry and remodeling work surface for Nova remodeling journal notes."
+          title="Houston Remodeling Journal"
+          description="Process, materials, budgeting, and planning notes for Houston homeowners preparing for a remodel."
+          image="https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=2000&q=82&auto=format&fit=crop"
+          imageAlt="Carpentry work surface with drawings and tools for Houston remodeling journal articles."
         />
         <Breadcrumbs items={breadcrumbs} />
         <section className="section">
           <div className="container route-list">
             {BLOG_POSTS.map((post) => (
               <article className="route-card" key={post.slug}>
-                <a href={blogUrl(post.slug)}>
+                <Link href={blogUrl(post.slug)}>
                   <div className="route-card__meta">
                     {post.category} · {post.date}
                   </div>
                   <h2>{post.title}</h2>
                   <p>{post.excerpt}</p>
-                </a>
+                </Link>
               </article>
             ))}
           </div>

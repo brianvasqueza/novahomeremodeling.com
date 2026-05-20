@@ -8,12 +8,12 @@ export function ParallaxSection() {
       <div className="parallax-content">
         <div className="parallax-eyebrow">Houston remodeling since 2009</div>
         <h2 className="parallax-h">
-          Ready to upgrade
+          Ready to remodel
           <br />
-          <em>your home?</em>
+          <em>your Houston home?</em>
         </h2>
         <Button variant="primary" onDark as="a" href="#contact">
-          Get a Free Estimate
+          Request a Houston Estimate
         </Button>
       </div>
     </section>

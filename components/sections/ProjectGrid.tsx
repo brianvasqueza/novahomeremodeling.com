@@ -21,9 +21,9 @@ export function ProjectGrid() {
           <div>
             <Eyebrow>Selected work</Eyebrow>
             <h2 className="projects__h">
-              127 homes remodeled,
+              Houston remodeling projects,
               <br />
-              sixteen years <em>in Houston.</em>
+              built one home <em>at a time.</em>
             </h2>
           </div>
           <CtaLink variant="tertiary" href="#work" arrow={false}>

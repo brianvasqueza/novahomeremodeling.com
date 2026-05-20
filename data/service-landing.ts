@@ -245,7 +245,7 @@ const categoryDefaults: Record<ServicePageData['category'], LandingSeed> = {
     },
     craft: {
       eyebrow: 'Materials and craft',
-      title: 'Consistency is the luxury homeowners feel every day.',
+      title: 'Consistency is what homeowners feel every day.',
       intro: 'In larger remodels, craft is not one dramatic moment. It is the repeated standard: aligned reveals, thoughtful transitions, durable finishes, and rooms that relate to each other.',
       items: [
         { title: 'Scope control', body: 'We define what is included, what is adjacent, and what should wait so the project stays intentional.' },
@@ -320,10 +320,10 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
   },
   'bathroom-remodeling': {
     seoTitle: 'Bathroom Remodeling in Houston, TX',
-    seoDescription: 'Houston bathroom remodeling for primary suites, guest baths, and powder rooms — plumbing-first sequencing, three-step waterproofing, tile drawn to scale, and premium finish detail.',
+    seoDescription: 'Houston bathroom remodeling for primary suites, guest baths, and powder rooms with plumbing-first sequencing, waterproofing, tile, and careful finish detail.',
     heroTitle: 'Bathroom Remodeling in Houston',
     heroDescription: 'Primary suites, guest baths, and powder rooms — plumbing moved before tile is touched, waterproofing inspected, and every finish detail planned before construction begins.',
-    imageAlt: 'Houston bathroom remodel with frameless glass shower, large-format tile, and premium fixture detail.',
+    imageAlt: 'Houston bathroom remodel with frameless glass shower, large-format tile, and detailed fixture work.',
     includes: {
       eyebrow: 'Bathroom scope',
       title: 'One coordinated scope — plumbing through final detail.',
@@ -376,7 +376,7 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
   },
   flooring: {
     seoTitle: 'Flooring Installation in Houston, TX',
-    seoDescription: 'Premium flooring installation in Houston with substrate prep, hardwood, engineered wood, tile, transitions, and climate-aware material planning.',
+    seoDescription: 'Flooring installation in Houston with substrate prep, hardwood, engineered wood, tile, transitions, and climate-aware material planning.',
     heroTitle: 'Flooring Installation in Houston',
     heroDescription: 'Houston flooring installation with substrate prep, moisture checks, hardwood, engineered wood, tile, transitions, and material planning for humid Gulf Coast homes.',
     problem: {
@@ -386,7 +386,7 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
         'Uneven slabs, poor transitions, hollow tile, cupping wood, and mismatched thresholds can make an otherwise strong remodel feel unfinished.',
         'Nova plans flooring around substrate prep, Houston humidity, room transitions, door clearances, baseboards, stair details, and the way the material will age under real use.',
       ],
-      reassurance: 'A premium floor is not just the product selected. It is the preparation beneath it and the transitions around it.',
+      reassurance: 'A durable floor is not just the product selected. It is the preparation beneath it and the transitions around it.',
       proofPoints: [
         { label: 'Design focus', value: 'Continuity and transitions' },
         { label: 'Craft focus', value: 'Substrate preparation' },
@@ -435,14 +435,14 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
     heroDescription: 'Whole-home remodeling in Houston with cohesive planning across kitchens, bathrooms, flooring, cabinetry, paint, lighting, structural work, and finish details.',
   },
   'outdoor-remodeling': {
-    seoTitle: 'Outdoor Living Remodeling in Houston, TX',
+    seoTitle: 'Outdoor Remodeling in Houston, TX',
     seoDescription: 'Houston outdoor living remodeling for covered patios, exterior upgrades, shade, materials, drainage, and year-round entertaining spaces.',
     heroTitle: 'Outdoor Living Remodeling in Houston',
     heroDescription: 'Outdoor living remodeling in Houston for covered patios, shade, drainage, exterior materials, lighting, and year-round entertaining spaces.',
   },
   'patio-remodeling': {
     seoTitle: 'Patio Remodeling in Houston, TX',
-    seoDescription: 'Premium patio remodeling in Houston with shade planning, durable materials, drainage, lighting, and outdoor living details.',
+    seoDescription: 'Patio remodeling in Houston with shade planning, durable materials, drainage, lighting, and outdoor living details.',
   },
   'deck-construction': {
     seoTitle: 'Deck Construction in Houston, TX',
@@ -450,11 +450,11 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
   },
   'custom-carpentry': {
     seoTitle: 'Custom Carpentry in Houston, TX',
-    seoDescription: 'Custom carpentry in Houston for built-ins, millwork, trim, shelving, architectural details, and premium interior remodeling.',
+    seoDescription: 'Custom carpentry in Houston for built-ins, millwork, trim, shelving, architectural details, and detailed interior remodeling.',
   },
   'interior-painting': {
     seoTitle: 'Interior Painting in Houston, TX',
-    seoDescription: 'Interior painting in Houston with skim-coat preparation, mineral and limewash finishes, trim painted separately from walls, and a color process that starts before the first coat goes on.',
+    seoDescription: 'Interior painting in Houston with detailed prep, trim painting, wall repair, mineral and limewash finishes, and color planning before the first coat.',
     heroTitle: 'Interior Painting in Houston',
     heroDescription: 'Surface preparation done seriously. Trim painted before installation. Finishes that hold their color — and look right under morning light.',
     imageAlt: 'Houston interior painting project with freshly painted walls, trim, and modern neutral finishes.',
@@ -567,7 +567,7 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
 
   'tile-installation': {
     seoTitle: 'Tile Installation in Houston, TX',
-    seoDescription: 'Premium tile installation in Houston with mortar bed setting, waterproofing, dry-laid layouts, grout sized to the material, and flood-tested wet areas.',
+    seoDescription: 'Tile installation in Houston with mortar bed setting, waterproofing, dry-laid layouts, grout sized to the material, and flood-tested wet areas.',
     problem: {
       eyebrow: 'What homeowners worry about',
       title: 'Tile is the room you look at every time you walk in. Every shortcut is visible.',
@@ -644,7 +644,7 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
   },
 
   'trim-finish-carpentry': {
-    seoTitle: 'Trim & Finish Carpentry in Houston, TX',
+    seoTitle: 'Finish Carpentry in Houston, TX',
     seoDescription: 'Interior trim and finish carpentry in Houston — crown, baseboard, casing, and wainscoting coped at inside corners, shop-primed, and installed to the home\'s profile.',
     problem: {
       eyebrow: 'The finish work that frames everything else',
@@ -826,7 +826,7 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
   },
 
   'framing': {
-    seoTitle: 'Framing in Houston, TX',
+    seoTitle: 'Residential Framing in Houston, TX',
     seoDescription: 'Structural and partition framing in Houston — plumbed, square, and blocked for every fixture location before drywall begins.',
     problem: {
       eyebrow: 'The work everything else depends on',
@@ -1006,11 +1006,11 @@ function mergeLandingContent(service: ServicePageData): ServiceLandingContent {
     seoTitle: merged.seoTitle ?? `${service.title} in Houston, TX`,
     seoDescription:
       merged.seoDescription ??
-      `${service.title} in Houston with careful planning, durable materials, and a premium remodeling process for homes across the area.`,
+      `${service.title} in Houston and surrounding areas with careful planning, durable materials, and a clear remodeling process.`,
     heroTitle: merged.heroTitle ?? `${service.title} in Houston`,
     heroDescription:
       merged.heroDescription ??
-      `${service.title} for Houston-area homes, planned with a clear scope, careful sequencing, and durable finish standards.`,
+      `${service.title} for Houston homes and surrounding areas, planned with a clear scope, careful sequencing, and durable finish standards.`,
     imageAlt:
       merged.imageAlt ??
       `${service.title} project detail for a Houston-area remodeling service page by Nova Home Remodeling & Design.`,

@@ -64,7 +64,7 @@ export const PROJECTS: Project[] = [
     sqft: '2,900',
     span: 'full',
     landscape: true,
-    img: 'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1400&fit=crop',
+    img: 'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1400&fit=crop',
     imageAlt: 'Open-plan remodeled kitchen and living area with warm lighting and natural finishes.',
   },
   {

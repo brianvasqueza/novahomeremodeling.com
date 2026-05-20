@@ -7,6 +7,7 @@ type PageMetadataInput = {
   description?: string;
   path?: string;
   image?: string;
+  imageAlt?: string;
   noIndex?: boolean;
   type?: 'website' | 'article';
   publishedTime?: string;
@@ -18,6 +19,7 @@ export function createMetadata({
   description = SITE.description,
   path = '/',
   image = SITE.socialImage,
+  imageAlt = SITE.legalName,
   noIndex = false,
   type = 'website',
   publishedTime,
@@ -59,7 +61,7 @@ export function createMetadata({
       siteName: SITE.name,
       type,
       locale: SITE.locale,
-      images: [{ url: resolvedImage, width: 1200, height: 630, alt: SITE.legalName }],
+      images: [{ url: resolvedImage, width: 1200, height: 630, alt: imageAlt }],
       publishedTime,
       modifiedTime,
     },
@@ -67,7 +69,7 @@ export function createMetadata({
       card: 'summary_large_image',
       title: resolvedTitle,
       description,
-      images: [resolvedImage],
+      images: [{ url: resolvedImage, alt: imageAlt }],
     },
   };
 }

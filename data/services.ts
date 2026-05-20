@@ -45,7 +45,7 @@ export const SERVICES_BENTO: ServiceCard[] = [
     title: 'Flooring',
     titleText: 'Flooring',
     slug: 'flooring',
-    desc: 'Flooring installation and replacement, including hardwood, tile, luxury vinyl plank, transitions, and finish details.',
+    desc: 'Flooring installation and replacement for Houston homes, including hardwood, tile, luxury vinyl plank, transitions, and finish details.',
   },
   {
     num: '05',

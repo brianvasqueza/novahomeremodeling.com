@@ -163,8 +163,8 @@ export const BA_DATA: BeforeAfterItem[] = [
     year: '2023',
     location: 'River Oaks · Houston, TX',
     body: 'A 1947 cottage kitchen taken back to the studs. White oak cabinetry, honed limestone counters, unlacquered brass. Every cabinet shop-drawn and dry-fit before installation.',
-    before: 'https://images.pexels.com/photos/30924413/pexels-photo-30924413.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
-    after:  'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
+    before: 'https://images.pexels.com/photos/30924413/pexels-photo-30924413.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
+    after:  'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
   },
   {
     project: 'No. 053',
@@ -173,8 +173,8 @@ export const BA_DATA: BeforeAfterItem[] = [
     year: '2020',
     location: 'The Woodlands · Houston, TX',
     body: 'Primary suite bathroom rebuilt from the rough-in. Plumbing moved before tile was mentioned. Three-step waterproofing, heated limestone floor, frameless glass templated after tile completion.',
-    before: 'https://images.pexels.com/photos/3935348/pexels-photo-3935348.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
-    after:  'https://images.pexels.com/photos/31238728/pexels-photo-31238728.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
+    before: 'https://images.pexels.com/photos/3935348/pexels-photo-3935348.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
+    after:  'https://images.pexels.com/photos/31238728/pexels-photo-31238728.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
   },
   {
     project: 'No. 081',
@@ -183,8 +183,8 @@ export const BA_DATA: BeforeAfterItem[] = [
     year: '2024',
     location: 'River Oaks · Houston, TX',
     body: 'Full whole-home renovation of a 1958 colonial. Structural wall removal, new beam, reconfigured kitchen and primary suite. Same crew, start to finish.',
-    before: 'https://images.pexels.com/photos/15124970/pexels-photo-15124970.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
-    after:  'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
+    before: 'https://images.pexels.com/photos/15124970/pexels-photo-15124970.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
+    after:  'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
   },
 ];
 
@@ -202,8 +202,8 @@ export const BUDGET_OPTIONS = [
 ];
 
 export const HERO_IMAGES: Record<string, string> = {
-  kitchen: 'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
-  framing: 'https://images.pexels.com/photos/15124970/pexels-photo-15124970.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
-  bath: 'https://images.pexels.com/photos/31238728/pexels-photo-31238728.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
-  facade: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2400&q=85&auto=format&fit=crop',
+  kitchen: 'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
+  framing: 'https://images.pexels.com/photos/15124970/pexels-photo-15124970.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
+  bath: 'https://images.pexels.com/photos/31238728/pexels-photo-31238728.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
+  facade: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2000&q=82&auto=format&fit=crop',
 };

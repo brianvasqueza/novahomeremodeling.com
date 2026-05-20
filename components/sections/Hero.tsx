@@ -16,7 +16,7 @@ export function Hero({ image = 'kitchen' }: HeroProps) {
       <div className="hero__bg">
         <ResponsiveImage
           src={imgUrl}
-          alt="Luxury Houston kitchen remodel with wood cabinetry, large island, pendant lighting, and stone countertops."
+          alt="Houston kitchen remodel with wood cabinetry, large island, pendant lighting, and stone countertops."
           sizes="100vw"
           priority
         />
@@ -33,7 +33,7 @@ export function Hero({ image = 'kitchen' }: HeroProps) {
           </h1>
           <div className="hero__cta">
             <Button variant="primary" onDark as="a" href="#contact">
-              Get a Houston Remodeling Estimate
+              Request a Houston Remodeling Estimate
             </Button>
             <a className="hero__cta-alt" href="#work">
               See remodeling work

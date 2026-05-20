@@ -10,13 +10,41 @@ export type BreadcrumbItem = {
   href: string;
 };
 
+const serviceAreaPlaces = () =>
+  SITE.serviceArea.map((name) => ({
+    '@type': 'City',
+    name,
+    containedInPlace: {
+      '@type': 'State',
+      name: 'Texas',
+    },
+  }));
+
+const serviceOfferNames = [
+  'Kitchen remodeling',
+  'Bathroom remodeling',
+  'Interior painting',
+  'Exterior painting',
+  'Drywall repair',
+  'Flooring installation',
+  'Whole-home renovations',
+  'Custom carpentry',
+];
+
 export function organizationJsonLd() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'HomeAndConstructionBusiness',
+    '@type': ['Organization', 'LocalBusiness', 'HomeAndConstructionBusiness'],
     '@id': absoluteUrl('/#business'),
     name: SITE.legalName,
+    legalName: SITE.legalName,
+    alternateName: SITE.shortName,
+    description: SITE.description,
     url: SITE.url,
+    logo: {
+      '@type': 'ImageObject',
+      url: absoluteUrl(SITE.socialImage),
+    },
     image: absoluteUrl(SITE.socialImage),
     email: SITE.email,
     telephone: SITE.phone,
@@ -25,24 +53,13 @@ export function organizationJsonLd() {
       telephone: SITE.phone,
       email: SITE.email,
       contactType: 'customer service',
-      areaServed: 'Houston, TX',
+      areaServed: SITE.serviceAreaDisplay,
       availableLanguage: ['English', 'Spanish'],
     },
     priceRange: '$$$',
     slogan: SITE.shortDescription,
     foundingDate: '2009',
-    knowsAbout: [
-      'Houston home remodeling',
-      'Kitchen remodeling',
-      'Bathroom remodeling',
-      'Interior painting',
-      'Exterior painting',
-      'Drywall repair',
-      'Flooring installation',
-      'Whole-home renovations',
-      'Custom carpentry',
-      'Houston residential remodeling',
-    ],
+    knowsAbout: ['Houston home remodeling', ...serviceOfferNames, 'Houston residential remodeling'],
     address: {
       '@type': 'PostalAddress',
       addressLocality: SITE.city,
@@ -58,31 +75,17 @@ export function organizationJsonLd() {
         closes: '19:00',
       },
     ],
-    areaServed: SITE.serviceArea.map((name) => ({
-      '@type': 'City',
-      name,
-      containedInPlace: {
-        '@type': 'State',
-        name: 'Texas',
-      },
-    })),
+    areaServed: serviceAreaPlaces(),
     makesOffer: {
       '@type': 'OfferCatalog',
       name: 'Residential remodeling services',
-      itemListElement: [
-        'Kitchen remodeling',
-        'Bathroom remodeling',
-        'Interior painting',
-        'Exterior painting',
-        'Drywall repair',
-        'Flooring installation',
-        'Whole-home renovations',
-        'Custom carpentry',
-      ].map((name) => ({
+      itemListElement: serviceOfferNames.map((name) => ({
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
           name,
+          provider: { '@id': absoluteUrl('/#business') },
+          areaServed: SITE.serviceAreaDisplay,
         },
       })),
     },
@@ -125,14 +128,7 @@ export function serviceJsonLd(service: ServicePageData, content?: ServiceLanding
     image: service.heroImage,
     provider: { '@id': absoluteUrl('/#business') },
     mainEntityOfPage: absoluteUrl(serviceUrl(service.slug)),
-    areaServed: SITE.serviceArea.map((name) => ({
-      '@type': 'City',
-      name,
-      containedInPlace: {
-        '@type': 'State',
-        name: 'Texas',
-      },
-    })),
+    areaServed: serviceAreaPlaces(),
     audience: {
       '@type': 'Audience',
       audienceType: 'Houston-area homeowners',
@@ -148,7 +144,7 @@ export function serviceJsonLd(service: ServicePageData, content?: ServiceLanding
             itemOffered: {
               '@type': 'Service',
               name: item,
-              areaServed: 'Houston, TX',
+              areaServed: SITE.serviceAreaDisplay,
             },
           })),
         }

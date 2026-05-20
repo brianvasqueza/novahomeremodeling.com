@@ -23,14 +23,15 @@ import { createMetadata } from '@/lib/seo/metadata';
 import { absoluteUrl } from '@/lib/seo/urls';
 
 const HOME_IMAGE =
-  'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop';
+  'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Houston Home Remodeling Company | Kitchen, Bath, Painting & Flooring',
+  title: 'Houston Home Remodeling Company',
   description:
-    'Nova Home Remodeling & Design is a Houston home remodeling company for kitchen remodeling, bathroom remodeling, interior and exterior painting, drywall repair, flooring, and whole-home renovations.',
+    'Houston home remodeling for kitchens, bathrooms, painting, drywall repair, flooring, and whole-home renovations by Nova Home Remodeling & Design.',
   path: '/',
   image: HOME_IMAGE,
+  imageAlt: 'Houston kitchen remodel with wood cabinetry, large island, pendant lighting, and stone countertops.',
 });
 
 const homePageJsonLd = {
@@ -47,7 +48,7 @@ const homePageJsonLd = {
   primaryImageOfPage: {
     '@type': 'ImageObject',
     url: HOME_IMAGE,
-    caption: 'Luxury Houston kitchen remodel with wood cabinetry, large island, and stone countertops.',
+    caption: 'Houston kitchen remodel with wood cabinetry, large island, and stone countertops.',
   },
   mainEntity: {
     '@type': 'ItemList',

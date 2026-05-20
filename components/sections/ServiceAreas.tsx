@@ -10,14 +10,15 @@ export function ServiceAreas() {
         <div className="areas__l">
           <Eyebrow>09 — Where we work</Eyebrow>
           <h2 className="areas__h">
-            Greater Houston.
+            Remodeling across
             <br />
-            Every <em>neighborhood.</em>
+            Greater <em>Houston.</em>
           </h2>
           <p className="approach__body areas__lede">
-            Based in Houston; most projects within a forty‑minute drive of our shop. We know these
+            Based in Houston and serving surrounding areas including Katy, Sugar Land, Cypress,
+            Pearland, The Woodlands, Pasadena, Spring, Tomball, and Richmond. We know these
             neighborhoods — the homes, the soil, the climate. Out-of-area projects are taken on a
-            case basis, with a project lead on site.
+            case-by-case basis, with a project lead on site.
           </p>
         </div>
         <div className="areas__r">

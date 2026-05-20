@@ -7,12 +7,12 @@ export function CTASection() {
       <div className="container">
         <div className="cta__index">10 — Get started</div>
         <h2 className="cta__h">
-          A free estimate,
+          Plan your Houston
           <br />
-          done <em>in your home.</em>
+          remodeling <em>estimate.</em>
         </h2>
         <CtaLink href="#contact">
-          Schedule a Houston Remodeling Estimate
+          Request a Houston Remodeling Estimate
         </CtaLink>
         <div className="cta__sub">
           <a className="link link--gold cta__phone" href={SITE.phoneHref}>

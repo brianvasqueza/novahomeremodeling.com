@@ -16,7 +16,7 @@ export function Services() {
             one <em>standard.</em>
           </>
         }
-        body="Kitchen remodeling, bathroom remodeling, interior painting, exterior painting, drywall repair, flooring, and outdoor work — one dedicated crew per project, from the first estimate to final walkthrough."
+        body="Kitchen remodeling, bathroom remodeling, interior painting, exterior painting, drywall repair, flooring, and outdoor work for Houston and surrounding areas — one dedicated crew per project, from the first estimate to final walkthrough."
         classNames={{
           grid: 'services__head',
           left: 'services__head-l',
@@ -33,10 +33,10 @@ export function Services() {
         <nav className="services__seo-links" aria-label="Core Houston remodeling services">
           <Link href="/services/kitchen-remodeling">Kitchen remodeling in Houston</Link>
           <Link href="/services/bathroom-remodeling">Bathroom remodeling in Houston</Link>
-          <Link href="/services/interior-painting">Interior painting</Link>
-          <Link href="/services/exterior-painting">Exterior painting</Link>
-          <Link href="/services/drywall-repair">Drywall repair</Link>
-          <Link href="/services/flooring">Flooring installation</Link>
+          <Link href="/services/interior-painting">Interior painting in Houston</Link>
+          <Link href="/services/exterior-painting">Exterior painting in Houston</Link>
+          <Link href="/services/drywall-repair">Drywall repair in Houston</Link>
+          <Link href="/services/flooring">Flooring installation in Houston</Link>
         </nav>
     </Section>
   );

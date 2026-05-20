@@ -9,6 +9,7 @@ export type BlogPost = {
   category: BlogCategory;
   author: string;
   image: string;
+  imageAlt: string;
   topics: string[];
 };
 
@@ -21,7 +22,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-05-01',
     category: 'Process',
     author: 'Nova Home Remodeling & Design',
-    image: 'https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=2400&q=85&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=2000&q=82&auto=format&fit=crop',
+    imageAlt: 'Carpentry work surface with drawings and tools for Houston remodeling project planning.',
     topics: ['preconstruction', 'budgeting', 'project planning'],
   },
   {
@@ -32,7 +34,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-04-15',
     category: 'Materials',
     author: 'Nova Home Remodeling & Design',
-    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2400&q=85&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2000&q=82&auto=format&fit=crop',
+    imageAlt: 'Warm remodeled kitchen with durable natural materials for Houston homes.',
     topics: ['materials', 'Houston homes', 'finish selection'],
   },
 ];

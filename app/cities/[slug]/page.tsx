@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: city.description,
     path: `/cities/${city.slug}`,
     image: city.heroImage,
+    imageAlt: `Residential remodeling project detail for Nova service area work in ${city.name}, Texas.`,
   });
 }
 

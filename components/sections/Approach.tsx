@@ -8,7 +8,7 @@ export function Approach() {
         <div className="approach__left">
           <Eyebrow>01 — The company</Eyebrow>
           <h2 className="approach__h">
-            A Houston crew.
+            A Houston remodeling crew.
             <br />
             We draw before we build.
             <br />
@@ -18,7 +18,7 @@ export function Approach() {
         <div className="approach__right">
           <div className="approach__body">
             <p>
-              Nova is a residential remodeling company in Houston, in business since 2009 in the
+              Nova is a residential remodeling company in Houston, serving the
               neighborhoods our clients have lived in for years. We take on kitchens, bathrooms,
               drywall repair, flooring, interior painting, exterior painting, additions, and
               whole‑home renovations — one dedicated crew per project, from the first drawing to
@@ -26,8 +26,9 @@ export function Approach() {
             </p>
             <p>
               We do not subcontract finish carpentry. Every cabinet is measured on site before
-              anything is ordered. We sign each completed project on the inside of a drawer face
-              when we leave.
+              anything is ordered. Each project is planned for real daily use: durable materials,
+              clean transitions, careful punch work, and a job site that stays understandable from
+              first visit to final walkthrough.
             </p>
           </div>
           <div className="approach__cta">

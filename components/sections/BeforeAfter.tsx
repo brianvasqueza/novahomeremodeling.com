@@ -64,9 +64,9 @@ export function BeforeAfter() {
           <div className="ba__head-l">
             <Eyebrow dark gold>06 — Before · After</Eyebrow>
             <h2 className="ba__h">
-              The same room.
+              Remodeling proof,
               <br />
-              Drag to <em>see.</em>
+              room by <em>room.</em>
             </h2>
           </div>
           <div className="ba__head-r">

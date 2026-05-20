@@ -10,7 +10,7 @@ export function Craft() {
         eyebrow="08 — Materials"
         title={
           <>
-            A short list of <em>materials</em> we trust.
+            Remodeling materials chosen for <em>Houston homes.</em>
           </>
         }
         body="Materials we've installed, sourced, and stood behind for years — not a trend catalog. Each one chosen because it holds up, ages well, and suits Houston's climate and the homes we work in."

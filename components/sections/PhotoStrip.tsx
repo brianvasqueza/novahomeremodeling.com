@@ -48,7 +48,7 @@ const STRIP_IMAGES: StripImage[] = [
     aspect: 'portrait',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=560&q=85&auto=format&fit=crop',
+    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=560&q=82&auto=format&fit=crop',
     alt: 'Exterior view of Craftsman home after heritage restoration in Houston.',
     aspect: 'wide',
   },

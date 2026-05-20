@@ -11,16 +11,16 @@ export interface CityPageData {
 }
 
 const IMG = {
-  houston:    'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2400&q=85&auto=format&fit=crop',
-  katy:       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2400&q=85&auto=format&fit=crop',
-  sugarLand:  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2400&q=85&auto=format&fit=crop',
-  cypress:    'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
-  pearland:   'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=2400&q=85&auto=format&fit=crop',
-  woodlands:  'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=2400&q=85&auto=format&fit=crop',
-  pasadena:   'https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=2400&q=85&auto=format&fit=crop',
-  spring:     'https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?w=2400&q=85&auto=format&fit=crop',
-  tomball:    'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=2400&q=85&auto=format&fit=crop',
-  richmond:   'https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=2400&q=85&auto=format&fit=crop',
+  houston:    'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2000&q=82&auto=format&fit=crop',
+  katy:       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2000&q=82&auto=format&fit=crop',
+  sugarLand:  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2000&q=82&auto=format&fit=crop',
+  cypress:    'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
+  pearland:   'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=2000&q=82&auto=format&fit=crop',
+  woodlands:  'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=2000&q=82&auto=format&fit=crop',
+  pasadena:   'https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=2000&q=82&auto=format&fit=crop',
+  spring:     'https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?w=2000&q=82&auto=format&fit=crop',
+  tomball:    'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=2000&q=82&auto=format&fit=crop',
+  richmond:   'https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=2000&q=82&auto=format&fit=crop',
 };
 
 export const CITY_PAGE_DATA: CityPageData[] = [
@@ -29,7 +29,7 @@ export const CITY_PAGE_DATA: CityPageData[] = [
     name: 'Houston',
     distance: 'Home base',
     character: 'River Oaks estates, Heights bungalows, and Montrose townhomes — every neighborhood asks something different.',
-    description: 'Premium home remodeling in Houston — kitchens, bathrooms, whole-home renovations, and custom millwork in River Oaks, the Heights, Montrose, Memorial, and beyond.',
+    description: 'Home remodeling in Houston — kitchens, bathrooms, whole-home renovations, and custom millwork in River Oaks, the Heights, Montrose, Memorial, and beyond.',
     heroImage: IMG.houston,
     intro: [
       'Houston is where we are based and where most of our work is done. The city covers a range of housing stock that few metros can match — River Oaks Georgian colonials, Heights craftsman bungalows from the 1920s, mid-century modern in Meyerland, contemporary townhomes in Montrose. Each neighborhood has its own expectations, its own permit rhythm, its own history that a remodel should respect.',
@@ -54,7 +54,7 @@ export const CITY_PAGE_DATA: CityPageData[] = [
     name: 'Katy',
     distance: '30 mi west',
     character: 'Master-planned communities and family homes along the I-10 corridor west of the city.',
-    description: 'Home remodeling in Katy, TX — kitchen renovations, bathroom upgrades, and custom carpentry for master-planned community homes and established neighborhoods west of Houston.',
+    description: 'Home remodeling in Katy, TX for kitchen renovations, bathroom upgrades, and custom carpentry in established neighborhoods west of Houston.',
     heroImage: IMG.katy,
     intro: [
       'Katy homeowners tend to know exactly what they want from a remodel: a kitchen that works for a family, a primary bath that finally feels finished, a backyard that earns its square footage. These are not speculative projects — they are investments in houses that people intend to live in for a long time. We respect that orientation.',
@@ -79,7 +79,7 @@ export const CITY_PAGE_DATA: CityPageData[] = [
     name: 'Sugar Land',
     distance: '25 mi SW',
     character: 'Affluent Fort Bend County suburbs with high-value homes and discerning finish expectations.',
-    description: 'Luxury home remodeling in Sugar Land, TX — premium kitchen renovations, master bath suites, and whole-home upgrades for Fort Bend County\'s most sought-after neighborhoods.',
+    description: 'Home remodeling in Sugar Land, TX for kitchen renovations, bath suites, and whole-home upgrades across Fort Bend County.',
     heroImage: IMG.sugarLand,
     intro: [
       'Sugar Land properties carry finish expectations that match their price points. Clients here have typically lived in well-built homes and know the difference between a good installation and a careful one — the drawer that does not wobble, the tile grout line that holds its color, the trim that is actually plumb. We do not have to explain why these things matter.',
@@ -108,7 +108,7 @@ export const CITY_PAGE_DATA: CityPageData[] = [
     heroImage: IMG.cypress,
     intro: [
       'Cypress lots are generous by Houston standards, and outdoor living drives most of the project conversations we have here. Covered patios, outdoor kitchens, pergolas, and seamless indoor-outdoor transitions — these are not amenities in Cypress, they are baseline expectations for any home that is going to sell well or be lived in comfortably through the long Houston summer.',
-      'Interior work follows the same premium standard. The kitchens in the newer Cypress communities are often well-appointed but built to a production spec — custom cabinetry, stone counters, and proper lighting make an immediate and measurable difference. We come out here regularly enough that our subcontractors know the area, and permitting with Harris County is a familiar process.',
+      'Interior work follows the same careful standard. The kitchens in the newer Cypress communities are often well-appointed but built to a production spec — custom cabinetry, stone counters, and proper lighting make an immediate and measurable difference. We come out here regularly enough that our subcontractors know the area, and permitting with Harris County is a familiar process.',
     ],
     asideFacts: [
       { label: 'Distance from studio', value: '35 miles northwest' },
@@ -153,8 +153,8 @@ export const CITY_PAGE_DATA: CityPageData[] = [
     slug: 'the-woodlands',
     name: 'The Woodlands',
     distance: '35 mi north',
-    character: 'Premium master-planned community with wooded lots and architect-designed custom homes.',
-    description: 'Luxury remodeling in The Woodlands, TX — whole-home renovations, premium kitchen and bath suites, and custom millwork for one of Houston\'s most prestigious planned communities.',
+    character: 'Master-planned community with wooded lots and architect-designed custom homes.',
+    description: 'Home remodeling in The Woodlands, TX for whole-home renovations, kitchen upgrades, bath suites, and custom millwork in established planned communities.',
     heroImage: IMG.woodlands,
     intro: [
       'The Woodlands attracts clients who have already made a considered home purchase and want the interior to match. The community\'s architectural standards are reflected in the homes themselves — these are thoughtfully built properties, and a renovation that does not meet that bar is noticeable. We have worked here enough to understand that the finish quality expected is high, and we calibrate accordingly.',
@@ -254,7 +254,7 @@ export const CITY_PAGE_DATA: CityPageData[] = [
     name: 'Richmond',
     distance: '35 mi SW',
     character: 'Historic Fort Bend County seat with period homes and established neighborhoods worth preserving.',
-    description: 'Home remodeling in Richmond, TX — period-sensitive renovations, custom carpentry, and premium kitchen and bath work for historic Fort Bend County properties.',
+    description: 'Home remodeling in Richmond, TX — period-sensitive renovations, custom carpentry, and kitchen and bath work for historic Fort Bend County properties.',
     heroImage: IMG.richmond,
     intro: [
       'Richmond is one of the oldest towns in Texas, and the housing stock reflects that history — Victorian-era homes alongside early twentieth-century colonials and mid-century ranch houses that have aged gracefully. These properties ask for remodelers who can read an old structure and propose work that respects the original without being museum-level precious about it.',

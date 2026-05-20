@@ -48,10 +48,10 @@ function ContactForm() {
     if (!form.email.trim()) e.email = 'We need an email to reply to.';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
       e.email = "That doesn't look like an email.";
-    if (form.scope.length === 0) e.scope = 'Pick at least one.';
-    if (!form.budget) e.budget = 'An honest range helps.';
+    if (form.scope.length === 0) e.scope = 'Select the rooms you are working on.';
+    if (!form.budget) e.budget = 'Select the range that fits your scope.';
     if (!form.message.trim() || form.message.trim().length < 12)
-      e.message = 'A sentence or two about the home.';
+      e.message = 'A sentence about the home is enough to get started.';
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -253,13 +253,13 @@ function ContactForm() {
 
       <div className="form__row">
         <label className="form__label" htmlFor="f-message">
-          A few words about the home
+          A few words about the remodeling project
         </label>
         <textarea
           id="f-message"
           className="form__textarea"
           rows={4}
-          placeholder="Year built, square footage, rooms involved, the feeling you're after."
+          placeholder="Year built, rooms involved, kitchen or bath goals, painting, drywall, flooring, or the feeling you're after."
           required
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? 'f-message-error' : undefined}
@@ -272,15 +272,15 @@ function ContactForm() {
       <div className="form__trust-strip">
         <span>Houston, Texas</span>
         <span>{SITE.hoursDisplay}</span>
-        <span>16 years in Houston</span>
-        <span>No lists, no spam</span>
+        <span>Est. 2009 · 17 years local</span>
+        <span>Private — never shared</span>
       </div>
       <div className="form__submit-row">
         <p className="form__hint">
-          A senior member of the studio reads every inquiry. We reply within three business days.
+          Every inquiry is read by a senior member of our team. We reply within three business days — a few questions, then a free in-home estimate at a time that works for you.
         </p>
         <Button variant="primary" as="button" type="submit">
-          Send the letter
+          Request a Remodeling Estimate
         </Button>
       </div>
     </form>
@@ -294,11 +294,11 @@ export function Contact() {
         <div className="contact__l">
           <Eyebrow>11 — Contact</Eyebrow>
           <h2 className="contact__h">
-            Tell us about <em>the home.</em>
+            Tell us about <em>the remodel.</em>
           </h2>
           <div className="contact__info">
             <div className="contact__info-group">
-              <span className="label">Studio</span>
+              <span className="label">Office</span>
               <span className="value">
                 {SITE.address}
                 <br />

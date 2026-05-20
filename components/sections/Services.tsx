@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Section } from '@/components/common/Section';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { ServiceCard } from '@/components/cards/ServiceCard';
@@ -10,12 +11,12 @@ export function Services() {
         eyebrow="03 — Services"
         title={
           <>
-              Eight services,
+            Houston remodeling services,
             <br />
             one <em>standard.</em>
           </>
         }
-        body="We do not estimate every project. We work on six to eight homes a year, in depth, and refuse the rest. Each project begins with a fixed‑fee feasibility study."
+        body="Kitchen remodeling, bathroom remodeling, interior painting, exterior painting, drywall repair, flooring, and outdoor work — one dedicated crew per project, from the first estimate to final walkthrough."
         classNames={{
           grid: 'services__head',
           left: 'services__head-l',
@@ -29,6 +30,14 @@ export function Services() {
             <ServiceCard key={s.num} service={s} href={`/services/${s.slug}`} />
           ))}
         </div>
+        <nav className="services__seo-links" aria-label="Core Houston remodeling services">
+          <Link href="/services/kitchen-remodeling">Kitchen remodeling in Houston</Link>
+          <Link href="/services/bathroom-remodeling">Bathroom remodeling in Houston</Link>
+          <Link href="/services/interior-painting">Interior painting</Link>
+          <Link href="/services/exterior-painting">Exterior painting</Link>
+          <Link href="/services/drywall-repair">Drywall repair</Link>
+          <Link href="/services/flooring">Flooring installation</Link>
+        </nav>
     </Section>
   );
 }

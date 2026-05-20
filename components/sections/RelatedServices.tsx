@@ -5,9 +5,10 @@ import { SERVICE_PAGE_DATA } from '@/data/service-pages';
 
 type RelatedServicesProps = {
   slugs: string[];
+  currentServiceTitle?: string;
 };
 
-export function RelatedServices({ slugs }: RelatedServicesProps) {
+export function RelatedServices({ slugs, currentServiceTitle }: RelatedServicesProps) {
   const services = slugs
     .map((slug) => SERVICE_PAGE_DATA.find((s) => s.slug === slug))
     .filter(Boolean);
@@ -18,7 +19,15 @@ export function RelatedServices({ slugs }: RelatedServicesProps) {
     <Section id="related" className="related-svcs">
       <Eyebrow>Continue exploring</Eyebrow>
       <h2 className="related-svcs__h">
-        Related <em>services.</em>
+        {currentServiceTitle ? (
+          <>
+            Related Houston remodeling services for <em>{currentServiceTitle.toLowerCase()}.</em>
+          </>
+        ) : (
+          <>
+            Related <em>services.</em>
+          </>
+        )}
       </h2>
       <div className="related-svcs__grid">
         {services.map((s, i) => (

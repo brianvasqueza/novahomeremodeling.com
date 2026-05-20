@@ -6,11 +6,19 @@ import { ServiceDetail } from '@/components/sections/ServiceDetail';
 import {
   ServiceConsultation,
   ServiceCraft,
+  ServiceIncludes,
   ServiceLocalAuthority,
   ServiceProblem,
   ServiceTransformation,
 } from '@/components/sections/ServiceLandingSections';
 import { ServiceFeatures } from '@/components/sections/ServiceFeatures';
+import {
+  ServiceMicroGallery,
+  ServiceProcessVisual,
+  ServiceStoryVisual,
+  ServiceVisualBreak,
+} from '@/components/sections/ServiceVisualStory';
+import { KitchenRemodelingExperience } from '@/components/sections/KitchenRemodelingExperience';
 import { Process } from '@/components/sections/Process';
 import { ServiceFAQ } from '@/components/sections/ServiceFAQ';
 import { RelatedServices } from '@/components/sections/RelatedServices';
@@ -19,9 +27,10 @@ import { Contact } from '@/components/sections/Contact';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { SERVICE_PAGE_DATA, findServicePage } from '@/data/service-pages';
+import { findServiceVisualStory } from '@/data/service-visuals';
 import { getServiceLandingContent } from '@/data/service-landing';
 import { getServiceAreaLinks } from '@/data/internal-links';
-import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from '@/lib/seo/json-ld';
+import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd, serviceWebPageJsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -49,7 +58,9 @@ export default async function ServicePage({ params }: PageProps) {
   const service = findServicePage(slug);
   if (!service) notFound();
   const landingContent = getServiceLandingContent(service);
+  const visualStory = findServiceVisualStory(service.slug);
   const areaLinks = getServiceAreaLinks(service);
+  const isKitchenRemodeling = service.slug === 'kitchen-remodeling';
   const breadcrumbs = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
@@ -61,6 +72,7 @@ export default async function ServicePage({ params }: PageProps) {
       <JsonLd
         data={[
           serviceJsonLd(service, landingContent),
+          serviceWebPageJsonLd(service, landingContent),
           faqJsonLd(service),
           breadcrumbJsonLd(breadcrumbs),
         ]}
@@ -68,27 +80,43 @@ export default async function ServicePage({ params }: PageProps) {
       <main>
         <PageHero
           eyebrow={service.eyebrow}
-          title={service.title}
-          description={service.description}
+          title={landingContent.heroTitle}
+          description={landingContent.heroDescription}
           image={service.heroImage}
-          imageAlt={`${service.title} project detail by Nova Home Remodeling & Design in the Houston area.`}
+          imageAlt={landingContent.imageAlt}
+          ctaLabel={isKitchenRemodeling ? 'Start a kitchen project' : undefined}
+          ctaHref={isKitchenRemodeling ? '#contact' : undefined}
         />
         <Breadcrumbs items={breadcrumbs} />
-        <ServiceDetail service={service} />
-        <ServiceProblem content={landingContent} />
-        <ServiceTransformation content={landingContent} />
-        <ServiceFeatures service={service} />
-        <ServiceCraft content={landingContent} />
-        <Process />
-        <ServiceLocalAuthority content={landingContent} areaLinks={areaLinks} />
+        {isKitchenRemodeling ? (
+          <KitchenRemodelingExperience />
+        ) : (
+          <>
+            <ServiceDetail service={service} />
+            {visualStory && <ServiceStoryVisual visualStory={visualStory} />}
+            <ServiceProblem content={landingContent} />
+            <ServiceTransformation content={landingContent} />
+            <ServiceIncludes content={landingContent} />
+            <ServiceFeatures service={service} />
+            {visualStory && <ServiceProcessVisual visualStory={visualStory} />}
+            <ServiceCraft content={landingContent} />
+            <Process />
+            {visualStory && <ServiceMicroGallery visualStory={visualStory} />}
+          </>
+        )}
+        {visualStory ? (
+          <ServiceVisualBreak visualStory={visualStory} content={landingContent} areaLinks={areaLinks} />
+        ) : (
+          <ServiceLocalAuthority content={landingContent} areaLinks={areaLinks} />
+        )}
         <ServiceFAQ service={service} />
-        <RelatedServices slugs={service.related} />
+        <RelatedServices slugs={service.related} currentServiceTitle={service.title} />
         <InternalLinkGrid
           eyebrow="Houston area"
           title={`Where we handle ${service.title.toLowerCase()}`}
           links={areaLinks}
         />
-        <ServiceConsultation content={landingContent} service={service} />
+        <ServiceConsultation content={landingContent} />
         <Contact />
       </main>
     </SiteShell>

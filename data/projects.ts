@@ -26,8 +26,8 @@ export const PROJECTS: Project[] = [
     year: 2024,
     sqft: '3,400',
     span: 'lg',
-    img: 'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=1600&q=82&auto=format&fit=crop',
-    imageAlt: 'Warm open-plan living space with plaster walls and warm natural light.',
+    img: 'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1200&fit=crop',
+    imageAlt: 'Warm open kitchen and living remodel with natural light and refined finishes.',
   },
   {
     index: '078',
@@ -39,8 +39,8 @@ export const PROJECTS: Project[] = [
     sqft: '1,200',
     span: 'sm',
     offset: true,
-    img: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1400&q=82&auto=format&fit=crop',
-    imageAlt: 'Quiet limestone bathroom remodel with soft neutral finishes.',
+    img: 'https://images.pexels.com/photos/31238728/pexels-photo-31238728.jpeg?auto=compress&cs=tinysrgb&w=1400&h=1100&fit=crop',
+    imageAlt: 'Modern bathroom remodel with walk-in shower, wood vanity, and warm neutral tile.',
   },
   {
     index: '074',
@@ -51,8 +51,8 @@ export const PROJECTS: Project[] = [
     year: 2023,
     sqft: '240',
     span: 'sm',
-    img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=82&auto=format&fit=crop',
-    imageAlt: 'Custom kitchen remodel with pantry storage and stone counters.',
+    img: 'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=1400&h=1100&fit=crop',
+    imageAlt: 'Kitchen remodel with wood cabinetry, large island, pendant lights, and stone countertops.',
   },
   {
     index: '071',
@@ -64,8 +64,8 @@ export const PROJECTS: Project[] = [
     sqft: '2,900',
     span: 'full',
     landscape: true,
-    img: 'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=2400&q=82&auto=format&fit=crop',
-    imageAlt: 'Open-plan whole-home renovation with warm plaster walls and exposed oak.',
+    img: 'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1400&fit=crop',
+    imageAlt: 'Open-plan remodeled kitchen and living area with warm lighting and natural finishes.',
   },
   {
     index: '069',
@@ -77,8 +77,8 @@ export const PROJECTS: Project[] = [
     sqft: '4,800',
     span: 'lg',
     offset: true,
-    img: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1600&q=82&auto=format&fit=crop',
-    imageAlt: 'Open-plan addition with warm wood detail and curated interiors.',
+    img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=82&auto=format&fit=crop',
+    imageAlt: 'Houston-style home exterior with outdoor living space after a residential remodel.',
   },
   {
     index: '066',
@@ -89,8 +89,8 @@ export const PROJECTS: Project[] = [
     year: 2022,
     sqft: '380',
     span: 'sm',
-    img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1400&q=82&auto=format&fit=crop',
-    imageAlt: 'Kitchen renovation with custom island, stone counters, and warm wood detail.',
+    img: 'https://images.pexels.com/photos/36511373/pexels-photo-36511373.jpeg?auto=compress&cs=tinysrgb&w=1400&h=1100&fit=crop',
+    imageAlt: 'Finished kitchen remodel detail with stone countertop, sink, faucet, and wood cabinetry.',
   },
   {
     index: '061',
@@ -102,8 +102,8 @@ export const PROJECTS: Project[] = [
     sqft: '2,800',
     span: 'full',
     landscape: true,
-    img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=2000&q=82&auto=format&fit=crop',
-    imageAlt: 'Restored Craftsman exterior with a careful heritage remodel.',
+    img: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1200&fit=crop',
+    imageAlt: 'Believable suburban home exterior with mature landscaping after a heritage remodel.',
   },
   {
     index: '058',
@@ -114,8 +114,8 @@ export const PROJECTS: Project[] = [
     year: 2021,
     sqft: '640',
     span: 'sm',
-    img: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=1400&q=82&auto=format&fit=crop',
-    imageAlt: 'Covered outdoor living addition with stone flooring and custom millwork.',
+    img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400&q=82&auto=format&fit=crop',
+    imageAlt: 'Covered patio and backyard outdoor living area for a Houston-area home.',
   },
   {
     index: '053',
@@ -127,8 +127,8 @@ export const PROJECTS: Project[] = [
     sqft: '320',
     span: 'lg',
     offset: true,
-    img: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1600&q=82&auto=format&fit=crop',
-    imageAlt: 'Primary bathroom with honed stone tile, heated floors, and frameless glass.',
+    img: 'https://images.pexels.com/photos/19227244/pexels-photo-19227244.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1200&fit=crop',
+    imageAlt: 'Primary bathroom remodel with elegant vanity, glass shower, and warm lighting.',
   },
 ];
 

@@ -13,7 +13,7 @@ export function Craft() {
             A short list of <em>materials</em> we trust.
           </>
         }
-        body="We work from a deliberately narrow palette — six materials, six finishes, two metals. The discipline is in the restraint. The result is a house that ages well."
+        body="Materials we've installed, sourced, and stood behind for years — not a trend catalog. Each one chosen because it holds up, ages well, and suits Houston's climate and the homes we work in."
         classNames={{
           grid: 'craft__head',
           left: 'craft__head-l',

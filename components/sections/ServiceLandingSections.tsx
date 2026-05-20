@@ -3,7 +3,6 @@ import { Section } from '@/components/common/Section';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { CtaLink } from '@/components/ui/CTA';
 import type { ServiceLandingContent } from '@/data/service-landing';
-import type { ServicePageData } from '@/data/service-pages';
 import type { InternalLink } from '@/data/internal-links';
 
 type LandingProps = {
@@ -52,11 +51,11 @@ export function ServiceTransformation({ content }: LandingProps) {
       </div>
       <div className="svc-transform__grid">
         <article className="svc-transform__panel">
-          <span className="svc-transform__label">Before</span>
+          <h3 className="svc-transform__label">Before</h3>
           <p>{transformation.before}</p>
         </article>
         <article className="svc-transform__panel svc-transform__panel--after">
-          <span className="svc-transform__label">After</span>
+          <h3 className="svc-transform__label">After</h3>
           <p>{transformation.after}</p>
         </article>
         <ul className="svc-transform__outcomes" aria-label="Remodeling outcomes">
@@ -88,6 +87,24 @@ export function ServiceCraft({ content }: LandingProps) {
           </article>
         ))}
       </div>
+    </Section>
+  );
+}
+
+export function ServiceIncludes({ content }: LandingProps) {
+  const { includes } = content;
+
+  return (
+    <Section id="service-scope" className="svc-includes section--alt">
+      <div className="svc-includes__head">
+        <Eyebrow>{includes.eyebrow}</Eyebrow>
+        <h2 className="svc-landing__h">{includes.title}</h2>
+      </div>
+      <ul className="svc-includes__list" aria-label="Service scope">
+        {includes.items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
     </Section>
   );
 }
@@ -130,11 +147,7 @@ export function ServiceLocalAuthority({ content, areaLinks }: ServiceLocalAuthor
   );
 }
 
-type ServiceConsultationProps = LandingProps & {
-  service: ServicePageData;
-};
-
-export function ServiceConsultation({ content, service }: ServiceConsultationProps) {
+export function ServiceConsultation({ content }: LandingProps) {
   const { consultation, authorityLinks } = content;
 
   return (
@@ -149,7 +162,7 @@ export function ServiceConsultation({ content, service }: ServiceConsultationPro
               <li key={step}>{step}</li>
             ))}
           </ol>
-          <CtaLink href="#contact">Plan {service.title.toLowerCase()}</CtaLink>
+          <CtaLink href="#contact">Talk about this project</CtaLink>
         </div>
         <nav className="svc-consult__links" aria-label="Helpful project links">
           {authorityLinks.map((link) => (

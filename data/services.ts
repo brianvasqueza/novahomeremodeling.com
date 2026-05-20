@@ -18,7 +18,7 @@ export const SERVICES_BENTO: ServiceCard[] = [
     title: 'Kitchen <em>Remodeling</em>',
     titleText: 'Kitchen Remodeling',
     slug: 'kitchen-remodeling',
-    desc: 'Full-scope kitchen renovations — demolition to custom cabinetry. Shop-drawn millwork, stone counters, unlacquered brass.',
+    desc: 'Houston kitchen remodeling with layout planning, custom cabinetry, stone counters, lighting, and clean finish work.',
   },
   {
     num: '02',
@@ -27,16 +27,16 @@ export const SERVICES_BENTO: ServiceCard[] = [
     title: 'Bathroom <em>Remodeling</em>',
     titleText: 'Bathroom Remodeling',
     slug: 'bathroom-remodeling',
-    desc: 'Primary suites to powder rooms. Tile, plumbing, heated stone, frameless glass. Drawn before a single pipe is moved.',
+    desc: 'Bathroom remodeling for primary suites, hall baths, walk-in showers, tile, vanities, plumbing, and durable finishes.',
   },
   {
     num: '03',
     icon: 'paint',
     span: 1,
-    title: 'Painting',
-    titleText: 'Painting',
+    title: 'Interior <em>Painting</em>',
+    titleText: 'Interior Painting',
     slug: 'interior-painting',
-    desc: 'Interior and exterior. Plaster-grade prep, heirloom colours, limewash. No shortcuts on the walls.',
+    desc: 'Interior painting for Houston homes, with surface prep, trim detail, wall repair, and clean modern color transitions.',
   },
   {
     num: '04',
@@ -45,7 +45,7 @@ export const SERVICES_BENTO: ServiceCard[] = [
     title: 'Flooring',
     titleText: 'Flooring',
     slug: 'flooring',
-    desc: 'White oak, limestone, heritage tile. Rift-sawn, hand-scraped, or poured in place.',
+    desc: 'Flooring installation and replacement, including hardwood, tile, luxury vinyl plank, transitions, and finish details.',
   },
   {
     num: '05',
@@ -54,7 +54,7 @@ export const SERVICES_BENTO: ServiceCard[] = [
     title: 'Cabinets',
     titleText: 'Cabinets',
     slug: 'cabinet-installation',
-    desc: 'Every cabinet drawn on-site. Box joints, dovetails, inset faces — no flat-pack, ever.',
+    desc: 'Cabinet installation for kitchen remodels, baths, built-ins, storage walls, appliance panels, and hardware.',
   },
   {
     num: '06',
@@ -63,7 +63,7 @@ export const SERVICES_BENTO: ServiceCard[] = [
     title: 'Trim &amp; <em>Finish Work</em>',
     titleText: 'Trim & Finish Work',
     slug: 'trim-finish-carpentry',
-    desc: 'Crown, baseboard, panelling, wainscoting. Mitered by hand. Gaps under 1⁄32″.',
+    desc: 'Finish carpentry for remodels: crown, baseboards, paneling, built-ins, door casing, and clean transitions.',
   },
   {
     num: '07',

@@ -5,14 +5,14 @@ export function CTASection() {
   return (
     <section className="cta section" id="cta">
       <div className="container">
-        <div className="cta__index">10 — Begin</div>
+        <div className="cta__index">10 — Get started</div>
         <h2 className="cta__h">
-          It starts with a long
+          A free estimate,
           <br />
-          conversation. <em>In your home.</em>
+          done <em>in your home.</em>
         </h2>
         <CtaLink href="#contact">
-          Start a project
+          Schedule a Houston Remodeling Estimate
         </CtaLink>
         <div className="cta__sub">
           <a className="link link--gold cta__phone" href={SITE.phoneHref}>

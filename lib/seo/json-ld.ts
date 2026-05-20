@@ -32,8 +32,13 @@ export function organizationJsonLd() {
     slogan: SITE.shortDescription,
     foundingDate: '2009',
     knowsAbout: [
+      'Houston home remodeling',
       'Kitchen remodeling',
       'Bathroom remodeling',
+      'Interior painting',
+      'Exterior painting',
+      'Drywall repair',
+      'Flooring installation',
       'Whole-home renovations',
       'Custom carpentry',
       'Houston residential remodeling',
@@ -67,10 +72,12 @@ export function organizationJsonLd() {
       itemListElement: [
         'Kitchen remodeling',
         'Bathroom remodeling',
+        'Interior painting',
+        'Exterior painting',
+        'Drywall repair',
+        'Flooring installation',
         'Whole-home renovations',
         'Custom carpentry',
-        'Flooring',
-        'Interior painting',
       ].map((name) => ({
         '@type': 'Offer',
         itemOffered: {
@@ -121,12 +128,59 @@ export function serviceJsonLd(service: ServicePageData, content?: ServiceLanding
     areaServed: SITE.serviceArea.map((name) => ({
       '@type': 'City',
       name,
+      containedInPlace: {
+        '@type': 'State',
+        name: 'Texas',
+      },
     })),
     audience: {
       '@type': 'Audience',
       audienceType: 'Houston-area homeowners',
     },
+    category: 'Residential remodeling',
     serviceType: service.title,
+    hasOfferCatalog: content
+      ? {
+          '@type': 'OfferCatalog',
+          name: content.includes.title,
+          itemListElement: content.includes.items.map((item) => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: item,
+              areaServed: 'Houston, TX',
+            },
+          })),
+        }
+      : undefined,
+  };
+}
+
+export function serviceWebPageJsonLd(service: ServicePageData, content: ServiceLandingContent) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': absoluteUrl(`${serviceUrl(service.slug)}#webpage`),
+    name: content.heroTitle,
+    headline: content.heroTitle,
+    description: content.seoDescription,
+    url: absoluteUrl(serviceUrl(service.slug)),
+    isPartOf: { '@id': absoluteUrl('/#website') },
+    about: { '@id': absoluteUrl(`${serviceUrl(service.slug)}#service`) },
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: service.heroImage,
+      caption: content.imageAlt,
+    },
+    spatialCoverage: {
+      '@type': 'City',
+      name: 'Houston',
+      containedInPlace: {
+        '@type': 'State',
+        name: 'Texas',
+      },
+    },
+    inLanguage: 'en-US',
   };
 }
 

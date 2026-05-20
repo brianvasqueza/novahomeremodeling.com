@@ -14,7 +14,7 @@ const IMG = {
   houston:    'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2400&q=85&auto=format&fit=crop',
   katy:       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2400&q=85&auto=format&fit=crop',
   sugarLand:  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2400&q=85&auto=format&fit=crop',
-  cypress:    'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=2400&q=85&auto=format&fit=crop',
+  cypress:    'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
   pearland:   'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=2400&q=85&auto=format&fit=crop',
   woodlands:  'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=2400&q=85&auto=format&fit=crop',
   pasadena:   'https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=2400&q=85&auto=format&fit=crop',

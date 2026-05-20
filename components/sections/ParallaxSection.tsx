@@ -6,14 +6,14 @@ export function ParallaxSection() {
       <div className="parallax-bg" />
       <div className="parallax-overlay" />
       <div className="parallax-content">
-        <div className="parallax-eyebrow">Sixteen years in Houston</div>
+        <div className="parallax-eyebrow">Houston remodeling since 2009</div>
         <h2 className="parallax-h">
-          The home you&apos;ve been
+          Ready to upgrade
           <br />
-          <em>picturing.</em>
+          <em>your home?</em>
         </h2>
         <Button variant="primary" onDark as="a" href="#contact">
-          Start a conversation
+          Get a Free Estimate
         </Button>
       </div>
     </section>

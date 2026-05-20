@@ -21,7 +21,7 @@ export function ProjectGrid() {
           <div>
             <Eyebrow>Selected work</Eyebrow>
             <h2 className="projects__h">
-              One hundred twenty‑seven homes,
+              127 homes remodeled,
               <br />
               sixteen years <em>in Houston.</em>
             </h2>

@@ -10,25 +10,25 @@ export interface Testimonial {
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    quote: 'They moved like architects and built like joiners. We bought a house and they handed it back <em>a home.</em>',
+    quote: 'The kitchen came in on schedule and on budget. One crew from start to finish, and one number to call when we had questions. Two years later, <em>everything still looks right.</em>',
     name: 'Eleanor & James Whitfield',
     role: 'Project No. 074 — River Oaks · 2023',
-    img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=120&h=120&q=85&auto=format&fit=crop',
-    imgAlt: 'Kitchen renovation — Project No. 074, River Oaks',
+    img: 'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&fit=crop',
+    imgAlt: 'Warm kitchen remodeling detail with wood cabinetry and a large island.',
   },
   {
     quote: 'Sixteen months, no surprises, no change orders past month four. We have never written that sentence about a builder before.',
     name: 'M. & R. Asato',
     role: 'Project No. 081 — The Woodlands · 2024',
-    img: 'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=120&h=120&q=85&auto=format&fit=crop',
-    imgAlt: 'Whole-home renovation — Project No. 081, The Woodlands',
+    img: 'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&fit=crop',
+    imgAlt: 'Finished open kitchen and living remodel with warm lighting.',
   },
   {
     quote: 'The drawer they signed is in the pantry. We open it more than we should, just to look. <em>It is a small joy.</em>',
     name: 'Catherine Pemberton',
     role: 'Project No. 069 — Sugar Land · 2022',
-    img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=120&h=120&q=85&auto=format&fit=crop',
-    imgAlt: 'Kitchen addition — Project No. 069, Sugar Land',
+    img: 'https://images.pexels.com/photos/8356432/pexels-photo-8356432.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&fit=crop',
+    imgAlt: 'Close-up of cabinet hardware on white kitchen cabinetry.',
   },
 ];
 
@@ -50,13 +50,13 @@ export const STEPS: ProcessStep[] = [
     n: '02',
     title: 'Drawings',
     body: 'Full plan sets and shop drawings — every cabinet measured on site, every joint specified on paper. Nothing goes to production without a drawing.',
-    duration: 'Months 2–4',
+    duration: 'Weeks 2–6',
   },
   {
     n: '03',
     title: 'Build',
     body: 'Our in-house crew handles framing, cabinetry, tile, and finish work. Same people, start to finish. No handoffs, no surprises.',
-    duration: 'Months 4–14',
+    duration: 'Varies by scope',
   },
   {
     n: '04',
@@ -83,16 +83,16 @@ export const CRAFT: CraftItem[] = [
     n: 'M.01',
     title: 'White oak, rift‑sawn',
     desc: 'Sourced from a single mill. Two weeks acclimating on site before a board is cut.',
-    img: 'https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?w=1200&q=82&auto=format&fit=crop',
-    imageAlt: 'Close view of rift-sawn white oak boards used for custom millwork.',
+    img: 'https://images.pexels.com/photos/15124970/pexels-photo-15124970.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
+    imageAlt: 'Cabinet installation in progress during a warm kitchen remodeling project.',
     span: 'default',
   },
   {
     n: 'M.02',
     title: 'Hand‑cut joinery',
     desc: 'Dovetails, finger joints, mortise and tenon. No biscuit, no pocket screw, no shortcut.',
-    img: 'https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=1600&q=82&auto=format&fit=crop',
-    imageAlt: 'Carpentry workspace showing joinery and hand-built remodeling craft.',
+    img: 'https://images.pexels.com/photos/30924413/pexels-photo-30924413.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1000&fit=crop',
+    imageAlt: 'Kitchen renovation planning and layout work before finish installation.',
     span: 'wide',
     offset: true,
   },
@@ -100,16 +100,16 @@ export const CRAFT: CraftItem[] = [
     n: 'M.03',
     title: 'Honed limestone',
     desc: 'Belgian bluestone and Italian travertine. Sealed only with linseed and beeswax.',
-    img: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=82&auto=format&fit=crop',
-    imageAlt: 'Honed stone and plaster material palette for a refined remodel.',
+    img: 'https://images.pexels.com/photos/36511373/pexels-photo-36511373.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
+    imageAlt: 'Stone countertop, sink, and faucet detail in a finished kitchen remodel.',
     span: 'default',
   },
   {
     n: 'M.04',
     title: 'Unlacquered brass',
     desc: 'Hardware allowed to patinate. We supply a small jar of oil, not a polishing cloth.',
-    img: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&q=82&auto=format&fit=crop',
-    imageAlt: 'Warm brass hardware detail for cabinetry and interior finish work.',
+    img: 'https://images.pexels.com/photos/8356432/pexels-photo-8356432.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1200&fit=crop',
+    imageAlt: 'Cabinet handle detail on white kitchen cabinetry after remodeling.',
     span: 'default',
     offset: true,
   },
@@ -117,16 +117,16 @@ export const CRAFT: CraftItem[] = [
     n: 'M.05',
     title: 'Lime plaster',
     desc: 'Three‑coat troweled plaster, cured for ninety days. Breathable, soft, never cracking.',
-    img: 'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=1200&q=82&auto=format&fit=crop',
-    imageAlt: 'Soft lime plaster wall finish in a warm residential interior.',
+    img: 'https://images.pexels.com/photos/19227244/pexels-photo-19227244.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
+    imageAlt: 'Elegant remodeled bathroom vanity with warm lighting and clean tile finishes.',
     span: 'default',
   },
   {
     n: 'M.06',
     title: 'Salvaged hardware',
     desc: 'Hinges and pulls reused from the original house wherever possible. New only where necessary.',
-    img: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=82&auto=format&fit=crop',
-    imageAlt: 'Restored interior detail with salvaged hardware and warm wood.',
+    img: 'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
+    imageAlt: 'Warm open kitchen and living space after a whole-home remodel.',
     span: 'default',
   },
 ];
@@ -163,8 +163,8 @@ export const BA_DATA: BeforeAfterItem[] = [
     year: '2023',
     location: 'River Oaks · Houston, TX',
     body: 'A 1947 cottage kitchen taken back to the studs. White oak cabinetry, honed limestone counters, unlacquered brass. Every cabinet shop-drawn and dry-fit before installation.',
-    before: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=2400&q=85&auto=format&fit=crop&sat=-90&bri=-20&con=-15',
-    after:  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2400&q=85&auto=format&fit=crop',
+    before: 'https://images.pexels.com/photos/30924413/pexels-photo-30924413.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
+    after:  'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
   },
   {
     project: 'No. 053',
@@ -173,8 +173,8 @@ export const BA_DATA: BeforeAfterItem[] = [
     year: '2020',
     location: 'The Woodlands · Houston, TX',
     body: 'Primary suite bathroom rebuilt from the rough-in. Plumbing moved before tile was mentioned. Three-step waterproofing, heated limestone floor, frameless glass templated after tile completion.',
-    before: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=2400&q=85&auto=format&fit=crop&sat=-90&bri=-20&con=-15',
-    after:  'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=2400&q=85&auto=format&fit=crop',
+    before: 'https://images.pexels.com/photos/3935348/pexels-photo-3935348.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
+    after:  'https://images.pexels.com/photos/31238728/pexels-photo-31238728.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
   },
   {
     project: 'No. 081',
@@ -183,17 +183,27 @@ export const BA_DATA: BeforeAfterItem[] = [
     year: '2024',
     location: 'River Oaks · Houston, TX',
     body: 'Full whole-home renovation of a 1958 colonial. Structural wall removal, new beam, reconfigured kitchen and primary suite. Same crew, start to finish.',
-    before: 'https://images.unsplash.com/photo-1567016526105-22da7c13161a?w=2400&q=85&auto=format&fit=crop&sat=-90&bri=-20&con=-15',
-    after:  'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=2400&q=85&auto=format&fit=crop',
+    before: 'https://images.pexels.com/photos/15124970/pexels-photo-15124970.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
+    after:  'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
   },
 ];
 
-export const SCOPE_OPTIONS = ['Kitchen', 'Bath', 'Primary suite', 'Whole‑home', 'Addition', 'Heritage'];
-export const BUDGET_OPTIONS = ['$200k – $500k', '$500k – $1M', '$1M – $2.5M', '$2.5M+'];
+export const SCOPE_OPTIONS = ['Kitchen', 'Bath', 'Primary suite', 'Whole‑home', 'Addition', 'Exterior'];
+export const BUDGET_OPTIONS = [
+  'Under $5k',
+  '$5k – $10k',
+  '$10k – $20k',
+  '$20k – $50k',
+  '$50k – $100k',
+  '$100k – $300k',
+  '$300k – $750k',
+  '$750k+',
+  'Not sure yet',
+];
 
 export const HERO_IMAGES: Record<string, string> = {
-  kitchen: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2400&q=85&auto=format&fit=crop',
-  framing: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=2400&q=85&auto=format&fit=crop',
-  bath: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=2400&q=85&auto=format&fit=crop',
+  kitchen: 'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
+  framing: 'https://images.pexels.com/photos/15124970/pexels-photo-15124970.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
+  bath: 'https://images.pexels.com/photos/31238728/pexels-photo-31238728.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
   facade: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2400&q=85&auto=format&fit=crop',
 };

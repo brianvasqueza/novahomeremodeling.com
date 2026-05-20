@@ -27,31 +27,31 @@ export interface ServicePageData {
 }
 
 const IMG = {
-  kitchen:     'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2400&q=85&auto=format&fit=crop',
+  kitchen:     'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop',
   bath:        'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=2400&q=85&auto=format&fit=crop',
   paintInt:    'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=2400&q=85&auto=format&fit=crop',
   paintExt:    'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=2400&q=85&auto=format&fit=crop',
   drywall:     'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=2400&q=85&auto=format&fit=crop',
-  beam:        'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=2400&q=85&auto=format&fit=crop',
+  beam:        'https://images.unsplash.com/photo-1677204703178-4cb5b2fb26d2?w=2400&q=85&auto=format&fit=crop',
   window:      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2400&q=85&auto=format&fit=crop',
   door:        'https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=2400&q=85&auto=format&fit=crop',
   floor:       'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=2400&q=85&auto=format&fit=crop',
-  tile:        'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=2400&q=85&auto=format&fit=crop',
-  outdoor:     'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=2400&q=85&auto=format&fit=crop',
+  tile:        'https://images.unsplash.com/photo-1690603935238-b60582bcb273?w=2400&q=85&auto=format&fit=crop',
+  outdoor:     'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=2400&q=85&auto=format&fit=crop',
   patio:       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2400&q=85&auto=format&fit=crop',
   deck:        'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=2400&q=85&auto=format&fit=crop',
   trim:        'https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=2400&q=85&auto=format&fit=crop',
   cabinet:     'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=2400&q=85&auto=format&fit=crop',
-  closet:      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2400&q=85&auto=format&fit=crop',
-  framing:     'https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=2400&q=85&auto=format&fit=crop',
+  closet:      'https://images.unsplash.com/photo-1696846912293-9a8013e17403?w=2400&q=85&auto=format&fit=crop',
+  framing:     'https://images.unsplash.com/photo-1704742950992-9815a104820c?w=2400&q=85&auto=format&fit=crop',
   carpentry:   'https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?w=2400&q=85&auto=format&fit=crop',
   lighting:    'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=2400&q=85&auto=format&fit=crop',
-  accent:      'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=2400&q=85&auto=format&fit=crop',
-  siding:      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=2400&q=85&auto=format&fit=crop',
-  fence:       'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=2400&q=85&auto=format&fit=crop',
-  pergola:     'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=2400&q=85&auto=format&fit=crop',
+  accent:      'https://images.unsplash.com/photo-1756302555654-5e413da2d1b8?w=2400&q=85&auto=format&fit=crop',
+  siding:      'https://images.unsplash.com/photo-1741525665303-dfb05d750e48?w=2400&q=85&auto=format&fit=crop',
+  fence:       'https://images.unsplash.com/photo-1779120690231-5dda93531065?w=2400&q=85&auto=format&fit=crop',
+  pergola:     'https://images.unsplash.com/photo-1708397016786-8916880649b8?w=2400&q=85&auto=format&fit=crop',
   renovation:  'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2400&q=85&auto=format&fit=crop',
-  garage:      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2400&q=85&auto=format&fit=crop',
+  garage:      'https://images.unsplash.com/photo-1776261761989-b66436309302?w=2400&q=85&auto=format&fit=crop',
   commercial:  'https://images.unsplash.com/photo-1497366216548-37526070297c?w=2400&q=85&auto=format&fit=crop',
 };
 
@@ -96,20 +96,24 @@ export const SERVICE_PAGE_DATA: ServicePageData[] = [
     ],
     faq: [
       {
-        q: 'How long does a full kitchen remodel take?',
-        a: 'Most of our kitchen projects run eight to fourteen weeks on site, depending on scope. Cabinetry lead time is included in that figure — we do not start demo until casework is in production. The preconstruction period (drawings, material selection, permitting) typically adds four to eight weeks before site work begins.',
+        q: 'How long does a kitchen remodel take?',
+        a: 'Most kitchen projects run eight to fourteen weeks on site. Preconstruction — drawings, material selections, and any permitting — typically adds four to eight weeks before site work begins. We do not start demolition until cabinetry is in production.',
       },
       {
-        q: 'Do I need to move out during the remodel?',
-        a: 'For a full gut renovation, most clients choose to. We seal the work area and protect living spaces, but kitchen access is eliminated for several weeks. We can discuss phasing if staying in place is necessary, though it typically extends the timeline.',
+        q: 'Do I need to move out?',
+        a: 'For a full gut renovation, most clients choose to. Kitchen access is eliminated for several weeks. If staying in place is a requirement, we can discuss phasing — though it extends the timeline.',
+      },
+      {
+        q: 'What does a kitchen remodel cost in Houston?',
+        a: 'A full kitchen remodel — cabinetry, countertops, tile, lighting, appliance coordination, and finish carpentry — typically runs $80,000 to $200,000 or more depending on size, materials, and layout changes. Our feasibility study is the most reliable way to get a real number for your specific kitchen.',
       },
       {
         q: 'Can I supply my own appliances?',
-        a: 'Yes. We coordinate with any appliance vendor and verify rough-in dimensions before casework production. If you are selecting appliances, we ask that your choices be finalized before drawings are issued.',
+        a: 'Yes. We coordinate with any vendor and confirm rough-in dimensions before casework is produced. Appliance selections need to be finalized before drawings are issued — their dimensions affect cabinet sizing.',
       },
       {
-        q: 'What is included in a fixed-fee feasibility study?',
-        a: 'Our feasibility study is a flat-fee engagement that produces a written scope, preliminary floor plan, material palette, and a realistic budget range. It is not an estimate — it is the document we use to decide together whether to proceed, and what the project actually is.',
+        q: 'What is included in a feasibility study?',
+        a: 'A flat-fee engagement that produces a written scope, preliminary floor plan, material palette, and a realistic budget range. It is not a quote — it is the document we use to decide together what the project actually is.',
       },
     ],
     related: ['cabinet-installation', 'flooring', 'tile-installation'],
@@ -156,19 +160,27 @@ export const SERVICE_PAGE_DATA: ServicePageData[] = [
     faq: [
       {
         q: 'How long does a bathroom remodel take?',
-        a: 'Primary suite bathrooms typically run six to ten weeks on site. Powder rooms and secondary bathrooms can be completed in three to five weeks. Tile with complex patterns or large-format stone adds time regardless of room size.',
+        a: 'Primary suite bathrooms typically run six to ten weeks on site. Powder rooms and secondary bathrooms can be three to five weeks. Complex tile patterns or large-format stone add time regardless of room size.',
       },
       {
-        q: 'Can we keep one bathroom functional during a multi-bath remodel?',
-        a: 'Yes. We sequence work to preserve access to at least one functional bathroom throughout the project. In single-bath homes, we discuss scheduling and temporary solutions during preconstruction.',
+        q: 'Can we keep one bathroom functional during the project?',
+        a: 'Yes. We sequence multi-bath projects to preserve access to at least one functional bathroom throughout. In single-bath homes, we discuss phasing and temporary solutions during preconstruction.',
       },
       {
-        q: 'What makes the difference in a tile installation?',
-        a: 'Substrate preparation and layout planning. Tile is only as straight and flat as the surface beneath it. We use a full mortar bed system for all floors and back-butter every large-format tile by hand. The difference is visible at ten feet and felt underfoot for decades.',
+        q: 'Can you convert a tub to a walk-in shower?',
+        a: 'Yes. Tub-to-shower conversions are one of the most common requests we handle. We reframe the opening if needed, move or cap the plumbing, and plan tile layout around the new footprint before anything is ordered.',
+      },
+      {
+        q: 'Do bathroom remodels require permits in Houston?',
+        a: 'Plumbing moves and structural changes typically require permits. We handle permitting as part of preconstruction — you do not navigate the City separately.',
+      },
+      {
+        q: 'What makes the difference in tile work?',
+        a: 'Substrate preparation and layout planning. Tile is only as flat as the surface beneath it. We use a full mortar bed for all floors and back-butter every large-format tile. The difference is visible at ten feet and lasts for decades.',
       },
       {
         q: 'Do you handle frameless glass enclosures?',
-        a: 'Yes. We work with a small number of glass fabricators whose tolerances and lead times we know. Glass is templated after tile is complete — never before — to ensure a precise fit.',
+        a: 'Yes. Glass is templated after tile is complete — never before — to ensure a precise fit. We work with fabricators whose tolerances and lead times we know.',
       },
     ],
     related: ['tile-installation', 'flooring', 'custom-carpentry'],
@@ -180,12 +192,12 @@ export const SERVICE_PAGE_DATA: ServicePageData[] = [
     eyebrow: 'Service — Painting',
     title: 'Interior Painting',
     titleHtml: 'Interior <em>Painting</em>',
-    tagline: 'Twelve coats of prep. Two of colour.',
-    description: 'Interior painting with plaster-grade surface preparation, heirloom colours, and hand-applied limewash finishes. The prep is the work.',
+    tagline: 'Twelve coats of prep. Two of color.',
+    description: 'Interior painting with plaster-grade surface preparation, mineral finishes, and hand-applied limewash. The prep is the work.',
     heroImage: IMG.paintInt,
     body: [
-      'Most painting failures are preparation failures. A brush and a bucket are the last two percent of the job. The other ninety-eight is surface repair, prime coats, blocking, sanding, and patience. Our painters are finish carpenters who happen to hold a brush — they read the wall before they touch it.',
-      'We work with a curated palette of European mineral paints and traditional limewash — materials that build texture rather than hiding it. Where standard latex will look flat and plastic in five years, a properly applied mineral coat develops depth. We do not offer custom colour matching on dollar-per-gallon paint.',
+      'Most painting failures are preparation failures. A brush and a bucket are the last two percent of the job. The other ninety-eight is surface repair, prime coats, blocking, sanding, and patience. Our painting crews approach the wall the way a finish carpenter approaches a piece of trim — they read the surface before they touch it.',
+      'We work with mineral paints and traditional limewash — materials that build texture rather than hiding it. Where standard latex will look flat in five years, a properly applied mineral coat develops depth. We do not offer color matching on budget paint systems.',
     ],
     asideFacts: [
       { label: 'Prep standard', value: 'Skim coat + three sands minimum' },
@@ -203,7 +215,7 @@ export const SERVICE_PAGE_DATA: ServicePageData[] = [
         n: '02',
         title: 'Mineral and limewash finishes on request.',
         titleHtml: 'Mineral and <em>limewash</em> finishes on request.',
-        body: "Farrow & Ball, Little Greene, Bauwerk, and traditional Italian limewash — we apply each according to its manufacturer's specification. Some of these products require three to five application days to cure between coats.",
+        body: 'We may use mineral paints, Roman clay, or traditional limewash — each applied according to its specification. Some of these products require three to five application days to cure between coats, and we plan the schedule accordingly.',
       },
       {
         n: '03',
@@ -214,20 +226,24 @@ export const SERVICE_PAGE_DATA: ServicePageData[] = [
     ],
     faq: [
       {
-        q: 'How long does interior painting take for a whole home?',
-        a: 'A full interior repaint of a 2,500 sq ft home typically takes one to two weeks, including prep and two finish coats. Homes requiring extensive surface repair, skim coating, or complex multi-tone work run longer.',
+        q: 'How long does interior painting take?',
+        a: 'A full interior repaint of a 2,500 sq ft home typically takes one to two weeks, including prep and two finish coats. Homes with extensive surface repair, skim coating, or specialty finishes run longer.',
       },
       {
-        q: 'Do you work with designer-specified colours?',
-        a: 'Yes. We accept colour specifications from interior designers and can match to any commercially available paint. We ask that all colours be finalized before we price the job — mid-project changes affect scheduling and material costs.',
+        q: 'Do you help with color selection?',
+        a: 'We guide the process — discussing how colors read in daylight versus evening light, how sheen affects large wall areas, and how to coordinate trim with walls. Final selection is always the homeowner\'s decision.',
+      },
+      {
+        q: 'Can you paint cabinets and trim?',
+        a: 'Yes. Trim and casings are primed and painted before installation, then touched up in place. Cabinet painting follows a similar sequence — surface prep, prime, and a durable finish coat suited to daily contact.',
       },
       {
         q: 'Can you paint over existing wallpaper?',
-        a: 'We advise against it in most cases. Wallpaper seams telegraph through paint, and adhesive failure behind the paper eventually causes bubbling. We remove wallpaper as part of preparation and repair the substrate before painting.',
+        a: 'We advise against it. Seams telegraph through paint, and adhesive failure eventually causes bubbling. We remove wallpaper as part of preparation and repair the substrate before any finish coat.',
       },
       {
-        q: 'What is the lead time to schedule an interior paint project?',
-        a: 'Our painting crews are typically scheduled four to eight weeks out. Projects that include significant surface repair or that follow another trade (plastering, drywall) are scheduled in sequence with the prior work.',
+        q: 'What paint finishes work best for high-traffic areas?',
+        a: 'Satin or eggshell for most walls — easier to clean than flat and forgiving enough for imperfect surfaces. Semi-gloss for trim and casings, where durability and a clean edge at the wall matter more than sheen suppression.',
       },
     ],
     related: ['accent-walls', 'drywall-repair', 'trim-finish-carpentry'],
@@ -273,20 +289,24 @@ export const SERVICE_PAGE_DATA: ServicePageData[] = [
     ],
     faq: [
       {
-        q: 'How often does an exterior paint job need to be redone?',
-        a: 'Done correctly, an exterior paint job should last eight to twelve years before needing significant work. Factors that shorten that window: inadequate preparation, latex over bare wood, poor caulking, and south-facing or west-facing surfaces with high UV exposure.',
+        q: 'How long does an exterior paint job last?',
+        a: 'Done correctly, eight to twelve years. Factors that shorten that window: latex over bare wood, inadequate surface prep, missed caulking, and south- or west-facing surfaces with heavy UV exposure.',
       },
       {
-        q: 'Do you paint in the summer in Houston?',
-        a: 'Yes. We schedule exterior work to avoid direct afternoon sun on painted surfaces, which can cause surface drying that traps moisture. Mornings and overcast days are preferred. We do not apply paint in temperatures below 50°F or above 95°F surface temperature.',
+        q: 'Can you paint brick, stucco, or hardiplank siding?',
+        a: 'Yes. Each substrate requires a different primer and topcoat system. Brick and masonry get a masonry primer; hardiplank and engineered wood get an oil-based primer on any exposed areas before topcoat.',
       },
       {
-        q: 'Can you match an existing colour I want to keep?',
-        a: "Yes. We can colour-match to an existing paint chip or to any major manufacturer's system. For historical homes, we can also work with colour palettes appropriate to the architectural period.",
+        q: 'How do you prepare exterior surfaces before painting?',
+        a: 'Pressure-wash, scrape any loose or peeling paint, prime bare wood with an oil-based product, caulk all seams and penetrations with elastomeric caulk, and sand any remaining rough transitions — all before a topcoat goes on.',
       },
       {
-        q: 'Do I need to be home during exterior painting?',
-        a: 'Not necessarily. We can work independently with access to the exterior. We secure ladder staging and protect landscaping daily. Many clients prefer to be notified at key milestones — prime inspection, first coat, final coat.',
+        q: 'Do you paint in Houston summers?',
+        a: 'Yes. We schedule to avoid direct afternoon sun on fresh surfaces. Mornings and overcast days are preferred. We do not apply paint below 50°F or above 95°F surface temperature.',
+      },
+      {
+        q: 'Do I need to be home during the project?',
+        a: 'No. We work independently with exterior access. Landscaping is protected daily. Most clients ask to be notified at key milestones — prime inspection, first coat, and final coat.',
       },
     ],
     related: ['siding-repair', 'deck-construction', 'fence-installation'],
@@ -332,20 +352,24 @@ export const SERVICE_PAGE_DATA: ServicePageData[] = [
     ],
     faq: [
       {
+        q: 'How long do drywall repairs take?',
+        a: 'Most patch repairs — holes, damage, structural cuts — are complete in one to two days including priming. Skim-coating a full room adds a day. Large water-damage sections that require new drywall run two to four days depending on scope.',
+      },
+      {
         q: 'Can you match existing wall texture?',
-        a: 'In most cases, yes. Common textures (orange peel, knockdown, skip-trowel) are reproducible by hand. Very old or unique machine-applied textures are more difficult to match perfectly. We always sample and review before completing a repair.',
+        a: 'In most cases, yes. Orange peel, knockdown, and skip-trowel are all reproducible by hand. We sample a small area first and review it under raking light before completing the repair. Very old machine-applied textures are the exception.',
       },
       {
-        q: 'Is drywall repair something you do as a standalone job?',
-        a: 'Yes. We take repair-only projects when scheduling allows. We prioritize clients who have ongoing relationships with us, but we also take standalone jobs that have clear scope.',
+        q: 'Can you repair ceiling cracks and damage?',
+        a: 'Yes. Ceiling repairs follow the same sequence as wall repairs — substrate assessment, tape and compound, texture match, prime. Settlement cracks are common in Houston and are straightforward to address.',
       },
       {
-        q: 'How do you handle large water-damaged areas?',
-        a: 'Large water damage often requires removing the affected drywall entirely, verifying the framing and insulation are dry, treating for mold if present, and then hanging new drywall. Patching over saturated or moldy drywall is not something we will do.',
+        q: 'How do you handle water-damaged drywall?',
+        a: 'We take a moisture reading first. If the source is unresolved, we say so before touching the drywall. Large saturated areas are removed completely — framing and insulation verified dry, mold treated if present, then new drywall hung and finished.',
       },
       {
         q: 'Do you paint after the repair?',
-        a: 'We hand off to the painter after priming. We do not include painting in a drywall repair scope unless it is part of a larger project. We can coordinate scheduling with your painter or recommend one.',
+        a: 'We hand off at primer. Painting is not included in a repair scope unless it is part of a larger project. We can coordinate with your painter or recommend one if needed.',
       },
     ],
     related: ['interior-painting', 'framing', 'accent-walls'],

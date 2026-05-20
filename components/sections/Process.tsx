@@ -32,13 +32,14 @@ export function Process() {
             <h2 className="process__h">
               Four phases.
               <br />
-              Sixteen months, <em>on average.</em>
+              Honest <em>from day one.</em>
             </h2>
           </div>
           <div className="process__head-r">
             <p className="process__lede">
-              One crew per project, start to finish. The same people who frame your kitchen are the
-              ones who set the tile and hang the cabinets. No handoffs. No strangers in month seven.
+              One crew per Houston remodeling project, start to finish. The same people who frame
+              your kitchen are the ones who set the tile, repair drywall, install flooring, and hang
+              the cabinets. No handoffs, no strangers mid-project, no timeline surprises.
             </p>
           </div>
         </div>

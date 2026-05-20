@@ -1,4 +1,5 @@
 import { ResponsiveImage } from '@/components/common/ResponsiveImage';
+import { CtaLink } from '@/components/ui/CTA';
 
 type PageHeroProps = {
   eyebrow: string;
@@ -6,9 +7,19 @@ type PageHeroProps = {
   description: string;
   image: string;
   imageAlt?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 };
 
-export function PageHero({ eyebrow, title, description, image, imageAlt = '' }: PageHeroProps) {
+export function PageHero({
+  eyebrow,
+  title,
+  description,
+  image,
+  imageAlt = '',
+  ctaLabel,
+  ctaHref,
+}: PageHeroProps) {
   return (
     <section className="hero page-hero" id="top">
       <div className="hero__bg">
@@ -23,6 +34,13 @@ export function PageHero({ eyebrow, title, description, image, imageAlt = '' }: 
         </div>
         <div className="hero__meta page-hero__meta">
           <p>{description}</p>
+          {ctaLabel && ctaHref && (
+            <div className="hero__cta">
+              <CtaLink href={ctaHref} onDark>
+                {ctaLabel}
+              </CtaLink>
+            </div>
+          )}
         </div>
       </div>
     </section>

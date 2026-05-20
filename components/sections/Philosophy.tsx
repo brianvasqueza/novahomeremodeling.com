@@ -37,10 +37,10 @@ export function Philosophy() {
             <li>
               <div className="n">III</div>
               <div>
-                <h3>Six to eight homes a year.</h3>
+                <h3>We keep a manageable schedule.</h3>
                 <p>
-                  We refuse the rest. The studio&apos;s calendar is the only constraint we will not bend,
-                  regardless of the project&apos;s size.
+                  Taking on more than the crew can cover well is how quality slips. We do not bid more
+                  work than we can staff. The timeline we give you at the start is the one we keep.
                 </p>
               </div>
             </li>

@@ -21,7 +21,7 @@ export function StickyMobileCTA() {
         {SITE.phoneDisplay}
       </a>
       <a className="sticky-cta__btn" href="#contact" tabIndex={visible ? 0 : -1}>
-        Get a quote
+        Start a project
       </a>
     </div>
   );

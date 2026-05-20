@@ -20,8 +20,9 @@ export function Approach() {
             <p>
               Nova is a residential remodeling company in Houston, in business since 2009 in the
               neighborhoods our clients have lived in for years. We take on kitchens, bathrooms,
-              additions, and whole‑home renovations — one dedicated crew per project, from the
-              first drawing to the day we hand you the keys.
+              drywall repair, flooring, interior painting, exterior painting, additions, and
+              whole‑home renovations — one dedicated crew per project, from the first drawing to
+              the day we hand you the keys.
             </p>
             <p>
               We do not subcontract finish carpentry. Every cabinet is measured on site before

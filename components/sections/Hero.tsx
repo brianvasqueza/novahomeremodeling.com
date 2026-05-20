@@ -16,7 +16,7 @@ export function Hero({ image = 'kitchen' }: HeroProps) {
       <div className="hero__bg">
         <ResponsiveImage
           src={imgUrl}
-          alt="Custom remodeled kitchen with refined millwork and warm natural light."
+          alt="Luxury Houston kitchen remodel with wood cabinetry, large island, pendant lighting, and stone countertops."
           sizes="100vw"
           priority
         />
@@ -25,18 +25,18 @@ export function Hero({ image = 'kitchen' }: HeroProps) {
       <div className="hero__index">No. 127 — Houston, TX · Est. 2009</div>
       <div className="container hero__body">
         <div className="hero__copy">
-          <div className="hero__eyebrow">Nova Home Remodeling &amp; Design</div>
+          <div className="hero__eyebrow">Houston Home Remodeling Company</div>
           <h1 className="hero__h1">
-            Your home, rebuilt.
+            Houston homes, rebuilt.
             <br />
             Every detail <em>drawn&nbsp;first.</em>
           </h1>
           <div className="hero__cta">
             <Button variant="primary" onDark as="a" href="#contact">
-              Start a project
+              Get a Houston Remodeling Estimate
             </Button>
             <a className="hero__cta-alt" href="#work">
-              View our work
+              See remodeling work
             </a>
           </div>
         </div>
@@ -52,7 +52,7 @@ export function Hero({ image = 'kitchen' }: HeroProps) {
             </div>
             <div>
               <span>Completed</span>
-              <span>One hundred twenty‑seven projects</span>
+              <span>127 projects</span>
             </div>
             <div>
               <span>Call</span>

@@ -8,43 +8,43 @@ interface StripImage {
 
 const STRIP_IMAGES: StripImage[] = [
   {
-    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=560&q=85&auto=format&fit=crop',
-    alt: 'Bright renovated kitchen with white oak cabinetry and limestone countertops.',
+    src: 'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop',
+    alt: 'Warm kitchen remodel with wood cabinets, pendant lighting, and a large island.',
     aspect: 'wide',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=420&h=560&q=85&auto=format&fit=crop',
-    alt: 'Honed stone tile and plaster finish detail in a primary bathroom.',
+    src: 'https://images.pexels.com/photos/31238728/pexels-photo-31238728.jpeg?auto=compress&cs=tinysrgb&w=420&h=560&fit=crop',
+    alt: 'Modern bathroom remodel with walk-in shower, wood vanity, and warm neutral tile.',
     aspect: 'portrait',
   },
   {
-    src: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=560&h=560&q=85&auto=format&fit=crop',
-    alt: 'Unlacquered brass cabinet hardware, allowed to patinate over time.',
+    src: 'https://images.pexels.com/photos/8356432/pexels-photo-8356432.jpeg?auto=compress&cs=tinysrgb&w=560&h=560&fit=crop',
+    alt: 'Close-up of cabinet hardware on white kitchen cabinetry.',
     aspect: 'square',
   },
   {
-    src: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=560&q=85&auto=format&fit=crop',
-    alt: 'Primary bathroom with heated limestone floor and frameless glass enclosure.',
+    src: 'https://images.pexels.com/photos/19227244/pexels-photo-19227244.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop',
+    alt: 'Elegant primary bathroom remodel with vanity, glass shower, and warm lighting.',
     aspect: 'wide',
   },
   {
-    src: 'https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=420&h=560&q=85&auto=format&fit=crop',
-    alt: 'Hand-cut joinery and millwork fabrication in progress on site.',
+    src: 'https://images.pexels.com/photos/15124970/pexels-photo-15124970.jpeg?auto=compress&cs=tinysrgb&w=420&h=560&fit=crop',
+    alt: 'Cabinet installation in progress during a kitchen remodeling project.',
     aspect: 'portrait',
   },
   {
-    src: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&h=560&q=85&auto=format&fit=crop',
-    alt: 'Covered outdoor living addition with stone flooring and custom millwork.',
+    src: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop',
+    alt: 'Believable Houston-area home exterior after outdoor remodeling and curb appeal updates.',
     aspect: 'wide',
   },
   {
-    src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=560&h=560&q=85&auto=format&fit=crop',
-    alt: 'Custom kitchen island with stone countertop and integrated storage.',
+    src: 'https://images.pexels.com/photos/36511373/pexels-photo-36511373.jpeg?auto=compress&cs=tinysrgb&w=560&h=560&fit=crop',
+    alt: 'Finished kitchen remodel detail with stone countertop, sink, and wood cabinetry.',
     aspect: 'square',
   },
   {
-    src: 'https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?w=420&h=560&q=85&auto=format&fit=crop',
-    alt: 'Warm living room interior with rift-sawn shelving and curated objects.',
+    src: 'https://images.pexels.com/photos/30924413/pexels-photo-30924413.jpeg?auto=compress&cs=tinysrgb&w=420&h=560&fit=crop',
+    alt: 'Kitchen remodeling planning and layout work before finish installation.',
     aspect: 'portrait',
   },
   {
@@ -53,8 +53,8 @@ const STRIP_IMAGES: StripImage[] = [
     aspect: 'wide',
   },
   {
-    src: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=420&h=560&q=85&auto=format&fit=crop',
-    alt: 'Neutral tile and natural stone in a fully rebuilt primary suite bathroom.',
+    src: 'https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&w=420&h=560&fit=crop',
+    alt: 'Finished bathroom remodel with clean tile, modern fixtures, and warm natural light.',
     aspect: 'portrait',
   },
 ];

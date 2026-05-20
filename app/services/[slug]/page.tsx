@@ -29,7 +29,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { SERVICE_PAGE_DATA, findServicePage } from '@/data/service-pages';
 import { findServiceVisualStory } from '@/data/service-visuals';
 import { getServiceLandingContent } from '@/data/service-landing';
-import { getServiceAreaLinks } from '@/data/internal-links';
+import { getServiceAreaLinks, getServiceGuideLinks } from '@/data/internal-links';
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd, serviceWebPageJsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
 
@@ -61,6 +61,7 @@ export default async function ServicePage({ params }: PageProps) {
   const landingContent = getServiceLandingContent(service);
   const visualStory = findServiceVisualStory(service.slug);
   const areaLinks = getServiceAreaLinks(service);
+  const guideLinks = getServiceGuideLinks(service);
   const isKitchenRemodeling = service.slug === 'kitchen-remodeling';
   const breadcrumbs = [
     { name: 'Home', href: '/' },
@@ -113,6 +114,13 @@ export default async function ServicePage({ params }: PageProps) {
         <ServiceFAQ service={service} />
         <RelatedServices slugs={service.related} currentServiceTitle={service.title} />
         <InternalLinkGrid
+          id="related-guides"
+          eyebrow="Remodeling guides"
+          title={`Planning guides related to ${service.title.toLowerCase()}`}
+          links={guideLinks}
+        />
+        <InternalLinkGrid
+          id="service-areas"
           eyebrow="Houston and surrounding areas"
           title={`Where we handle ${service.title.toLowerCase()} near Houston`}
           links={areaLinks}

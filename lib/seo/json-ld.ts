@@ -220,11 +220,17 @@ export function cityPageJsonLd(city: CityPageData) {
 export function blogPostJsonLd(post: BlogPost) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
+    '@type': ['Article', 'BlogPosting'],
     '@id': absoluteUrl(`${blogUrl(post.slug)}#article`),
     headline: post.title,
+    name: post.seoTitle,
     description: post.excerpt,
-    image: post.image,
+    url: absoluteUrl(blogUrl(post.slug)),
+    image: {
+      '@type': 'ImageObject',
+      url: post.image,
+      caption: post.imageAlt,
+    },
     datePublished: post.date,
     dateModified: post.modified ?? post.date,
     author: {
@@ -233,6 +239,29 @@ export function blogPostJsonLd(post: BlogPost) {
     },
     publisher: { '@id': absoluteUrl('/#business') },
     mainEntityOfPage: absoluteUrl(blogUrl(post.slug)),
+    isPartOf: { '@id': absoluteUrl('/#website') },
+    articleSection: post.category,
+    keywords: post.topics,
+    inLanguage: 'en-US',
+  };
+}
+
+export function blogFaqJsonLd(post: BlogPost) {
+  if (post.faqs.length === 0) return null;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': absoluteUrl(`${blogUrl(post.slug)}#faq`),
+    url: absoluteUrl(blogUrl(post.slug)),
+    mainEntity: post.faqs.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
   };
 }
 

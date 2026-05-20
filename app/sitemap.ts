@@ -8,7 +8,7 @@ import { absoluteUrl, blogUrl, cityUrl, serviceUrl } from '@/lib/seo/urls';
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteLastModified = new Date(SITE.lastUpdated);
 
-  const staticRoutes = ['/', '/services', '/cities', '/blog'].map((path) => ({
+  const staticRoutes = ['/', '/services', '/cities', '/blog', '/contact'].map((path) => ({
     url: absoluteUrl(path),
     lastModified: siteLastModified,
     changeFrequency: 'monthly' as const,

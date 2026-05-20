@@ -7,13 +7,14 @@ type InternalLinkGridProps = {
   eyebrow: string;
   title: string;
   links: InternalLink[];
+  id?: string;
 };
 
-export function InternalLinkGrid({ eyebrow, title, links }: InternalLinkGridProps) {
+export function InternalLinkGrid({ eyebrow, title, links, id = 'internal-links' }: InternalLinkGridProps) {
   if (links.length === 0) return null;
 
   return (
-    <Section id="internal-links" className="internal-links">
+    <Section id={id} className="internal-links">
       <div className="internal-links__head">
         <Eyebrow>{eyebrow}</Eyebrow>
         <h2 className="internal-links__h">{title}</h2>

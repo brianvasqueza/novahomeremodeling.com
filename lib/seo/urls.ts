@@ -5,7 +5,7 @@ export const ROUTES = {
   services: '/services',
   cities: '/cities',
   blog: '/blog',
-  contact: '/#contact',
+  contact: '/contact',
 } as const;
 
 export function absoluteUrl(path = '/') {

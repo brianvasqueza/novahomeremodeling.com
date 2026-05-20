@@ -29,6 +29,90 @@ export function getServiceAreaLinks(service: ServicePageData): InternalLink[] {
   }));
 }
 
+const SERVICE_GUIDE_LINKS: Record<string, InternalLink[]> = {
+  'kitchen-remodeling': [
+    {
+      href: '/blog/kitchen-remodel-cost-houston',
+      label: 'Kitchen remodel cost guide',
+      description: 'Budget ranges, cost drivers, and Houston-specific planning notes for kitchen remodels.',
+    },
+    {
+      href: '/blog/open-concept-remodeling-ideas',
+      label: 'Open concept remodeling ideas',
+      description: 'What to know before opening walls between the kitchen, dining, and living areas.',
+    },
+    {
+      href: '/blog/best-flooring-options-texas-homes',
+      label: 'Flooring options for Texas homes',
+      description: 'A practical comparison of LVP, tile, hardwood, carpet, and concrete for Houston homes.',
+    },
+  ],
+  'bathroom-remodeling': [
+    {
+      href: '/blog/how-long-does-bathroom-remodel-take',
+      label: 'Bathroom remodel timeline guide',
+      description: 'A phase-by-phase look at bathroom remodel timelines, delays, and planning decisions.',
+    },
+    {
+      href: '/blog/best-flooring-options-texas-homes',
+      label: 'Flooring options for Texas homes',
+      description: 'Moisture, slab, and humidity considerations for flooring in Houston homes.',
+    },
+  ],
+  flooring: [
+    {
+      href: '/blog/best-flooring-options-texas-homes',
+      label: 'Best flooring options for Texas homes',
+      description: 'Compare flooring materials for Houston humidity, slab foundations, and everyday traffic.',
+    },
+    {
+      href: '/blog/kitchen-remodel-cost-houston',
+      label: 'Kitchen remodel cost guide',
+      description: 'Understand how flooring fits into a larger kitchen remodeling budget.',
+    },
+    {
+      href: '/blog/how-long-does-bathroom-remodel-take',
+      label: 'Bathroom remodel timeline guide',
+      description: 'See where bathroom tile and flooring fit into the remodel sequence.',
+    },
+  ],
+  'home-renovations': [
+    {
+      href: '/blog/open-concept-remodeling-ideas',
+      label: 'Open concept remodeling ideas',
+      description: 'Structural, cost, and design considerations for opening up older Houston layouts.',
+    },
+    {
+      href: '/blog/best-flooring-options-texas-homes',
+      label: 'Flooring options for Texas homes',
+      description: 'Material guidance for whole-home flooring decisions in Houston-area remodels.',
+    },
+    {
+      href: '/blog/kitchen-remodel-cost-houston',
+      label: 'Kitchen remodel cost guide',
+      description: 'A realistic cost primer for one of the largest scopes in a whole-home remodel.',
+    },
+  ],
+  'beam-installation': [
+    {
+      href: '/blog/open-concept-remodeling-ideas',
+      label: 'Open concept remodeling ideas',
+      description: 'How beams, posts, permits, and finish work shape an open-concept remodel.',
+    },
+  ],
+  framing: [
+    {
+      href: '/blog/open-concept-remodeling-ideas',
+      label: 'Open concept remodeling ideas',
+      description: 'Planning notes for wall removal, structural framing, and layout changes.',
+    },
+  ],
+};
+
+export function getServiceGuideLinks(service: ServicePageData): InternalLink[] {
+  return SERVICE_GUIDE_LINKS[service.slug] ?? [];
+}
+
 export function getCityServiceLinks(citySlug: string): InternalLink[] {
   const city = CITY_PAGE_DATA.find((item) => item.slug === citySlug);
   if (!city) return [];

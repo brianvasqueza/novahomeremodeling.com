@@ -1,9 +1,11 @@
 type JsonLdProps = {
-  data: Record<string, unknown> | Record<string, unknown>[];
+  data: Record<string, unknown> | null | (Record<string, unknown> | null)[];
 };
 
 export function JsonLd({ data }: JsonLdProps) {
-  const entries = Array.isArray(data) ? data.filter(Boolean) : [data];
+  const entries = (Array.isArray(data) ? data : [data]).filter(
+    (entry): entry is Record<string, unknown> => Boolean(entry),
+  );
 
   if (entries.length === 0) {
     return null;

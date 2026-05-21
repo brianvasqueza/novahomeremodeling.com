@@ -1,6 +1,16 @@
+'use client';
+
+import { m, useReducedMotion } from 'framer-motion';
 import { Eyebrow } from '@/components/ui/Eyebrow';
+import { staggerContainer, staggerChild, reducedFade, reducedContainer } from '@/lib/motion/variants';
+import { ease } from '@/lib/motion/config';
 
 export function Philosophy() {
+  const reduced = useReducedMotion();
+
+  const listVariants = reduced ? reducedContainer : staggerContainer;
+  const itemVariants = reduced ? reducedFade : staggerChild;
+
   return (
     <section className="section section--dark" id="philosophy">
       <div className="container philo__grid">
@@ -11,8 +21,18 @@ export function Philosophy() {
           </h2>
         </div>
         <div className="philo__r">
-          <ul className="philo__principles">
-            <li>
+          <m.ul
+            className="philo__principles"
+            variants={listVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-8% 0px' }}
+            transition={{ staggerChildren: 0.12, delayChildren: 0.15 }}
+          >
+            <m.li
+              variants={itemVariants}
+              transition={{ duration: 0.55, ease: ease.out }}
+            >
               <div className="n">I</div>
               <div>
                 <h3>
@@ -23,8 +43,11 @@ export function Philosophy() {
                   subcontractors, no unfamiliar faces six months into your home.
                 </p>
               </div>
-            </li>
-            <li>
+            </m.li>
+            <m.li
+              variants={itemVariants}
+              transition={{ duration: 0.55, ease: ease.out }}
+            >
               <div className="n">II</div>
               <div>
                 <h3>Drawn before built.</h3>
@@ -33,8 +56,11 @@ export function Philosophy() {
                   turned on. Surprises are for theater, not for homes.
                 </p>
               </div>
-            </li>
-            <li>
+            </m.li>
+            <m.li
+              variants={itemVariants}
+              transition={{ duration: 0.55, ease: ease.out }}
+            >
               <div className="n">III</div>
               <div>
                 <h3>We keep a manageable schedule.</h3>
@@ -43,8 +69,11 @@ export function Philosophy() {
                   work than we can staff. The timeline we give you at the start is the one we keep.
                 </p>
               </div>
-            </li>
-            <li>
+            </m.li>
+            <m.li
+              variants={itemVariants}
+              transition={{ duration: 0.55, ease: ease.out }}
+            >
               <div className="n">IV</div>
               <div>
                 <h3>
@@ -55,8 +84,11 @@ export function Philosophy() {
                   month four — we eat any miscount that&apos;s ours.
                 </p>
               </div>
-            </li>
-            <li>
+            </m.li>
+            <m.li
+              variants={itemVariants}
+              transition={{ duration: 0.55, ease: ease.out }}
+            >
               <div className="n">V</div>
               <div>
                 <h3>We sign our work.</h3>
@@ -65,8 +97,8 @@ export function Philosophy() {
                   the rest of the house&apos;s life.
                 </p>
               </div>
-            </li>
-          </ul>
+            </m.li>
+          </m.ul>
         </div>
       </div>
     </section>

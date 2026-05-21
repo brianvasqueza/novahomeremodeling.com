@@ -4,6 +4,7 @@ import { Instrument_Serif } from 'next/font/google';
 import { createMetadata } from '@/lib/seo/metadata';
 import { organizationJsonLd, websiteJsonLd } from '@/lib/seo/json-ld';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { MotionProvider } from '@/components/motion/MotionProvider';
 import './globals.css';
 
 const satoshi = localFont({
@@ -39,7 +40,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body>
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
-        {children}
+        <MotionProvider>
+          {children}
+        </MotionProvider>
       </body>
     </html>
   );

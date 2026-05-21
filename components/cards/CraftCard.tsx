@@ -21,6 +21,8 @@ export function CraftCard({ item }: CraftCardProps) {
           alt={item.imageAlt}
           sizes="(max-width: 760px) 100vw, (max-width: 1200px) 50vw, 680px"
         />
+        <div className="craft-item__overlay" />
+        <div className="craft-item__cap">{item.title}</div>
       </div>
       <div className="craft-item__num">{item.n}</div>
       <h3 className="craft-item__title">{item.title}</h3>

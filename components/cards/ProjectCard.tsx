@@ -5,9 +5,10 @@ import { cn } from '@/lib/cn';
 
 type ProjectCardProps = {
   project: Project;
+  compact?: boolean;
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, compact = false }: ProjectCardProps) {
   const content = (
     <>
       <div className="project__media media-reveal">
@@ -20,7 +21,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <span className="project__tag">{project.category}</span>
         <div className="project__overlay" />
         <div className="project__hover-caption">
-          {project.location} · {project.year}
+          <span className="project__hover-caption-title">{project.title}</span>
+          <span className="project__hover-caption-meta">{project.location} · {project.year}</span>
         </div>
       </div>
       <div className="project__meta">
@@ -35,7 +37,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       className={cn(
         'project',
         `project--${project.span ?? 'lg'}`,
-        project.offset && 'project--offset',
+        project.offset && !compact && 'project--offset',
         project.landscape && 'project--landscape',
         project.span === 'full' && 'project--wide',
       )}

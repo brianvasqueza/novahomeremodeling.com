@@ -1,39 +1,11 @@
-/* Scroll-reveal, word-split, and parallax animation setup.
+/* Scroll-reveal and parallax animation setup.
    Called once after hydration in AnimationsProvider. */
 
-function splitWords(el: HTMLElement) {
-  el.classList.add('word-reveal');
-  const walk = (node: Node) => {
-    Array.from(node.childNodes).forEach((child) => {
-      if (child.nodeType === 3) {
-        const frag = document.createDocumentFragment();
-        (child.textContent ?? '').split(/(\s+)/).forEach((tok) => {
-          if (/^\s+$/.test(tok)) {
-            frag.appendChild(document.createTextNode(tok));
-          } else if (tok) {
-            const sp = document.createElement('span');
-            sp.className = 'w';
-            sp.textContent = tok;
-            frag.appendChild(sp);
-          }
-        });
-        (child as ChildNode).replaceWith(frag);
-      } else if (child.nodeType === 1 && (child as Element).tagName !== 'BR') {
-        walk(child);
-      }
-    });
-  };
-  walk(el);
-  /* Cap stagger at 10 words so long headlines don't run too long */
-  el.querySelectorAll<HTMLElement>('.w').forEach((w, i) => {
-    w.style.transitionDelay = `${Math.min(i, 10) * 44}ms`;
-  });
-}
-
-function setupReveal(reduced: boolean) {
-  /* Base reveal on sections and key atomic elements */
+function setupReveal() {
+  /* Base reveal on sections and key atomic elements.
+     .hero__copy is excluded — the Hero component uses Framer Motion for all entrances. */
   document
-    .querySelectorAll<HTMLElement>('.hero__copy, .project, .craft-item')
+    .querySelectorAll<HTMLElement>('.project, .craft-item')
     .forEach((el) => {
       if (!el.classList.contains('reveal-blur') && !el.classList.contains('media-reveal')) {
         el.classList.add('reveal');
@@ -43,14 +15,12 @@ function setupReveal(reduced: boolean) {
   /* Blur-to-sharp on section headings */
   document
     .querySelectorAll<HTMLElement>(
-      '.approach__h, .services__h, .projects__h, .ba__h, .craft__h, .areas__h, .philo__h, .cta__h, .contact__h, .process__h, .parallax-h, .feat-project__h',
+      '.approach__h, .services__h, .projects__h, .ba__h, .craft__h, .areas__h, .philo__h, .contact__h, .process__h, .parallax-h, .feat-project__h',
     )
     .forEach((el) => el.classList.add('reveal-blur'));
 
-  /* Word-split hero headline */
-  if (!reduced) {
-    document.querySelectorAll<HTMLElement>('.hero__h1').forEach(splitWords);
-  }
+  /* Hero H1 word-split is disabled — Framer Motion handles the blur-to-sharp
+     headline reveal on the hero section. */
 
   /* Blur-to-sharp eyebrows, lede text, parallax content */
   document
@@ -113,10 +83,7 @@ function setupReveal(reduced: boolean) {
     .querySelectorAll<HTMLElement>('.reveal,.reveal-blur,.media-reveal,.svc-card,.word-reveal')
     .forEach((el) => io.observe(el));
 
-  /* Hero text and index fire immediately */
-  document
-    .querySelectorAll<HTMLElement>('.hero__copy, .hero__h1')
-    .forEach((el) => el.classList.add('is-in'));
+  /* Hero elements are Framer Motion-controlled — no vanilla JS reveal needed. */
 }
 
 function setupParallax(reduced: boolean) {
@@ -149,6 +116,6 @@ function setupParallax(reduced: boolean) {
 
 export function initAnimations() {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  setupReveal(reduced);
+  setupReveal();
   setupParallax(reduced);
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { CtaLink } from '@/components/ui/CTA';
 import { ProjectCard } from '@/components/cards/ProjectCard';
@@ -14,6 +14,17 @@ export function ProjectGrid() {
     () => (active === 'All work' ? PROJECTS : PROJECTS.filter((p) => p.category === active)),
     [active],
   );
+  const isFiltered = active !== 'All work';
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      document
+        .querySelectorAll<HTMLElement>('.projects__list .media-reveal')
+        .forEach((el) => el.classList.add('is-in'));
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [list]);
 
   return (
     <Section id="work">
@@ -46,7 +57,7 @@ export function ProjectGrid() {
 
         <div className="projects__list">
           {list.map((p) => (
-            <ProjectCard key={p.index} project={p} />
+            <ProjectCard key={p.index} project={p} compact={isFiltered} />
           ))}
           {list.length === 0 && (
             <div className="projects__empty">

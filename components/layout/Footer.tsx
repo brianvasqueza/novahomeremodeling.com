@@ -49,7 +49,12 @@ export function Footer() {
           </div>
         </div>
         <div className="footer__bot">
-          <div>© 2009 — 2026 {SITE.legalName} · {SITE.serviceAreaDisplay} · Bonded &amp; insured</div>
+          <div>
+            © 2009 — 2026 {SITE.legalName} · {SITE.serviceAreaDisplay} · Bonded &amp; insured · Website by{' '}
+            <a href="https://vasquezwebstudio.com" target="_blank" rel="noopener noreferrer">
+              Vasquez Web Studio
+            </a>
+          </div>
           <div className="social">
             <Link className="link" href="/services">Services</Link>
             <Link className="link" href="/cities">Areas</Link>

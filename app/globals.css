@@ -1869,6 +1869,11 @@ textarea:focus-visible {
   letter-spacing: 0.06em;
   flex-wrap: wrap; gap: 16px;
 }
+.footer__bot a {
+  color: inherit;
+  transition: color var(--dur-base) var(--ease-out);
+}
+.footer__bot a:hover { color: var(--paper); }
 .footer__bot .social { display: flex; gap: 24px; }
 .footer__big-wm {
   margin-top: clamp(40px, 5vw, 80px);

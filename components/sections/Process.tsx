@@ -1,27 +1,47 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { STEPS, PHASE_LABELS } from '@/data/content';
+import {
+  ScrollStepContent,
+  StickySection,
+  StickyVisualPanel,
+  type StickyStoryStep,
+} from '@/components/storytelling';
+
+const PROCESS_VISUALS = [
+  {
+    src: '/homepage/michael-brown-0xp3aw009eo-unsplash.jpg',
+    alt: 'Luxury remodeled living space used during the consultation and planning phase.',
+  },
+  {
+    src: '/kitchenremodeling/prydumano-design-KyWwFZkcaUU-unsplash.jpg',
+    alt: 'Detailed kitchen finishes and cabinetry that support drawings and material planning.',
+  },
+  {
+    src: '/kitchenremodeling/franco-debartolo-JxBwFjX-8hU-unsplash.jpg',
+    alt: 'Warm kitchen remodel showing cabinetry, stone counters, and finish work during construction.',
+  },
+  {
+    src: '/bathroom%20remodeling/patrick-bohn-PoXaUHUa-Tg-unsplash.jpg',
+    alt: 'Finished bathroom remodel with marble shower and brass fixtures ready for final walkthrough.',
+  },
+];
 
 export function Process() {
   const [active, setActive] = useState(0);
-  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            setActive(Number((e.target as HTMLElement).dataset.idx));
-          }
-        });
-      },
-      { threshold: 0.55 },
-    );
-    stepRefs.current.forEach((el) => el && io.observe(el));
-    return () => io.disconnect();
+  const storySteps = useMemo<StickyStoryStep[]>(() => {
+    return STEPS.map((step, index) => ({
+      id: step.n,
+      eyebrow: step.n,
+      title: step.title,
+      body: step.body,
+      meta: step.duration,
+      image: PROCESS_VISUALS[index] ?? PROCESS_VISUALS[0],
+    }));
   }, []);
+  const handleActive = useCallback((index: number) => setActive(index), []);
 
   return (
     <section className="section section--dark" id="process">
@@ -44,50 +64,26 @@ export function Process() {
           </div>
         </div>
 
-        <div className="process-sticky-wrap">
-          <div className="process-sticky-left">
-            <div className="process-sticky-card">
-              <div>
-                <div className="process-sticky-num" key={`num-${active}`}>
-                  Phase {String(active + 1).padStart(2, '0')} / 04
-                </div>
-                <div className="process-sticky-phase" key={`phase-${active}`}>
-                  {PHASE_LABELS[active]}
-                </div>
-              </div>
-              <div className="process-sticky-bar">
-                {STEPS.map((_, i) => (
-                  <div
-                    key={i}
-                    className={[
-                      'process-sticky-bar-seg',
-                      i === active && 'is-active',
-                      i < active && 'is-done',
-                    ]
-                      .filter(Boolean)
-                      .join(' ')}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-
+        <StickySection className="process-sticky-wrap">
+          <StickyVisualPanel
+            steps={storySteps.map((step, index) => ({
+              ...step,
+              title: PHASE_LABELS[index] ?? step.title,
+            }))}
+            activeIndex={active}
+          />
           <div className="process-steps-scroll">
-            {STEPS.map((s, i) => (
-              <div
-                key={s.n}
-                className="process-step-item reveal-blur"
-                ref={(el) => { stepRefs.current[i] = el; }}
-                data-idx={i}
-              >
-                <div className="step-item__num">{s.n}</div>
-                <h3 className="step-item__title">{s.title}</h3>
-                <p className="step-item__body">{s.body}</p>
-                <div className="step-item__duration">{s.duration}</div>
-              </div>
+            {storySteps.map((step, i) => (
+              <ScrollStepContent
+                key={step.id}
+                step={step}
+                index={i}
+                isActive={active === i}
+                onActive={handleActive}
+              />
             ))}
           </div>
-        </div>
+        </StickySection>
       </div>
     </section>
   );

@@ -27,8 +27,8 @@ export interface ServicePageData {
 }
 
 const IMG = {
-  kitchen:     'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
-  bath:        'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=2000&q=82&auto=format&fit=crop',
+  kitchen:     '/kitchenremodeling/ariel-domenden-k1fe40cx2EU-unsplash.jpg',
+  bath:        '/bathroom%20remodeling/patrick-bohn-PoXaUHUa-Tg-unsplash.jpg',
   paintInt:    'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=2000&q=82&auto=format&fit=crop',
   paintExt:    'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=2000&q=82&auto=format&fit=crop',
   drywall:     'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=2000&q=82&auto=format&fit=crop',

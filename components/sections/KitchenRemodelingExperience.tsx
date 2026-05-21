@@ -5,18 +5,18 @@ import { Eyebrow } from '@/components/ui/Eyebrow';
 import { CtaLink } from '@/components/ui/CTA';
 
 const KITCHEN_IMAGES = {
-  problem: 'https://images.pexels.com/photos/17158648/pexels-photo-17158648.jpeg?auto=compress&cs=tinysrgb&w=1800&h=1200&fit=crop',
-  explanation: 'https://images.pexels.com/photos/8082222/pexels-photo-8082222.jpeg?auto=compress&cs=tinysrgb&w=1800&h=1200&fit=crop',
-  layoutWork: 'https://images.pexels.com/photos/30924413/pexels-photo-30924413.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
-  renovationWork: 'https://images.pexels.com/photos/15124970/pexels-photo-15124970.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
-  counterInstall: 'https://images.pexels.com/photos/36511373/pexels-photo-36511373.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
-  counterDetail: 'https://images.pexels.com/photos/15409430/pexels-photo-15409430.jpeg?auto=compress&cs=tinysrgb&w=900&h=1100&fit=crop',
-  hardware: 'https://images.pexels.com/photos/8356432/pexels-photo-8356432.jpeg?auto=compress&cs=tinysrgb&w=900&h=1100&fit=crop',
-  galleryOne: 'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
-  galleryTwo: 'https://images.pexels.com/photos/100575/pexels-photo-100575.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
-  galleryThree: 'https://images.pexels.com/photos/7027760/pexels-photo-7027760.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
-  galleryFour: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
-  galleryFive: 'https://images.pexels.com/photos/6315799/pexels-photo-6315799.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop',
+  problem: '/kitchenremodeling/ariel-domenden-k1fe40cx2EU-unsplash.jpg',
+  explanation: '/kitchenremodeling/lotus-design-n-print--Vfa35ueUCo-unsplash.jpg',
+  layoutWork: '/kitchenremodeling/prydumano-design-KyWwFZkcaUU-unsplash.jpg',
+  renovationWork: '/kitchenremodeling/franco-debartolo-JxBwFjX-8hU-unsplash.jpg',
+  counterInstall: '/kitchenremodeling/lotus-design-n-print-RwXneIyqxAw-unsplash.jpg',
+  counterDetail: '/kitchenremodeling/lisa-anna-cnU1eDXGKL4-unsplash.jpg',
+  hardware: '/kitchenremodeling/prydumano-design-KyWwFZkcaUU-unsplash.jpg',
+  galleryOne: '/kitchenremodeling/ariel-domenden-k1fe40cx2EU-unsplash.jpg',
+  galleryTwo: '/kitchenremodeling/blake-wisz-2ocL2PmZ-vA-unsplash.jpg',
+  galleryThree: '/kitchenremodeling/lotus-design-n-print-RwXneIyqxAw-unsplash.jpg',
+  galleryFour: '/kitchenremodeling/franco-debartolo-JxBwFjX-8hU-unsplash.jpg',
+  galleryFive: '/kitchenremodeling/lisa-anna-cnU1eDXGKL4-unsplash.jpg',
 };
 
 function Visual({

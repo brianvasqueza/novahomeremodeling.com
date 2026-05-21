@@ -26,8 +26,8 @@ export const PROJECTS: Project[] = [
     year: 2024,
     sqft: '3,400',
     span: 'lg',
-    img: 'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1200&fit=crop',
-    imageAlt: 'Warm open kitchen and living remodel with natural light and refined finishes.',
+    img: '/homepage/michael-brown-0xp3aw009eo-unsplash.jpg',
+    imageAlt: 'Luxury open living remodel with fireplace, piano, glass rail, and custom built-ins.',
   },
   {
     index: '078',
@@ -39,8 +39,8 @@ export const PROJECTS: Project[] = [
     sqft: '1,200',
     span: 'sm',
     offset: true,
-    img: 'https://images.pexels.com/photos/31238728/pexels-photo-31238728.jpeg?auto=compress&cs=tinysrgb&w=1400&h=1100&fit=crop',
-    imageAlt: 'Modern bathroom remodel with walk-in shower, wood vanity, and warm neutral tile.',
+    img: '/bathroom%20remodeling/patrick-bohn-ZZT1NLPKjZE-unsplash.jpg',
+    imageAlt: 'Luxury bathroom remodel with green vanity, marble shower, brass fixtures, and twin mirrors.',
   },
   {
     index: '074',
@@ -51,8 +51,8 @@ export const PROJECTS: Project[] = [
     year: 2023,
     sqft: '240',
     span: 'sm',
-    img: 'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=1400&h=1100&fit=crop',
-    imageAlt: 'Kitchen remodel with wood cabinetry, large island, pendant lights, and stone countertops.',
+    img: '/kitchenremodeling/ariel-domenden-k1fe40cx2EU-unsplash.jpg',
+    imageAlt: 'Luxury kitchen and dining remodel with coffered ceiling, large island, and tall glass doors.',
   },
   {
     index: '071',
@@ -64,8 +64,8 @@ export const PROJECTS: Project[] = [
     sqft: '2,900',
     span: 'full',
     landscape: true,
-    img: 'https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1400&fit=crop',
-    imageAlt: 'Open-plan remodeled kitchen and living area with warm lighting and natural finishes.',
+    img: '/homepage/michael-brown-bZZ-YKRvRF0-unsplash.jpg',
+    imageAlt: 'Open-plan remodeled living room with pale wood flooring, custom media wall, and adjacent kitchen.',
   },
   {
     index: '069',
@@ -77,8 +77,8 @@ export const PROJECTS: Project[] = [
     sqft: '4,800',
     span: 'lg',
     offset: true,
-    img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=82&auto=format&fit=crop',
-    imageAlt: 'Houston-style home exterior with outdoor living space after a residential remodel.',
+    img: '/homepage/herobackground.jpg',
+    imageAlt: 'Luxury modern home exterior with glass, stone, wood cladding, pool, and outdoor living terrace.',
   },
   {
     index: '066',
@@ -89,8 +89,8 @@ export const PROJECTS: Project[] = [
     year: 2022,
     sqft: '380',
     span: 'sm',
-    img: 'https://images.pexels.com/photos/36511373/pexels-photo-36511373.jpeg?auto=compress&cs=tinysrgb&w=1400&h=1100&fit=crop',
-    imageAlt: 'Finished kitchen remodel detail with stone countertop, sink, faucet, and wood cabinetry.',
+    img: '/kitchenremodeling/franco-debartolo-JxBwFjX-8hU-unsplash.jpg',
+    imageAlt: 'Warm wood kitchen remodel with marble counters, professional range, and stone tile floor.',
   },
   {
     index: '061',
@@ -102,8 +102,8 @@ export const PROJECTS: Project[] = [
     sqft: '2,800',
     span: 'full',
     landscape: true,
-    img: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1200&fit=crop',
-    imageAlt: 'Believable suburban home exterior with mature landscaping after a heritage remodel.',
+    img: '/homepage/zac-gudakov-IOWG5lg7BWc-unsplash.jpg',
+    imageAlt: 'Bright living room remodel with pale wood flooring, fireplace wall, and refined neutral finishes.',
   },
   {
     index: '058',
@@ -114,8 +114,8 @@ export const PROJECTS: Project[] = [
     year: 2021,
     sqft: '640',
     span: 'sm',
-    img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400&q=82&auto=format&fit=crop',
-    imageAlt: 'Covered patio and backyard outdoor living area for a Houston-area home.',
+    img: '/homepage/point3d-commercial-imaging-ltd-WIPVrs5meCA-unsplash.jpg',
+    imageAlt: 'Bright remodeled living area with large windows, custom media wall, and kitchen view.',
   },
   {
     index: '053',
@@ -127,8 +127,8 @@ export const PROJECTS: Project[] = [
     sqft: '320',
     span: 'lg',
     offset: true,
-    img: 'https://images.pexels.com/photos/19227244/pexels-photo-19227244.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1200&fit=crop',
-    imageAlt: 'Primary bathroom remodel with elegant vanity, glass shower, and warm lighting.',
+    img: '/bathroom%20remodeling/patrick-bohn-D8ghwGaYQpw-unsplash.jpg',
+    imageAlt: 'Primary bathroom remodel with freestanding tub, black marble accent wall, and brass fixtures.',
   },
 ];
 

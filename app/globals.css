@@ -1956,7 +1956,7 @@ body.no-italic-accents em {
 .parallax-bg {
   position: absolute; inset: -25% 0;
   background-size: cover; background-position: center;
-  background-image: url('https://images.pexels.com/photos/10827358/pexels-photo-10827358.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1600&fit=crop');
+  background-image: url('/homepage/michael-brown-0xp3aw009eo-unsplash.jpg');
   will-change: transform; z-index: 0;
 }
 .parallax-overlay {

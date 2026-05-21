@@ -23,7 +23,7 @@ import { createMetadata } from '@/lib/seo/metadata';
 import { absoluteUrl } from '@/lib/seo/urls';
 
 const HOME_IMAGE =
-  'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop';
+  '/homepage/herobackground.jpg';
 
 export const metadata: Metadata = createMetadata({
   title: 'Houston Home Remodeling Company',
@@ -31,7 +31,7 @@ export const metadata: Metadata = createMetadata({
     'Houston home remodeling for kitchens, bathrooms, painting, drywall repair, flooring, and whole-home renovations by Nova Home Remodeling & Design.',
   path: '/',
   image: HOME_IMAGE,
-  imageAlt: 'Houston kitchen remodel with wood cabinetry, large island, pendant lighting, and stone countertops.',
+  imageAlt: 'Luxury modern Houston home exterior with stone, glass, wood cladding, and pool terrace.',
 });
 
 const homePageJsonLd = {
@@ -47,8 +47,8 @@ const homePageJsonLd = {
   about: { '@id': absoluteUrl('/#business') },
   primaryImageOfPage: {
     '@type': 'ImageObject',
-    url: HOME_IMAGE,
-    caption: 'Houston kitchen remodel with wood cabinetry, large island, and stone countertops.',
+    url: absoluteUrl(HOME_IMAGE),
+    caption: 'Luxury modern Houston home exterior with stone, glass, wood cladding, and pool terrace.',
   },
   mainEntity: {
     '@type': 'ItemList',

@@ -8,53 +8,53 @@ interface StripImage {
 
 const STRIP_IMAGES: StripImage[] = [
   {
-    src: 'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop',
-    alt: 'Warm kitchen remodel with wood cabinets, pendant lighting, and a large island.',
+    src: '/kitchenremodeling/ariel-domenden-k1fe40cx2EU-unsplash.jpg',
+    alt: 'Luxury kitchen and dining remodel with coffered ceiling, large island, and tall glass doors.',
     aspect: 'wide',
   },
   {
-    src: 'https://images.pexels.com/photos/31238728/pexels-photo-31238728.jpeg?auto=compress&cs=tinysrgb&w=420&h=560&fit=crop',
-    alt: 'Modern bathroom remodel with walk-in shower, wood vanity, and warm neutral tile.',
+    src: '/bathroom%20remodeling/bailey-alexander-antlPQPVcjo-unsplash.jpg',
+    alt: 'Luxury bathroom with freestanding tub, marble-look floor, crystal chandelier, and soft drapery.',
     aspect: 'portrait',
   },
   {
-    src: 'https://images.pexels.com/photos/8356432/pexels-photo-8356432.jpeg?auto=compress&cs=tinysrgb&w=560&h=560&fit=crop',
-    alt: 'Close-up of cabinet hardware on white kitchen cabinetry.',
+    src: '/kitchenremodeling/lisa-anna-cnU1eDXGKL4-unsplash.jpg',
+    alt: 'White kitchen cabinetry with brass pulls, tile backsplash, and styled counter detail.',
     aspect: 'square',
   },
   {
-    src: 'https://images.pexels.com/photos/19227244/pexels-photo-19227244.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop',
-    alt: 'Elegant primary bathroom remodel with vanity, glass shower, and warm lighting.',
+    src: '/bathroom%20remodeling/patrick-bohn-PoXaUHUa-Tg-unsplash.jpg',
+    alt: 'Luxury primary bathroom with marble-look tile, brass fixtures, glass shower, and freestanding tub.',
     aspect: 'wide',
   },
   {
-    src: 'https://images.pexels.com/photos/15124970/pexels-photo-15124970.jpeg?auto=compress&cs=tinysrgb&w=420&h=560&fit=crop',
-    alt: 'Cabinet installation in progress during a kitchen remodeling project.',
+    src: '/kitchenremodeling/franco-debartolo-JxBwFjX-8hU-unsplash.jpg',
+    alt: 'Warm wood kitchen cabinetry with marble counters and professional appliances.',
     aspect: 'portrait',
   },
   {
-    src: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800&h=560&fit=crop',
-    alt: 'Believable Houston-area home exterior after outdoor remodeling and curb appeal updates.',
+    src: '/homepage/herobackground.jpg',
+    alt: 'Luxury modern home exterior with pool terrace, stone, glass, and wood cladding.',
     aspect: 'wide',
   },
   {
-    src: 'https://images.pexels.com/photos/36511373/pexels-photo-36511373.jpeg?auto=compress&cs=tinysrgb&w=560&h=560&fit=crop',
-    alt: 'Finished kitchen remodel detail with stone countertop, sink, and wood cabinetry.',
+    src: '/bathroom%20remodeling/patrick-bohn-ZZT1NLPKjZE-unsplash.jpg',
+    alt: 'Green vanity, brass hardware, and marble shower detail in a luxury bathroom remodel.',
     aspect: 'square',
   },
   {
-    src: 'https://images.pexels.com/photos/30924413/pexels-photo-30924413.jpeg?auto=compress&cs=tinysrgb&w=420&h=560&fit=crop',
-    alt: 'Kitchen remodeling planning and layout work before finish installation.',
+    src: '/kitchenremodeling/prydumano-design-KyWwFZkcaUU-unsplash.jpg',
+    alt: 'Soft neutral kitchen cabinetry and countertop detail with under-cabinet lighting.',
     aspect: 'portrait',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=560&q=82&auto=format&fit=crop',
-    alt: 'Exterior view of Craftsman home after heritage restoration in Houston.',
+    src: '/homepage/michael-brown-0xp3aw009eo-unsplash.jpg',
+    alt: 'Luxury open living room with fireplace, piano, built-in shelving, and glass rail.',
     aspect: 'wide',
   },
   {
-    src: 'https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&w=420&h=560&fit=crop',
-    alt: 'Finished bathroom remodel with clean tile, modern fixtures, and warm natural light.',
+    src: '/bathroom%20remodeling/franco-debartolo-Ns3T2jCfQFk-unsplash.jpg',
+    alt: 'Freestanding tub with polished marble floor, chandelier, and soft drapery.',
     aspect: 'portrait',
   },
 ];

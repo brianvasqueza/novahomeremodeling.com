@@ -1,8 +1,8 @@
 # Google Indexing Checklist — Nova Home Remodeling & Design
 
-**Date:** May 20, 2026  
+**Date:** May 20, 2026 (updated with blog content)  
 **Domain:** https://novahomeremodeling.com  
-**Build status:** ✅ Clean — 47 routes generated, 0 TypeScript errors, 0 lint errors
+**Build status:** ✅ Clean — 49 routes generated, 0 TypeScript errors, 0 lint errors
 
 ---
 
@@ -12,10 +12,10 @@
 |------|-------|
 | Sitemap URL | https://novahomeremodeling.com/sitemap.xml |
 | Robots.txt URL | https://novahomeremodeling.com/robots.txt |
-| Total sitemap entries | 42 |
-| Total generated pages | 43 (42 + 404) |
-| JSON-LD scripts | 219 across all pages |
-| Images checked | 329 |
+| Total sitemap entries | 44 |
+| Total generated pages | 45 (44 + 404) |
+| JSON-LD scripts | 219+ across all pages |
+| Images checked | 329+ |
 
 ---
 
@@ -33,11 +33,16 @@
 | https://novahomeremodeling.com/services/flooring | Flooring Installation in Houston, TX | ✅ Ready |
 | https://novahomeremodeling.com/services/drywall-repair | Drywall Repair in Houston, TX | ✅ Ready |
 | https://novahomeremodeling.com/cities/houston | Home Remodeling in Houston, TX | ✅ Ready |
+| https://novahomeremodeling.com/blog/kitchen-remodel-cost-houston | How Much Does a Kitchen Remodel Cost in Houston? | ✅ Ready |
+| https://novahomeremodeling.com/blog/how-long-does-bathroom-remodel-take | How Long Does a Bathroom Remodel Take? | ✅ Ready |
 
 ### Priority 2 — Submit with sitemap (strong local pages)
 
 | URL | Status |
 |-----|--------|
+| https://novahomeremodeling.com/blog/best-flooring-options-texas-homes | Best Flooring Options for Texas Homes | ✅ Ready |
+| https://novahomeremodeling.com/blog/open-concept-remodeling-ideas | Open Concept Remodeling Ideas for Houston Homes | ✅ Ready |
+| https://novahomeremodeling.com/blog | Remodeling Guides for Houston Homeowners | ✅ Ready |
 | https://novahomeremodeling.com/services | ✅ Ready |
 | https://novahomeremodeling.com/cities | ✅ Ready |
 | https://novahomeremodeling.com/services/home-renovations | ✅ Ready |
@@ -56,15 +61,6 @@
 
 All remaining `/services/[slug]` and `/cities/[slug]` pages are technically ready and included in the sitemap. Let Google discover them via sitemap rather than manual submission.
 
-### ⚠️ Hold — Do not prioritize yet
-
-| URL | Issue |
-|-----|-------|
-| https://novahomeremodeling.com/blog/how-we-plan-a-fixed-fee-feasibility-study | Placeholder body content |
-| https://novahomeremodeling.com/blog/materials-that-age-well-in-houston-homes | Placeholder body content |
-
-The blog post detail pages are indexable and in the sitemap, but contain the placeholder text: *"This journal entry is intentionally data-backed and ready for CMS content."* Google will index thin content and it can harm topical authority. Either replace with real article bodies or add `noindex` until content is ready.
-
 ---
 
 ## 2. Sitemap URL
@@ -80,8 +76,8 @@ https://novahomeremodeling.com/sitemap.xml
 | Static pages (`/`, `/services`, `/cities`, `/blog`) | 4 |
 | Service pages | 26 |
 | City pages | 10 |
-| Blog posts | 2 |
-| **Total** | **42** |
+| Blog posts | 4 |
+| **Total** | **44** |
 
 ### All service slugs in sitemap
 
@@ -180,7 +176,7 @@ All public pages are crawlable. Only `/api/` routes are blocked. No important pa
 
 | Issue | Detail |
 |-------|--------|
-| Blog post body content | 2 blog posts have placeholder body copy — thin content risk if indexed |
+| Blog post body content | 4 real articles — full content, callouts, images, FAQs, and structured data. Ready to index. |
 | 6 service title tags 71–72 chars | 1–2 chars over 70-char guideline. Google will usually display without truncation. Not a blocker. Slugs: `cabinet-installation`, `commercial-remodeling`, `flooring`, `home-renovations`, `lighting-installation`, `pergolas` |
 | 6 service descriptions 166–170 chars | 1–5 chars over 165-char guideline. Minor truncation risk. Slugs: `closet-systems`, `commercial-remodeling`, `fence-installation`, `garage-remodeling`, `pergolas`, `trim-finish-carpentry` |
 | No `sameAs` in schema | No social profile or Google Business Profile URLs added. Add when real profiles exist. |
@@ -195,7 +191,7 @@ Complete these before or immediately after deploying to production:
 
 ### Before going live
 
-- [ ] **Replace blog post body content.** The 2 blog posts have placeholder body text. Either write real articles (recommended) or add `noindex` to blog detail pages temporarily. File: `app/blog/[slug]/page.tsx`, content source: `data/blog.ts`.
+- [x] **Blog post body content complete.** All 4 blog posts have full article content — cost guides, timelines, FAQs, callouts, in-content images, and structured data. Ready to index.
 - [ ] **Verify domain DNS is pointed to hosting.** The domain `novahomeremodeling.com` must resolve for Google to crawl it.
 - [ ] **Confirm SSL/HTTPS is active.** All canonical URLs use `https://`. Google will not index an HTTP-only site cleanly.
 - [ ] **Check that `/sitemap.xml` loads in browser.** Navigate to `https://novahomeremodeling.com/sitemap.xml` and confirm it returns valid XML with all 42 URLs.
@@ -205,7 +201,7 @@ Complete these before or immediately after deploying to production:
 
 - [ ] **Set up Google Search Console** (steps below).
 - [ ] **Submit sitemap** in Search Console.
-- [ ] **Request manual indexing** for the 8 Priority 1 pages.
+- [ ] **Request manual indexing** for the 10 Priority 1 pages (includes 2 blog posts).
 - [ ] **Add Google Business Profile** (if not already done). A verified GBP strongly supports local SEO for Houston searches.
 - [ ] **Add `sameAs` to schema** once any social profiles (Instagram, Facebook, Houzz) or directory listings are created.
 - [ ] **Add `hasMap`** once a Google Maps listing is public.
@@ -214,7 +210,7 @@ Complete these before or immediately after deploying to production:
 
 - [ ] Replace `mailto:` form with a real server-side form endpoint for lead capture reliability and conversion tracking.
 - [ ] Add conversion tracking (GA4 event or form submission pixel) once consent/privacy requirements are understood.
-- [ ] Consider `noindex` on blog detail pages until real article content replaces placeholders.
+- [ ] Monitor blog posts in Search Console after indexing — watch for impressions on target keywords (e.g. "kitchen remodel cost Houston", "bathroom remodel timeline").
 
 ---
 
@@ -277,6 +273,16 @@ https://novahomeremodeling.com/services/flooring
 https://novahomeremodeling.com/services/drywall-repair
 https://novahomeremodeling.com/cities/houston
 https://novahomeremodeling.com/services
+https://novahomeremodeling.com/blog/kitchen-remodel-cost-houston
+https://novahomeremodeling.com/blog/how-long-does-bathroom-remodel-take
+```
+
+Submit these next (Priority 2 — blog content):
+
+```
+https://novahomeremodeling.com/blog/best-flooring-options-texas-homes
+https://novahomeremodeling.com/blog/open-concept-remodeling-ideas
+https://novahomeremodeling.com/blog
 ```
 
 ### Step 5 — Monitor after submission
@@ -286,7 +292,7 @@ Check these Search Console reports after 1–2 weeks:
 | Report | What to look for |
 |--------|-----------------|
 | **Coverage** | Pages should move from "Discovered" to "Indexed". Watch for "Excluded" or "Error" entries. |
-| **Sitemaps** | Confirm Google processed all 42 URLs without errors. |
+| **Sitemaps** | Confirm Google processed all 44 URLs without errors. |
 | **URL Inspection** | For any page showing "URL is not on Google" after 2 weeks, reinspect and re-request indexing. |
 | **Core Web Vitals** | Check after first 28 days of data. |
 | **Search results** | After ~2–4 weeks, search `site:novahomeremodeling.com` in Google to see indexed pages. |
@@ -308,4 +314,4 @@ npm run lint
 
 ---
 
-*Last verified: May 20, 2026 — Build clean, 42 sitemap URLs, 0 broken links, 0 missing alt text, 0 JSON-LD errors, 0 duplicate metadata.*
+*Last updated: May 20, 2026 — 4 real blog articles added (kitchen costs, bathroom timeline, flooring, open concept). Sitemap now 44 URLs. All blog posts ready to index.*

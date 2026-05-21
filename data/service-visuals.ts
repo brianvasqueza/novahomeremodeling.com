@@ -57,16 +57,23 @@ export interface ServiceVisualStory {
 const u = (id: string, w = 1800, h = 1200) =>
   `https://images.unsplash.com/${id}?w=${w}&h=${h}&q=82&auto=format&fit=crop`;
 
+const local = (path: string) => path;
+
 const IMG = {
-  kitchenWarm: u('photo-1600566753190-17f0baa2a6c3', 1800, 1200),
-  kitchenLargeIsland: 'https://images.pexels.com/photos/17158648/pexels-photo-17158648.jpeg?auto=compress&cs=tinysrgb&w=1800&h=1200&fit=crop',
-  kitchenIsland: u('photo-1556909114-f6e7ad7d3136', 1800, 1200),
-  kitchenDetail: u('photo-1584622650111-993a426fbf0a', 1400, 1400),
-  bathShower: u('photo-1552321554-5fefe8c9ef14', 1800, 1200),
-  bathVanity: u('photo-1620626011761-996317b8d101', 1800, 1200),
-  bathOverview: 'https://images.pexels.com/photos/1910472/pexels-photo-1910472.jpeg?auto=compress&cs=tinysrgb&w=1800&h=1200&fit=crop',
-  bathTileWork: 'https://images.pexels.com/photos/3935348/pexels-photo-3935348.jpeg?auto=compress&cs=tinysrgb&w=1800&h=1200&fit=crop',
-  bathModern: 'https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&w=1800&h=1200&fit=crop',
+  kitchenWarm: local('/kitchenremodeling/ariel-domenden-k1fe40cx2EU-unsplash.jpg'),
+  kitchenLargeIsland: local('/kitchenremodeling/ariel-domenden-k1fe40cx2EU-unsplash.jpg'),
+  kitchenIsland: local('/kitchenremodeling/lotus-design-n-print--Vfa35ueUCo-unsplash.jpg'),
+  kitchenDetail: local('/kitchenremodeling/lisa-anna-cnU1eDXGKL4-unsplash.jpg'),
+  kitchenWood: local('/kitchenremodeling/franco-debartolo-JxBwFjX-8hU-unsplash.jpg'),
+  kitchenModern: local('/kitchenremodeling/lotus-design-n-print-RwXneIyqxAw-unsplash.jpg'),
+  kitchenSoft: local('/kitchenremodeling/prydumano-design-KyWwFZkcaUU-unsplash.jpg'),
+  bathShower: local('/bathroom%20remodeling/patrick-bohn-PoXaUHUa-Tg-unsplash.jpg'),
+  bathVanity: local('/bathroom%20remodeling/patrick-bohn-ZZT1NLPKjZE-unsplash.jpg'),
+  bathOverview: local('/bathroom%20remodeling/patrick-bohn-ZZT1NLPKjZE-unsplash.jpg'),
+  bathTileWork: local('/bathroom%20remodeling/pexels-curtis-adams-1694007-10827408.jpg'),
+  bathModern: local('/bathroom%20remodeling/patrick-bohn-D8ghwGaYQpw-unsplash.jpg'),
+  bathTub: local('/bathroom%20remodeling/bailey-alexander-antlPQPVcjo-unsplash.jpg'),
+  bathGreen: local('/bathroom%20remodeling/zac-gudakov-FiKcg6EMneY-unsplash.jpg'),
   tileDetail: u('photo-1690603935238-b60582bcb273', 1400, 1400),
   paintPrep: u('photo-1589939705384-5185137a7f0f', 1800, 1200),
   paintExterior: u('photo-1562259949-e8e7689d7828', 1800, 1200),
@@ -121,8 +128,8 @@ type Profile = {
 };
 
 const profiles: Profile[] = [
-  { slug: 'kitchen-remodeling', label: 'Kitchen remodeling', scene: IMG.kitchenLargeIsland, before: IMG.drywallWork, after: IMG.kitchenIsland, process: [IMG.framing, IMG.cabinet, IMG.stone], materials: [IMG.kitchenDetail, IMG.hardware, IMG.woodFloor], gallery: [IMG.kitchenWarm, IMG.kitchenIsland, IMG.cabinet, IMG.lighting], breakImage: IMG.kitchenWarm },
-  { slug: 'bathroom-remodeling', label: 'Bathroom remodeling', scene: IMG.bathOverview, before: IMG.drywallWork, after: IMG.bathVanity, process: [IMG.framing, IMG.tileDetail, IMG.bathTileWork], materials: [IMG.tileDetail, IMG.stone, IMG.hardware], gallery: [IMG.bathModern, IMG.bathShower, IMG.tileDetail, IMG.bathVanity], breakImage: IMG.bathVanity },
+  { slug: 'kitchen-remodeling', label: 'Kitchen remodeling', scene: IMG.kitchenLargeIsland, before: IMG.drywallWork, after: IMG.kitchenIsland, process: [IMG.kitchenSoft, IMG.kitchenWood, IMG.kitchenModern], materials: [IMG.kitchenDetail, IMG.kitchenWood, IMG.kitchenSoft], gallery: [IMG.kitchenWarm, IMG.kitchenIsland, IMG.kitchenWood, IMG.kitchenModern], breakImage: IMG.kitchenWarm },
+  { slug: 'bathroom-remodeling', label: 'Bathroom remodeling', scene: IMG.bathOverview, before: IMG.drywallWork, after: IMG.bathVanity, process: [IMG.bathTileWork, IMG.bathShower, IMG.bathModern], materials: [IMG.bathVanity, IMG.bathTub, IMG.bathGreen], gallery: [IMG.bathModern, IMG.bathShower, IMG.bathGreen, IMG.bathVanity], breakImage: IMG.bathVanity },
   { slug: 'interior-painting', label: 'Interior painting', scene: IMG.paintRoom1, before: IMG.drywallWork, after: IMG.paintRoom2, process: [IMG.drywallWork, IMG.paintWork, IMG.trim], materials: [IMG.accent, IMG.trim, IMG.paintWork], gallery: [IMG.paintRoom3, IMG.paintRoom2, IMG.trim, IMG.renovation], breakImage: IMG.accent },
   { slug: 'exterior-painting', label: 'Exterior painting', scene: IMG.extHome1, before: IMG.siding, after: IMG.extHome2, process: [IMG.siding, IMG.extPaintWork, IMG.extSurface], materials: [IMG.siding, IMG.extSurface, IMG.doors], gallery: [IMG.extHome3, IMG.extHome2, IMG.extPaintWork, IMG.outdoor], breakImage: IMG.outdoor },
   { slug: 'drywall-repair', label: 'Drywall repair', scene: IMG.wallClean, before: IMG.drywallWork, after: IMG.paintRoom1, process: [IMG.framing, IMG.drywallPatch, IMG.drywallFinish], materials: [IMG.drywallWork, IMG.drywallFinish, IMG.wallClean], gallery: [IMG.paintRoom2, IMG.drywallPatch, IMG.wallClean, IMG.renovation], breakImage: IMG.paintRoom1 },

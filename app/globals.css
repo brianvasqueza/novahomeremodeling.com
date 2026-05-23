@@ -287,6 +287,7 @@ textarea:focus-visible {
   align-items: center;
   gap: 24px;
   justify-content: flex-end;
+  grid-column: 3;
 }
 .nav__wm {
   font-family: var(--font-sans);

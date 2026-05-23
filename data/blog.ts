@@ -713,7 +713,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Planning',
     readTime: '11 min read',
     author: AUTHOR,
-    image: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=2000&q=82&auto=format&fit=crop',
+    image: '/kitchenremodeling/ariel-domenden-k1fe40cx2EU-unsplash.jpg',
     imageAlt: 'Modern open-concept kitchen in a Houston home with quartz island, custom cabinetry, and warm pendant lighting.',
     topics: ['kitchen layout', 'kitchen remodeling', 'open concept', 'kitchen island'],
     intro: [
@@ -774,7 +774,7 @@ export const BLOG_POSTS: BlogPost[] = [
           text: 'The most common mistake in open-concept kitchen remodels is underestimating the range hood. When cooking smells can travel to your living room, a 200 CFM hood is not going to cut it. We always spec 400 to 600 CFM for true open layouts.',
         },
         image: {
-          src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=82&auto=format&fit=crop',
+          src: '/homepage/point3d-commercial-imaging-ltd-WIPVrs5meCA-unsplash.jpg',
           alt: 'Open-concept kitchen flowing into the living and dining area in a modern Houston home — continuous flooring, large island, and connected sightlines.',
         },
       },
@@ -791,7 +791,7 @@ export const BLOG_POSTS: BlogPost[] = [
           'Deep drawer stacks in the base instead of traditional lower-cabinet doors',
         ],
         image: {
-          src: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1600&q=82&auto=format&fit=crop',
+          src: '/kitchenremodeling/lotus-design-n-print--Vfa35ueUCo-unsplash.jpg',
           alt: 'L-shaped kitchen in a contemporary Houston home with two-tone cabinetry, marble countertops, and hardwood floors.',
         },
       },
@@ -880,7 +880,7 @@ export const BLOG_POSTS: BlogPost[] = [
           'Two-tone cabinetry — lighter uppers paired with a darker or wood-toned lower or island — adds depth and warmth without committing the whole kitchen to one color. Integrated appliances let the kitchen read as clean cabinetry rather than a wall of stainless steel, which matters most in open-concept layouts where the kitchen is always visible from the living space.',
         ],
         image: {
-          src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=82&auto=format&fit=crop',
+          src: '/kitchenremodeling/lotus-design-n-print-RwXneIyqxAw-unsplash.jpg',
           alt: 'Modern Houston kitchen featuring two-tone cabinetry, brass hardware, waterfall quartzite island, and warm natural materials.',
         },
       },
@@ -909,7 +909,7 @@ export const BLOG_POSTS: BlogPost[] = [
           'Toe-kick drawers in the recessed base space — flat items like baking sheets, cutting boards, and pizza stones that otherwise waste a full shelf.',
         ],
         image: {
-          src: 'https://images.unsplash.com/photo-1556909190-affcb1b7e76c?w=1600&q=82&auto=format&fit=crop',
+          src: '/kitchenremodeling/lisa-anna-cnU1eDXGKL4-unsplash.jpg',
           alt: 'Custom kitchen cabinetry with integrated pull-out drawers, pantry organization, and soft-close hardware in a Houston remodel.',
         },
       },

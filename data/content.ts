@@ -1,34 +1,42 @@
-/* Testimonials, process steps, craft materials, service areas, before/after data */
+/* Principles, process steps, craft materials, service areas, before/after data */
 
-export interface Testimonial {
+export interface Principle {
+  label: string;
+  title: string;
+  category: string;
   quote: string;
-  name: string;
-  role: string;
-  img: string;
-  imgAlt: string;
 }
 
-export const TESTIMONIALS: Testimonial[] = [
+export const PRINCIPLES: Principle[] = [
   {
-    quote: 'The kitchen came in on schedule and on budget. One crew from start to finish, and one number to call when we had questions. Two years later, <em>everything still looks right.</em>',
-    name: 'Eleanor & James Whitfield',
-    role: 'Project No. 074 — River Oaks · 2023',
-    img: '/kitchenremodeling/ariel-domenden-k1fe40cx2EU-unsplash.jpg',
-    imgAlt: 'Luxury kitchen and dining remodel with coffered ceiling, large island, and tall glass doors.',
+    label: 'I',
+    title: 'Planning before work.',
+    category: 'How every Nova project begins',
+    quote: 'Every project starts with a conversation in your home. We walk the space, understand how you live in it, and ask more questions than we answer. <em>The plan comes after we understand the home.</em>',
   },
   {
-    quote: 'Sixteen months, no surprises, no change orders past month four. We have never written that sentence about a builder before.',
-    name: 'M. & R. Asato',
-    role: 'Project No. 081 — The Woodlands · 2024',
-    img: '/homepage/michael-brown-0xp3aw009eo-unsplash.jpg',
-    imgAlt: 'Luxury open living remodel with fireplace, piano, glass rail, and custom built-ins.',
+    label: 'II',
+    title: 'Clear communication.',
+    category: 'How we keep you informed',
+    quote: 'You should always know what is happening on your job site. We communicate before work starts, during every phase, and at every decision point — <em>not just when there is a problem.</em>',
   },
   {
-    quote: 'The drawer they signed is in the pantry. We open it more than we should, just to look. <em>It is a small joy.</em>',
-    name: 'Catherine Pemberton',
-    role: 'Project No. 069 — Sugar Land · 2022',
-    img: '/kitchenremodeling/lisa-anna-cnU1eDXGKL4-unsplash.jpg',
-    imgAlt: 'White kitchen cabinetry with brass pulls, white tile backsplash, and styled countertop detail.',
+    label: 'III',
+    title: 'One crew, start to finish.',
+    category: 'How we maintain quality',
+    quote: 'The same people who frame your kitchen are the ones who set tile, install cabinetry, and do the finish work. No handoffs, no unfamiliar faces mid-project. <em>One team that knows your home from day one.</em>',
+  },
+  {
+    label: 'IV',
+    title: 'Materials built to last.',
+    category: 'How we choose what goes in your home',
+    quote: 'Every material is selected for how it performs in Houston\'s climate — not just how it photographs. Durable finishes, proper waterproofing, and transitions <em>built to hold up for years.</em>',
+  },
+  {
+    label: 'V',
+    title: 'Owner involvement.',
+    category: 'How we stay accountable',
+    quote: 'The owner stays involved from the first walkthrough to the final punch list. This is not a company where you meet the principal once. <em>We are here through all of it.</em>',
   },
 ];
 
@@ -48,8 +56,8 @@ export const STEPS: ProcessStep[] = [
   },
   {
     n: '02',
-    title: 'Drawings',
-    body: 'Full plan sets and shop drawings — every cabinet measured on site, every joint specified on paper. Nothing goes to production without a drawing.',
+    title: 'Planning',
+    body: 'Every cabinet measured on site before anything is ordered. Materials confirmed, scope locked, sequence mapped. Nothing moves to production until the plan is solid.',
     duration: 'Weeks 2–6',
   },
   {
@@ -66,7 +74,7 @@ export const STEPS: ProcessStep[] = [
   },
 ];
 
-export const PHASE_LABELS = ['Brief', 'Drawings', 'Build', 'Sign'];
+export const PHASE_LABELS = ['Brief', 'Planning', 'Build', 'Sign'];
 
 export interface CraftItem {
   n: string;
@@ -162,7 +170,7 @@ export const BA_DATA: BeforeAfterItem[] = [
     duration: '8 months on site',
     year: '2023',
     location: 'River Oaks · Houston, TX',
-    body: 'A 1947 cottage kitchen taken back to the studs. White oak cabinetry, honed limestone counters, unlacquered brass. Every cabinet shop-drawn and dry-fit before installation.',
+    body: 'A 1947 cottage kitchen taken back to the studs. White oak cabinetry, honed limestone counters, unlacquered brass. Every cabinet measured on site and dry-fit before installation.',
     before: 'https://images.pexels.com/photos/30924413/pexels-photo-30924413.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
     after:  '/kitchenremodeling/ariel-domenden-k1fe40cx2EU-unsplash.jpg',
   },

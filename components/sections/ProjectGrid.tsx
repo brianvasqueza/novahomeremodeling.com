@@ -2,19 +2,18 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { Eyebrow } from '@/components/ui/Eyebrow';
-import { CtaLink } from '@/components/ui/CTA';
 import { ProjectCard } from '@/components/cards/ProjectCard';
 import { Section } from '@/components/common/Section';
 import { PROJECTS, PROJECT_FILTERS } from '@/data/projects';
 
 export function ProjectGrid() {
-  const [active, setActive] = useState('All work');
+  const [active, setActive] = useState('All Inspiration');
 
   const list = useMemo(
-    () => (active === 'All work' ? PROJECTS : PROJECTS.filter((p) => p.category === active)),
+    () => (active === 'All Inspiration' ? PROJECTS : PROJECTS.filter((p) => p.category === active)),
     [active],
   );
-  const isFiltered = active !== 'All work';
+  const isFiltered = active !== 'All Inspiration';
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -30,16 +29,14 @@ export function ProjectGrid() {
     <Section id="work">
         <div className="projects__head">
           <div>
-            <Eyebrow>Selected work</Eyebrow>
+            <Eyebrow>Project Inspiration</Eyebrow>
             <h2 className="projects__h">
-              Houston remodeling projects,
-              <br />
-              built one home <em>at a time.</em>
+              What&apos;s possible for <em>your home.</em>
             </h2>
+            <p className="projects__lede">
+              A collection of remodeling styles, finishes, and project ideas that reflect the type of spaces we help homeowners create throughout Houston.
+            </p>
           </div>
-          <CtaLink variant="tertiary" href="#work" arrow={false}>
-            Index — by year
-          </CtaLink>
         </div>
 
         <div className="projects__filters">
@@ -65,6 +62,10 @@ export function ProjectGrid() {
             </div>
           )}
         </div>
+
+        <p className="projects__note">
+          Representative examples shown for inspiration. Project photography from completed Nova renovations is being added as new projects are completed.
+        </p>
     </Section>
   );
 }

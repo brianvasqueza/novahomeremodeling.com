@@ -2,21 +2,21 @@ import { Eyebrow } from '@/components/ui/Eyebrow';
 import { CtaLink } from '@/components/ui/CTA';
 import { ResponsiveImage } from '@/components/common/ResponsiveImage';
 
-const FEATURED = {
-  project:  'No. 081',
-  category: 'Whole-home',
-  location: 'River Oaks · Houston, TX',
-  year:     '2024',
-  sqft:     '3,400',
-  duration: '14 months on site',
-  title:    'A 1958 River Oaks colonial, rebuilt in white oak.',
-  titleHtml: 'A 1958 River Oaks colonial, <em>rebuilt in white oak.</em>',
+const SERVICE = {
+  category: 'Interior Renovation',
+  titleHtml: 'Open-plan interiors <em>built for the way Houston families live.</em>',
   body: [
-    'Fourteen months on a 1958 colonial in River Oaks. A structural wall came out to open the kitchen into the living room — new LVL beam, white oak cabinetry throughout, honed limestone in both baths. The same crew framed it, tiled it, and finished it.',
-    'The owners had lived here for eleven years. They asked for a home that felt like it had always looked this way. We drew every detail twice. The pantry joinery took three shop drawings to get right. On the last day, we signed the inside of a drawer face and left the number.',
+    'Nova handles interior renovations of all scales — from a single kitchen remodel to a full floor plan reconfiguration. We plan before any work begins, communicate throughout, and send one dedicated crew from start to finish.',
+    'Our focus is on spaces that hold up. Durable materials, clean transitions, careful finish work, and a punch list we do not close until everything is right.',
   ],
   img: '/homepage/michael-brown-0xp3aw009eo-unsplash.jpg',
-  imgAlt: 'Luxury open living remodel with fireplace, piano, glass rail, custom built-ins, and warm natural light.',
+  imgAlt: 'Luxury open-plan living renovation with fireplace, custom built-ins, glass rail, and warm natural light.',
+  attributes: [
+    { label: 'Service',      value: 'Interior Renovation' },
+    { label: 'Scope',        value: 'Kitchens, baths, living spaces' },
+    { label: 'Crew model',   value: 'One crew, start to finish' },
+    { label: 'Service area', value: 'Greater Houston, TX' },
+  ],
   details: [
     {
       img: '/kitchenremodeling/franco-debartolo-JxBwFjX-8hU-unsplash.jpg',
@@ -42,8 +42,7 @@ export function FeaturedProject() {
       <div className="container">
 
         <div className="feat-project__pre">
-          <Eyebrow dark gold>04 — Featured project</Eyebrow>
-          <span className="feat-project__index">{FEATURED.project} — {FEATURED.year}</span>
+          <Eyebrow dark gold>04 — Featured service</Eyebrow>
         </div>
 
         <div className="feat-project__grid">
@@ -51,54 +50,44 @@ export function FeaturedProject() {
           {/* Main image */}
           <div className="feat-project__main media-reveal">
             <ResponsiveImage
-              src={FEATURED.img}
-              alt={FEATURED.imgAlt}
+              src={SERVICE.img}
+              alt={SERVICE.imgAlt}
               sizes="(max-width: 1100px) 100vw, 58vw"
               priority={false}
             />
-            <span className="feat-project__cat">{FEATURED.category}</span>
+            <span className="feat-project__cat">{SERVICE.category}</span>
           </div>
 
           {/* Aside */}
           <aside className="feat-project__aside">
             <div className="feat-project__meta">
-              <div className="feat-project__meta-item">
-                <span>Location</span>
-                <span>{FEATURED.location}</span>
-              </div>
-              <div className="feat-project__meta-item">
-                <span>Size</span>
-                <span>{FEATURED.sqft} sqft</span>
-              </div>
-              <div className="feat-project__meta-item">
-                <span>Duration</span>
-                <span>{FEATURED.duration}</span>
-              </div>
-              <div className="feat-project__meta-item">
-                <span>Year</span>
-                <span>{FEATURED.year}</span>
-              </div>
+              {SERVICE.attributes.map((a) => (
+                <div key={a.label} className="feat-project__meta-item">
+                  <span>{a.label}</span>
+                  <span>{a.value}</span>
+                </div>
+              ))}
             </div>
 
             <h2
               className="feat-project__h"
-              dangerouslySetInnerHTML={{ __html: FEATURED.titleHtml }}
+              dangerouslySetInnerHTML={{ __html: SERVICE.titleHtml }}
             />
 
             <div className="feat-project__body">
-              {FEATURED.body.map((p, i) => <p key={i}>{p}</p>)}
+              {SERVICE.body.map((p, i) => <p key={i}>{p}</p>)}
             </div>
 
             <CtaLink variant="tertiary" href="#contact" className="on-dark">
-              Start a similar project
+              Plan your remodel
             </CtaLink>
           </aside>
 
         </div>
 
-        {/* Detail strip */}
+        {/* Material / finish detail strip */}
         <div className="feat-project__details">
-          {FEATURED.details.map((d) => (
+          {SERVICE.details.map((d) => (
             <div key={d.caption} className="feat-project__detail media-reveal">
               <ResponsiveImage
                 src={d.img}

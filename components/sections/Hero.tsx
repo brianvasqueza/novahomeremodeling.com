@@ -112,7 +112,7 @@ export function Hero({ image = 'kitchen' }: HeroProps) {
           >
             Houston homes, rebuilt.
             <br />
-            Every detail <em>drawn&nbsp;first.</em>
+            Every detail <em>planned&nbsp;first.</em>
           </m.h1>
 
           {/* CTA buttons */}

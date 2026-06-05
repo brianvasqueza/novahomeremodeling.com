@@ -10,7 +10,9 @@ import { ProjectGrid } from '@/components/sections/ProjectGrid';
 import { PhotoStrip } from '@/components/sections/PhotoStrip';
 import { FeaturedProject } from '@/components/sections/FeaturedProject';
 import { Testimonials } from '@/components/sections/Testimonials';
-import { BeforeAfter } from '@/components/sections/BeforeAfter';
+// DISABLED — BeforeAfter section hidden until Nova has original before/after photography.
+// Re-enable by uncommenting this import and the <BeforeAfter /> usage below.
+// import { BeforeAfter } from '@/components/sections/BeforeAfter';
 import { Process } from '@/components/sections/Process';
 import { ParallaxSection } from '@/components/sections/ParallaxSection';
 import { Craft } from '@/components/sections/Craft';
@@ -98,9 +100,32 @@ export default function Home() {
         <PhotoStrip />
         {/* 05 — Featured project: single editorial spotlight */}
         <FeaturedProject />
-        {/* 06 — Social proof + visual transformation */}
+        {/* 06 — Nova Standard principles */}
         <Testimonials />
-        <BeforeAfter />
+        {/*
+          BEFORE/AFTER — intentionally disabled.
+
+          This section is hidden until Nova has a sufficient library of documented
+          before-and-after photography from completed projects. Displaying stock or
+          unattributed transformations would be misleading to prospective clients.
+
+          TO RE-ENABLE:
+            1. Uncomment the BeforeAfter import at the top of this file.
+            2. Uncomment <BeforeAfter /> below.
+            3. Update BA_DATA in data/content.ts with real Nova project photography.
+
+          FUTURE SECTION DIRECTION (when real photography is available):
+            Title:       "Remodeling Possibilities"
+            Headline:    "Imagine what's possible."
+            Description: "Representative examples showing the types of improvements
+                          homeowners often make when updating kitchens, bathrooms,
+                          and living spaces."
+            Categories:  Kitchens · Bathrooms · Living Spaces
+            Note:        Frame as inspirational/educational, not as documented Nova
+                         project case studies, unless the photography is verified
+                         original Nova work.
+        */}
+        {/* <BeforeAfter /> */}
         {/* 07 — Process: explain how it works */}
         <Process />
         {/* 08 — Material standards: deep qualifier for serious prospects */}

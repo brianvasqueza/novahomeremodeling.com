@@ -90,7 +90,7 @@ type ScrollStepContentProps = {
 
 export function ScrollStepContent({ step, index, isActive, onActive }: ScrollStepContentProps) {
   const ref = useRef<HTMLElement | null>(null);
-  const inView = useInView(ref, { amount: 0.58, margin: '-12% 0px -28% 0px' });
+  const inView = useInView(ref, { amount: 0.38, margin: '-8% 0px -36% 0px' });
   const reduced = useReducedMotion();
 
   useEffect(() => {
@@ -105,7 +105,7 @@ export function ScrollStepContent({ step, index, isActive, onActive }: ScrollSte
       animate={
         reduced || isActive
           ? { opacity: 1, y: 0, filter: 'blur(0px)' }
-          : { opacity: 0.48, y: 10, filter: 'blur(1.5px)' }
+          : { opacity: 0.38, y: 8, filter: 'blur(1px)' }
       }
       transition={{ duration: duration.base, ease: ease.out }}
     >

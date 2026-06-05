@@ -19,7 +19,7 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     index: '081',
-    category: 'Whole‑home',
+    category: 'Living Spaces',
     title: 'A 1958 River Oaks colonial, rebuilt in white oak.',
     titleHtml: 'A 1958 River Oaks colonial, <em>rebuilt in white oak.</em>',
     location: 'River Oaks · Houston, TX',
@@ -31,7 +31,7 @@ export const PROJECTS: Project[] = [
   },
   {
     index: '078',
-    category: 'Bath',
+    category: 'Bathrooms',
     title: 'Limestone, linen, light.',
     titleHtml: 'Limestone, linen, light.',
     location: 'Memorial · Houston, TX',
@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
   },
   {
     index: '074',
-    category: 'Kitchen',
+    category: 'Kitchens',
     title: 'A pantry built like a library.',
     titleHtml: 'A pantry built like a <em>library.</em>',
     location: 'Montrose · Houston, TX',
@@ -56,7 +56,7 @@ export const PROJECTS: Project[] = [
   },
   {
     index: '071',
-    category: 'Whole‑home',
+    category: 'Living Spaces',
     title: 'A 1962 ranch, opened to the yard.',
     titleHtml: 'A 1962 ranch, <em>opened to the yard.</em>',
     location: 'Tanglewood · Houston, TX',
@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
   },
   {
     index: '069',
-    category: 'Addition',
+    category: 'Additions',
     title: 'Twenty‑two feet of steel and glass.',
     titleHtml: 'Twenty‑two feet of <em>steel and glass.</em>',
     location: 'The Heights · Houston, TX',
@@ -82,9 +82,9 @@ export const PROJECTS: Project[] = [
   },
   {
     index: '066',
-    category: 'Kitchen',
-    title: 'The island, drawn four times before it was cut.',
-    titleHtml: 'The island, <em>drawn four times before it was cut.</em>',
+    category: 'Kitchens',
+    title: 'The island, refined until it fit the room.',
+    titleHtml: 'The island, <em>refined until it fit the room.</em>',
     location: 'Sugar Land · Houston, TX',
     year: 2022,
     sqft: '380',
@@ -94,7 +94,7 @@ export const PROJECTS: Project[] = [
   },
   {
     index: '061',
-    category: 'Heritage',
+    category: 'Living Spaces',
     title: 'A Craftsman, quietly restored.',
     titleHtml: 'A Craftsman, <em>quietly restored.</em>',
     location: 'Tanglewood · Houston, TX',
@@ -107,7 +107,7 @@ export const PROJECTS: Project[] = [
   },
   {
     index: '058',
-    category: 'Outdoor',
+    category: 'Outdoor Living',
     title: 'A covered porch that became the living room.',
     titleHtml: 'A covered porch that <em>became the living room.</em>',
     location: 'Cypress · Houston, TX',
@@ -119,7 +119,7 @@ export const PROJECTS: Project[] = [
   },
   {
     index: '053',
-    category: 'Bath',
+    category: 'Bathrooms',
     title: 'Stone and steam. A primary suite, rebuilt.',
     titleHtml: 'Stone and steam. <em>A primary suite, rebuilt.</em>',
     location: 'The Woodlands · Houston, TX',
@@ -132,4 +132,4 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const PROJECT_FILTERS = ['All work', 'Whole‑home', 'Kitchen', 'Bath', 'Addition', 'Outdoor', 'Heritage'];
+export const PROJECT_FILTERS = ['All Inspiration', 'Kitchens', 'Bathrooms', 'Living Spaces', 'Additions', 'Outdoor Living'];

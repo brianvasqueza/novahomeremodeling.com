@@ -50,10 +50,10 @@ export function Philosophy() {
             >
               <div className="n">II</div>
               <div>
-                <h3>Drawn before built.</h3>
+                <h3>Planned before built.</h3>
                 <p>
-                  Every cabinet, every joint, every seam appears on a shop drawing before any saw is
-                  turned on. Surprises are for theater, not for homes.
+                  Every scope, every measurement, every material selection is worked through before
+                  a saw turns on. Surprises are for theater, not for homes.
                 </p>
               </div>
             </m.li>

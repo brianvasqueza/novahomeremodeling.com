@@ -17,7 +17,7 @@ const PROCESS_VISUALS = [
   },
   {
     src: '/kitchenremodeling/prydumano-design-KyWwFZkcaUU-unsplash.jpg',
-    alt: 'Detailed kitchen finishes and cabinetry that support drawings and material planning.',
+    alt: 'Detailed kitchen finishes and cabinetry representing the planning and material selection phase.',
   },
   {
     src: '/kitchenremodeling/franco-debartolo-JxBwFjX-8hU-unsplash.jpg',

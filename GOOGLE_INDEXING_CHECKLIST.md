@@ -34,6 +34,7 @@
 | https://novahomeremodeling.com/services/drywall-repair | Drywall Repair in Houston, TX | ✅ Ready |
 | https://novahomeremodeling.com/cities/houston | Home Remodeling in Houston, TX | ✅ Ready |
 | https://novahomeremodeling.com/blog/kitchen-remodel-cost-houston | How Much Does a Kitchen Remodel Cost in Houston? | ✅ Ready |
+| https://novahomeremodeling.com/blog/best-kitchen-layout-ideas-houston | Best Kitchen Layout Ideas for Modern Houston Homes | ✅ Ready |
 | https://novahomeremodeling.com/blog/how-long-does-bathroom-remodel-take | How Long Does a Bathroom Remodel Take? | ✅ Ready |
 
 ### Priority 2 — Submit with sitemap (strong local pages)
@@ -274,6 +275,7 @@ https://novahomeremodeling.com/services/drywall-repair
 https://novahomeremodeling.com/cities/houston
 https://novahomeremodeling.com/services
 https://novahomeremodeling.com/blog/kitchen-remodel-cost-houston
+https://novahomeremodeling.com/blog/best-kitchen-layout-ideas-houston
 https://novahomeremodeling.com/blog/how-long-does-bathroom-remodel-take
 ```
 

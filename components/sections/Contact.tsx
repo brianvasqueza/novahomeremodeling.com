@@ -296,6 +296,10 @@ export function Contact() {
           <h2 className="contact__h">
             Tell us about your <em>Houston remodel.</em>
           </h2>
+          <p>
+            Got a repair instead of a full remodel? Send photos of your repair for a faster
+            estimate — drywall patches, door fixes, trim, caulking, and fence repairs all count.
+          </p>
           <div className="contact__info">
             <div className="contact__info-group">
               <span className="label">Office</span>

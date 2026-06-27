@@ -15,6 +15,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === '/' ? 1 : 0.8,
   }));
 
+  const landingRoutes = [
+    { path: '/handyman-services-houston', changeFrequency: 'monthly' as const, priority: 0.7 },
+    { path: '/drywall-repair-houston', changeFrequency: 'monthly' as const, priority: 0.7 },
+    { path: '/small-home-repairs-one-visit', changeFrequency: 'yearly' as const, priority: 0.5 },
+    { path: '/drywall-repair-patch-replace-repaint', changeFrequency: 'yearly' as const, priority: 0.5 },
+  ].map(({ path, changeFrequency, priority }) => ({
+    url: absoluteUrl(path),
+    lastModified: siteLastModified,
+    changeFrequency,
+    priority,
+  }));
+
   const serviceRoutes = SERVICE_PAGE_DATA.map((service) => ({
     url: absoluteUrl(serviceUrl(service.slug)),
     lastModified: siteLastModified,
@@ -36,5 +48,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...cityRoutes, ...blogRoutes];
+  return [...staticRoutes, ...landingRoutes, ...serviceRoutes, ...cityRoutes, ...blogRoutes];
 }

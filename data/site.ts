@@ -21,7 +21,7 @@ export const SITE = {
   hoursDisplay: 'Monday–Saturday | 7:00 AM – 7:00 PM',
   openingHours: ['Mo-Sa 07:00-19:00'],
   socialImage: '/assets/logo-mark.svg',
-  lastUpdated: '2026-05-20',
+  lastUpdated: '2026-06-27',
   serviceArea: [
     'Houston',
     'Katy',

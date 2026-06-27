@@ -43,7 +43,17 @@ export const IconMark = ({ size = 22 }: { size?: number }) => (
   </svg>
 );
 
-export type SvcIconType = 'kitchen' | 'bath' | 'paint' | 'floor' | 'cabinet' | 'trim' | 'door' | 'deck';
+export type SvcIconType =
+  | 'kitchen'
+  | 'bath'
+  | 'paint'
+  | 'floor'
+  | 'cabinet'
+  | 'trim'
+  | 'door'
+  | 'deck'
+  | 'repair'
+  | 'wall';
 
 export const SvcIcon = ({ type }: { type: SvcIconType }) => {
   const p: SVGProps<SVGSVGElement> = { width: 18, height: 18, viewBox: '0 0 24 24', ...s };
@@ -113,6 +123,19 @@ export const SvcIcon = ({ type }: { type: SvcIconType }) => {
           <line x1="12" y1="18" x2="12" y2="10" />
           <line x1="18" y1="18" x2="18" y2="10" />
           <path d="M3 10h18" />
+        </svg>
+      );
+    case 'repair':
+      return (
+        <svg {...p}>
+          <path d="M14.5 3.5a4 4 0 00-5.4 5.4L3 15v4a2 2 0 002 2h4l6.1-6.1a4 4 0 005.4-5.4l-3.1 3.1-2.4-.6-.6-2.4 3.1-3.1z" />
+        </svg>
+      );
+    case 'wall':
+      return (
+        <svg {...p}>
+          <rect x="3" y="3" width="18" height="18" rx="1" />
+          <rect x="8.5" y="8.5" width="7" height="7" />
         </svg>
       );
     default:

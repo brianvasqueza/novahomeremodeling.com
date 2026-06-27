@@ -29,6 +29,8 @@ const breadcrumbs = [
 
 interface ServiceCard {
   slug: string;
+  /** Overrides the default `/services/${slug}` link for cards that point to a standalone page. */
+  href?: string;
   eyebrow: string;
   title: string;
   titleHtml: string;
@@ -129,6 +131,25 @@ const FEATURED_SERVICES: ServiceCard[] = [
       'Every repair is checked under raking light — the angle that reveals every imperfection a straight-on noon walkthrough misses.',
     img: '/drywall/h-co-3coKbdfnAFg-unsplash.jpg',
     imgAlt: 'Smooth, freshly finished interior wall ready for primer and paint.',
+  },
+  {
+    slug: 'handyman-services-houston',
+    href: '/handyman-services-houston',
+    eyebrow: 'Repairs',
+    title: 'Handyman & Home Repair',
+    titleHtml: 'Handyman &amp; <em>Home Repair</em>',
+    description:
+      'Smaller repairs that don’t need a full remodel — drywall patches, door adjustments, trim and baseboard fixes, caulking, paint touch-ups, and fence or gate repairs.',
+    includes: [
+      'Drywall patches and small wall repairs',
+      'Door repair and hardware adjustments',
+      'Trim, baseboard, and caulking work',
+      'Paint touch-ups, fence, and gate repairs',
+    ],
+    benefit:
+      'Send a few photos of the repair and we can usually give you a price range before the first visit.',
+    img: '/drywall/charlesdeluvio-DH-FZZ7kM5c-unsplash.jpg',
+    imgAlt: 'Drywall patches taped over wall damage during a small home repair visit.',
   },
   {
     slug: 'beam-installation',
@@ -235,7 +256,7 @@ export default function ServicesIndexPage() {
             path: '/services',
             items: FEATURED_SERVICES.map((s) => ({
               name: s.title,
-              href: serviceUrl(s.slug),
+              href: s.href ?? serviceUrl(s.slug),
             })),
           }),
         ]}
@@ -267,9 +288,11 @@ export default function ServicesIndexPage() {
             </div>
 
             <div className="svc-index__grid">
-              {FEATURED_SERVICES.map((svc) => (
+              {FEATURED_SERVICES.map((svc) => {
+                const href = svc.href ?? serviceUrl(svc.slug);
+                return (
                 <article key={svc.slug} className="svc-index-card">
-                  <Link href={serviceUrl(svc.slug)} className="svc-index-card__media" tabIndex={-1} aria-hidden>
+                  <Link href={href} className="svc-index-card__media" tabIndex={-1} aria-hidden>
                     <ResponsiveImage
                       src={svc.img}
                       alt={svc.imgAlt}
@@ -281,7 +304,7 @@ export default function ServicesIndexPage() {
 
                   <h3 className="svc-index-card__title">
                     <Link
-                      href={serviceUrl(svc.slug)}
+                      href={href}
                       dangerouslySetInnerHTML={{ __html: svc.titleHtml }}
                     />
                   </h3>
@@ -302,7 +325,8 @@ export default function ServicesIndexPage() {
                     </CtaLink>
                   </div>
                 </article>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

@@ -11,7 +11,7 @@ export function Footer() {
             <p className="footer__motto">
               A residential remodeling company serving {SITE.serviceAreaDisplay}.
               <br />
-              Kitchens, bathrooms, painting, drywall, flooring, and whole-home work.
+              Kitchens, bathrooms, painting, drywall, flooring, whole-home work, and the smaller repairs in between.
             </p>
           </div>
           <div className="footer__col">
@@ -30,6 +30,8 @@ export function Footer() {
               <li><Link href="/services/bathroom-remodeling">Bathroom Remodeling</Link></li>
               <li><Link href="/services/interior-painting">Interior Painting</Link></li>
               <li><Link href="/services/flooring">Flooring Installation</Link></li>
+              <li><Link href="/handyman-services-houston">Handyman &amp; Home Repair</Link></li>
+              <li><Link href="/drywall-repair-houston">Drywall Repair</Link></li>
               <li><Link href="/services">All Remodeling Services</Link></li>
             </ul>
           </div>

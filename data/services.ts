@@ -1,4 +1,14 @@
-export type SvcIconType = 'kitchen' | 'bath' | 'paint' | 'floor' | 'cabinet' | 'trim' | 'door' | 'deck';
+export type SvcIconType =
+  | 'kitchen'
+  | 'bath'
+  | 'paint'
+  | 'floor'
+  | 'cabinet'
+  | 'trim'
+  | 'door'
+  | 'deck'
+  | 'repair'
+  | 'wall';
 
 export interface ServiceCard {
   num: string;
@@ -8,6 +18,8 @@ export interface ServiceCard {
   titleText: string;
   slug: string;
   desc: string;
+  /** Overrides the default `/services/${slug}` link for cards that point to a standalone page. */
+  href?: string;
 }
 
 export const SERVICES_BENTO: ServiceCard[] = [
@@ -82,5 +94,25 @@ export const SERVICES_BENTO: ServiceCard[] = [
     titleText: 'Decks',
     slug: 'deck-construction',
     desc: "Ipe, thermally modified ash, concrete. Seamless threshold details. Built for Houston's heat and humidity.",
+  },
+  {
+    num: '09',
+    icon: 'repair',
+    span: 2,
+    title: 'Handyman &amp; <em>Home Repair</em>',
+    titleText: 'Handyman & Home Repair',
+    slug: 'handyman-services-houston',
+    href: '/handyman-services-houston',
+    desc: 'Smaller repairs that don’t need a full remodel — door adjustments, trim and baseboard fixes, caulking, paint touch-ups, and fence or gate repairs.',
+  },
+  {
+    num: '10',
+    icon: 'wall',
+    span: 2,
+    title: 'Drywall <em>Repair</em>',
+    titleText: 'Drywall Repair',
+    slug: 'drywall-repair-houston',
+    href: '/drywall-repair-houston',
+    desc: 'Wall and ceiling patches, texture matching, water-damaged drywall, and the paint touch-up to finish it.',
   },
 ];

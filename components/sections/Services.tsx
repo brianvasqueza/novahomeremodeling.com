@@ -11,12 +11,12 @@ export function Services() {
         eyebrow="03 — Services"
         title={
           <>
-            Houston remodeling services,
+            Remodeling, repairs,
             <br />
-            one <em>standard.</em>
+            and everything <em>in between.</em>
           </>
         }
-        body="Kitchen remodeling, bathroom remodeling, interior painting, exterior painting, drywall repair, flooring, and outdoor work for Houston and surrounding areas — one dedicated crew per project, from the first estimate to final walkthrough."
+        body="Kitchen and bathroom remodeling, painting, flooring, and whole-home renovations — plus the smaller handyman-style jobs that come up in between: drywall patches, door adjustments, trim and caulking, paint touch-ups, fence or gate repairs, and general punch-list work. One dedicated crew per project, from the first estimate to final walkthrough."
         classNames={{
           grid: 'services__head',
           left: 'services__head-l',
@@ -27,7 +27,7 @@ export function Services() {
       />
         <div className="services__bento">
           {SERVICES_BENTO.map((s) => (
-            <ServiceCard key={s.num} service={s} href={`/services/${s.slug}`} />
+            <ServiceCard key={s.num} service={s} href={s.href ?? `/services/${s.slug}`} />
           ))}
         </div>
         <nav className="services__seo-links" aria-label="Core Houston remodeling services">
@@ -37,6 +37,10 @@ export function Services() {
           <Link href="/services/exterior-painting">Exterior painting in Houston</Link>
           <Link href="/services/drywall-repair">Drywall repair in Houston</Link>
           <Link href="/services/flooring">Flooring installation in Houston</Link>
+          <Link href="/handyman-services-houston">Handyman &amp; home repair services</Link>
+          <Link href="/drywall-repair-houston">Drywall patch &amp; repair estimates</Link>
+          <Link href="/small-home-repairs-one-visit">Small home repairs done in one visit</Link>
+          <Link href="/drywall-repair-patch-replace-repaint">Drywall patch, replace, or repaint guide</Link>
         </nav>
     </Section>
   );

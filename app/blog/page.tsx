@@ -10,10 +10,60 @@ import { breadcrumbJsonLd, collectionPageJsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
 import { blogUrl } from '@/lib/seo/urls';
 
+type BlogIndexCard = {
+  slug: string;
+  href: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  readTime: string;
+  image: string;
+  imageAlt: string;
+};
+
+const REPAIR_GUIDES: BlogIndexCard[] = [
+  {
+    slug: 'small-home-repairs-one-visit',
+    href: '/small-home-repairs-one-visit',
+    title: 'Small Home Repairs You Can Get Done in One Visit',
+    excerpt:
+      'Drywall patches, sticky doors, trim repair, caulking, paint touch-ups, and other small home repairs that can often be handled in one visit.',
+    category: 'Maintenance',
+    readTime: '6 min read',
+    image: '/drywall/charlesdeluvio-DH-FZZ7kM5c-unsplash.jpg',
+    imageAlt: 'Small drywall and wall repair work representing one-visit home repairs for Houston homeowners.',
+  },
+  {
+    slug: 'drywall-repair-patch-replace-repaint',
+    href: '/drywall-repair-patch-replace-repaint',
+    title: 'Drywall Repair: When to Patch, Replace, or Repaint',
+    excerpt:
+      'Not all drywall damage needs the same fix. Learn when to patch, when to replace drywall, and when repainting is enough after wall damage.',
+    category: 'Maintenance',
+    readTime: '7 min read',
+    image: '/drywall/h-co-3coKbdfnAFg-unsplash.jpg',
+    imageAlt: 'Smooth interior drywall repair area ready for primer and repainting.',
+  },
+];
+
+const blogCards: BlogIndexCard[] = [
+  ...BLOG_POSTS.map((post) => ({
+    slug: post.slug,
+    href: blogUrl(post.slug),
+    title: post.title,
+    excerpt: post.excerpt,
+    category: post.category,
+    readTime: post.readTime,
+    image: post.image,
+    imageAlt: post.imageAlt,
+  })),
+  ...REPAIR_GUIDES,
+];
+
 export const metadata: Metadata = createMetadata({
-  title: 'Remodeling Guides for Houston Homeowners',
+  title: 'Remodeling & Home Repair Guides for Houston Homeowners',
   description:
-    'Premium remodeling guides from Nova Home Remodeling & Design covering Houston remodel costs, project timelines, materials, and planning decisions.',
+    'Remodeling and home repair guides from Nova Home Remodeling & Design covering Houston remodel costs, project timelines, drywall repair, small repairs, materials, and planning decisions.',
   path: '/blog',
   image: BLOG_POSTS[0].image,
   imageAlt: BLOG_POSTS[0].imageAlt,
@@ -31,13 +81,13 @@ export default function BlogIndexPage() {
         data={[
           breadcrumbJsonLd(breadcrumbs),
           collectionPageJsonLd({
-            name: 'Remodeling Guides for Houston Homeowners',
+            name: 'Remodeling & Home Repair Guides for Houston Homeowners',
             description:
-              'Cost, timeline, material, and planning guides for Houston homeowners preparing for a remodel.',
+              'Cost, timeline, repair, material, and planning guides for Houston homeowners preparing for remodels and home repairs.',
             path: '/blog',
-            items: BLOG_POSTS.map((post) => ({
+            items: blogCards.map((post) => ({
               name: post.title,
-              href: blogUrl(post.slug),
+              href: post.href,
             })),
           }),
         ]}
@@ -45,8 +95,8 @@ export default function BlogIndexPage() {
       <main>
         <PageHero
           eyebrow="Remodeling Resource Hub"
-          title="Remodeling Guides for Houston Homeowners"
-          description="Clear, practical guides to help you understand remodeling costs, timelines, material choices, and planning decisions before work begins."
+          title="Remodeling & Home Repair Guides for Houston Homeowners"
+          description="Clear, practical guides to help you understand remodeling costs, repair decisions, timelines, material choices, and planning decisions before work begins."
           image={BLOG_POSTS[0].image}
           imageAlt={BLOG_POSTS[0].imageAlt}
         />
@@ -58,14 +108,14 @@ export default function BlogIndexPage() {
               <h2 id="blog-hub-title">Plan with better numbers, clearer timelines, and fewer surprises.</h2>
               <p>
                 These remodeling guides are built for Houston-area homeowners comparing project
-                scope, finish levels, material performance, and the practical steps that shape a
-                smoother renovation.
+                scope, repair options, finish levels, material performance, and the practical steps
+                that shape smoother home projects.
               </p>
             </div>
             <div className="blog-card-grid">
-              {BLOG_POSTS.map((post) => (
+              {blogCards.map((post) => (
                 <article className="blog-card" key={post.slug}>
-                  <Link href={blogUrl(post.slug)} className="blog-card__media" aria-label={post.title}>
+                  <Link href={post.href} className="blog-card__media" aria-label={post.title}>
                     <ResponsiveImage
                       src={post.image}
                       alt={post.imageAlt}
@@ -78,10 +128,10 @@ export default function BlogIndexPage() {
                       <span>{post.readTime}</span>
                     </div>
                     <h2>
-                      <Link href={blogUrl(post.slug)}>{post.title}</Link>
+                      <Link href={post.href}>{post.title}</Link>
                     </h2>
                     <p>{post.excerpt}</p>
-                    <Link className="btn btn--tertiary" href={blogUrl(post.slug)}>
+                    <Link className="btn btn--tertiary" href={post.href}>
                       Read Guide
                     </Link>
                   </div>

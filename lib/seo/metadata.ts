@@ -35,7 +35,6 @@ export function createMetadata({
     alternates: {
       canonical: absoluteUrl(path),
     },
-    icons: { icon: '/assets/logo-mark.svg' },
     applicationName: SITE.legalName,
     authors: [{ name: SITE.legalName, url: SITE.url }],
     creator: SITE.legalName,

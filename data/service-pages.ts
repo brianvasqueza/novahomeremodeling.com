@@ -105,7 +105,7 @@ export const SERVICE_PAGE_DATA: ServicePageData[] = [
       },
       {
         q: 'What does a kitchen remodel cost in Houston?',
-        a: 'A full kitchen remodel — cabinetry, countertops, tile, lighting, appliance coordination, and finish carpentry — typically runs $80,000 to $200,000 or more depending on size, materials, and layout changes. Our feasibility study is the most reliable way to get a real number for your specific kitchen.',
+        a: 'It depends on scope. A cosmetic refresh — paint, hardware, and a countertop swap — can start around $5,000 to $15,000. Mid-range updates like cabinet refacing, new counters, and lighting typically run $15,000 to $45,000. A full gut renovation — new cabinetry, countertops, tile, lighting, and appliance coordination — usually lands between $80,000 and $200,000 depending on size, materials, and layout changes. Our feasibility study is the most reliable way to get a real number for your specific kitchen and budget.',
       },
       {
         q: 'Can I supply my own appliances?',

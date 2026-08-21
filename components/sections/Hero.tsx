@@ -125,7 +125,7 @@ export function Hero({ image = 'kitchen' }: HeroProps) {
             <Button variant="primary" onDark as="a" href="#contact">
               Request a Houston Remodeling Estimate
             </Button>
-            <a className="hero__cta-alt" href="#work">
+            <a className="hero__cta-alt" href="/work">
               See remodeling work
             </a>
           </m.div>

@@ -67,7 +67,7 @@ export function PortfolioScroll() {
       <div className="container">
         <div className="port-scroll__head">
           <Eyebrow>Portfolio — Selected images</Eyebrow>
-          <CtaLink variant="tertiary" href="#work" arrow={false}>
+          <CtaLink variant="tertiary" href="/work" arrow={false}>
             View all work
           </CtaLink>
         </div>

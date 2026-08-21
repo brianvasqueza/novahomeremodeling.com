@@ -2,6 +2,7 @@ import { SITE } from '@/data/site';
 
 export const ROUTES = {
   home: '/',
+  work: '/work',
   services: '/services',
   cities: '/cities',
   blog: '/blog',

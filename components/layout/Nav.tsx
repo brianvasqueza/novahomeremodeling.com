@@ -11,7 +11,7 @@ interface NavProps {
 }
 
 const NAV_LINKS = [
-  { href: '/#work', label: 'Work' },
+  { href: '/work', label: 'Work' },
   { href: '/services', label: 'Services' },
   { href: '/#process', label: 'Process' },
   { href: '/cities', label: 'Areas' },

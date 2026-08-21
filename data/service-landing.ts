@@ -71,9 +71,9 @@ const sharedAuthorityLinks: ServiceLandingContent['authorityLinks'] = [
     body: 'See how Nova moves from feasibility, scope, and material selections into construction.',
   },
   {
-    label: 'Browse finished projects',
-    href: '/#work',
-    body: 'See how completed rooms come together — materials, layout decisions, and the level of finish we hold across every project.',
+    label: 'View real Nova work',
+    href: '/work',
+    body: 'See completed and in-progress Nova project photos, from interior updates to exterior repairs and carpentry details.',
   },
   {
     label: 'Start a project conversation',

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { ProjectCard } from '@/components/cards/ProjectCard';
 import { Section } from '@/components/common/Section';
@@ -65,6 +66,12 @@ export function ProjectGrid() {
 
         <p className="projects__note">
           Representative examples shown for inspiration. Project photography from completed Nova renovations is being added as new projects are completed.
+          <span className="projects__actual">
+            Looking for projects we&apos;ve actually completed?{' '}
+            <Link className="link link--gold" href="/work">
+              View Our Work.
+            </Link>
+          </span>
         </p>
     </Section>
   );

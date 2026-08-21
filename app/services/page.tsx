@@ -284,6 +284,10 @@ export default function ServicesIndexPage() {
                 Each service is handled by the same in-house crew — no subcontractors for finish work, no
                 project handoffs, no strangers mid-remodel. Below is an overview of the work we take on
                 and what to expect from each service.
+                {' '}
+                <Link className="link link--gold" href="/work">
+                  View real Nova work.
+                </Link>
               </p>
             </div>
 

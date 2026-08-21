@@ -1,12 +1,29 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import { m, useReducedMotion } from 'framer-motion';
 import { CtaLink } from '@/components/ui/CTA';
 import { SITE } from '@/data/site';
 import { blurReveal, fadeIn, ctaReveal, reducedFade } from '@/lib/motion/variants';
 import { ease, duration, viewportOnce } from '@/lib/motion/config';
 
-export function CTASection() {
+type CTASectionProps = {
+  index?: string;
+  heading?: ReactNode;
+  body?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  showEmail?: boolean;
+};
+
+export function CTASection({
+  index = '10 — Get started',
+  heading,
+  body,
+  ctaLabel = 'Request a Houston Remodeling Estimate',
+  ctaHref = '#contact',
+  showEmail = true,
+}: CTASectionProps = {}) {
   const reduced = useReducedMotion();
 
   const headingVariants = reduced ? reducedFade : blurReveal;
@@ -24,7 +41,7 @@ export function CTASection() {
           viewport={viewportOnce}
           transition={{ duration: duration.base, ease: ease.smooth }}
         >
-          10 — Get started
+          {index}
         </m.div>
         <m.h2
           className="cta__h"
@@ -34,10 +51,26 @@ export function CTASection() {
           viewport={viewportOnce}
           transition={{ duration: duration.slow, ease: ease.out, delay: 0.1 }}
         >
-          Plan your Houston
-          <br />
-          remodeling <em>estimate.</em>
+          {heading ?? (
+            <>
+              Plan your Houston
+              <br />
+              remodeling <em>estimate.</em>
+            </>
+          )}
         </m.h2>
+        {body && (
+          <m.p
+            className="cta__body"
+            variants={fadeVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            transition={{ duration: duration.base, ease: ease.smooth, delay: 0.22 }}
+          >
+            {body}
+          </m.p>
+        )}
         <m.div
           variants={ctaVariants}
           initial="hidden"
@@ -45,8 +78,8 @@ export function CTASection() {
           viewport={viewportOnce}
           transition={{ duration: duration.base, ease: ease.out, delay: 0.3 }}
         >
-          <CtaLink href="#contact">
-            Request a Houston Remodeling Estimate
+          <CtaLink href={ctaHref}>
+            {ctaLabel}
           </CtaLink>
         </m.div>
         <m.div
@@ -60,10 +93,14 @@ export function CTASection() {
           <a className="link link--gold cta__phone" href={SITE.phoneHref}>
             {SITE.phoneDisplay}
           </a>
-          <span className="cta__sub-divider">·</span>
-          <a className="link link--gold" href={SITE.emailHref}>
-            {SITE.email}
-          </a>
+          {showEmail && (
+            <>
+              <span className="cta__sub-divider">·</span>
+              <a className="link link--gold" href={SITE.emailHref}>
+                {SITE.email}
+              </a>
+            </>
+          )}
         </m.div>
         <m.div
           className="cta__trust"

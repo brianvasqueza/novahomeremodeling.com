@@ -4,6 +4,7 @@ import { Eyebrow } from '@/components/ui/Eyebrow';
 import type { ServiceVisualStory } from '@/data/service-visuals';
 import type { ServiceLandingContent } from '@/data/service-landing';
 import type { InternalLink } from '@/data/internal-links';
+import type { ReactNode } from 'react';
 
 type VisualStoryProps = {
   visualStory: ServiceVisualStory;
@@ -12,6 +13,10 @@ type VisualStoryProps = {
 type VisualBreakProps = VisualStoryProps & {
   content?: ServiceLandingContent;
   areaLinks?: InternalLink[];
+  id?: string;
+  title?: ReactNode;
+  body?: ReactNode;
+  kicker?: ReactNode;
 };
 
 function ImageFrame({
@@ -87,13 +92,23 @@ export function ServiceMicroGallery({ visualStory }: VisualStoryProps) {
   );
 }
 
-export function ServiceVisualBreak({ visualStory, content, areaLinks = [] }: VisualBreakProps) {
+export function ServiceVisualBreak({
+  visualStory,
+  content,
+  areaLinks = [],
+  id,
+  title,
+  body,
+  kicker,
+}: VisualBreakProps) {
   const { visualBreak } = visualStory;
   const local = content?.local;
   const visibleAreaLinks = areaLinks.slice(0, 4);
+  const displayTitle = title ?? local?.title ?? visualBreak.title;
+  const displayBody = body ?? local?.body ?? visualBreak.body;
 
   return (
-    <section className="svc-visual-break" aria-label={local?.title ?? visualBreak.title}>
+    <section className="svc-visual-break" id={id} aria-label={visualBreak.title}>
       <ResponsiveImage
         src={visualBreak.image.src}
         alt={visualBreak.image.alt}
@@ -104,9 +119,9 @@ export function ServiceVisualBreak({ visualStory, content, areaLinks = [] }: Vis
       <div className="svc-visual-break__overlay" />
       <div className="container svc-visual-break__layout">
         <div className="svc-visual-break__copy">
-          <span>{visualBreak.kicker}</span>
-          <h2>{local?.title ?? visualBreak.title}</h2>
-          <p>{local?.body ?? visualBreak.body}</p>
+          <span>{kicker ?? visualBreak.kicker}</span>
+          <h2>{displayTitle}</h2>
+          <p>{displayBody}</p>
           {local && (
             <>
               <ul className="svc-visual-break__neighborhoods" aria-label="Houston-area remodeling context">

@@ -9,6 +9,8 @@ type PageHeroProps = {
   imageAlt?: string;
   ctaLabel?: string;
   ctaHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
 };
 
 export function PageHero({
@@ -19,6 +21,8 @@ export function PageHero({
   imageAlt = '',
   ctaLabel,
   ctaHref,
+  secondaryLabel,
+  secondaryHref,
 }: PageHeroProps) {
   return (
     <section className="hero page-hero" id="top">
@@ -39,6 +43,11 @@ export function PageHero({
               <CtaLink href={ctaHref} onDark>
                 {ctaLabel}
               </CtaLink>
+              {secondaryLabel && secondaryHref && (
+                <a className="hero__cta-alt" href={secondaryHref}>
+                  {secondaryLabel}
+                </a>
+              )}
             </div>
           )}
         </div>

@@ -7,6 +7,8 @@ type PageMetadataInput = {
   description?: string;
   path?: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   imageAlt?: string;
   noIndex?: boolean;
   type?: 'website' | 'article';
@@ -19,6 +21,8 @@ export function createMetadata({
   description = SITE.description,
   path = '/',
   image = SITE.socialImage,
+  imageWidth = 1200,
+  imageHeight = 630,
   imageAlt = SITE.legalName,
   noIndex = false,
   type = 'website',
@@ -60,7 +64,7 @@ export function createMetadata({
       siteName: SITE.name,
       type,
       locale: SITE.locale,
-      images: [{ url: resolvedImage, width: 1200, height: 630, alt: imageAlt }],
+      images: [{ url: resolvedImage, width: imageWidth, height: imageHeight, alt: imageAlt }],
       publishedTime,
       modifiedTime,
     },

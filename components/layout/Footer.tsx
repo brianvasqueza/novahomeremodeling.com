@@ -17,6 +17,7 @@ export function Footer() {
           <div className="footer__col">
             <p className="footer__col-heading">Company</p>
             <ul>
+              <li><Link href="/work">Work</Link></li>
               <li><Link href="/#approach">Approach</Link></li>
               <li><Link href="/#process">Process</Link></li>
               <li><Link href="/#craft">Craft</Link></li>
@@ -58,6 +59,7 @@ export function Footer() {
             </a>
           </div>
           <div className="social">
+            <Link className="link" href="/work">Work</Link>
             <Link className="link" href="/services">Services</Link>
             <Link className="link" href="/cities">Areas</Link>
             <Link className="link" href="/blog">Journal</Link>

@@ -5,7 +5,7 @@ import { SiteShell } from '@/components/layout/SiteShell';
 import { PageHero } from '@/components/sections/PageHero';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { BLOG_POSTS } from '@/data/blog';
+import { PUBLISHED_BLOG_POSTS } from '@/data/blog';
 import { breadcrumbJsonLd, collectionPageJsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
 import { blogUrl } from '@/lib/seo/urls';
@@ -47,7 +47,7 @@ const REPAIR_GUIDES: BlogIndexCard[] = [
 ];
 
 const blogCards: BlogIndexCard[] = [
-  ...BLOG_POSTS.map((post) => ({
+  ...PUBLISHED_BLOG_POSTS.map((post) => ({
     slug: post.slug,
     href: blogUrl(post.slug),
     title: post.title,
@@ -65,8 +65,8 @@ export const metadata: Metadata = createMetadata({
   description:
     'Remodeling and home repair guides from Nova Home Remodeling & Design covering Houston remodel costs, project timelines, drywall repair, small repairs, materials, and planning decisions.',
   path: '/blog',
-  image: BLOG_POSTS[0].image,
-  imageAlt: BLOG_POSTS[0].imageAlt,
+  image: PUBLISHED_BLOG_POSTS[0].image,
+  imageAlt: PUBLISHED_BLOG_POSTS[0].imageAlt,
 });
 
 const breadcrumbs = [
@@ -97,8 +97,8 @@ export default function BlogIndexPage() {
           eyebrow="Remodeling Resource Hub"
           title="Remodeling & Home Repair Guides for Houston Homeowners"
           description="Clear, practical guides to help you understand remodeling costs, repair decisions, timelines, material choices, and planning decisions before work begins."
-          image={BLOG_POSTS[0].image}
-          imageAlt={BLOG_POSTS[0].imageAlt}
+          image={PUBLISHED_BLOG_POSTS[0].image}
+          imageAlt={PUBLISHED_BLOG_POSTS[0].imageAlt}
         />
         <Breadcrumbs items={breadcrumbs} />
         <section className="section blog-hub" aria-labelledby="blog-hub-title">

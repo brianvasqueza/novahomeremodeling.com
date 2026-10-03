@@ -1,9 +1,23 @@
-export type BlogCategory = 'Planning' | 'Materials' | 'Process' | 'Permits' | 'Maintenance';
+export type BlogCategory =
+  | 'Planning'
+  | 'Materials'
+  | 'Process'
+  | 'Permits'
+  | 'Maintenance'
+  | 'Bathroom Updates';
 
 type BlogLink = {
   label: string;
   href: string;
 };
+
+export type BlogInlineSegment = {
+  text: string;
+  href?: string;
+  strong?: boolean;
+};
+
+export type BlogRichText = string | BlogInlineSegment[];
 
 type BlogTable = {
   headers: string[];
@@ -23,39 +37,54 @@ export type InlineCta = {
 
 export type BlogSection = {
   heading: string;
+  id?: string;
   level?: 2 | 3;
-  body?: string[];
-  bullets?: string[];
+  body?: BlogRichText[];
+  bullets?: BlogRichText[];
+  bodyAfterBullets?: BlogRichText[];
   table?: BlogTable;
   callout?: BlogCallout;
-  image?: { src: string; alt: string };
+  image?: { src: string; alt: string; aspect?: 'wide' | 'portrait' };
   inlineCta?: InlineCta;
 };
 
 export type BlogPost = {
+  status?: 'draft' | 'published';
   slug: string;
   title: string;
   seoTitle: string;
+  metaDescription?: string;
   excerpt: string;
-  date: string;
+  date?: string;
   modified?: string;
   category: BlogCategory;
   readTime: string;
   author: string;
   image: string;
+  imageWidth?: number;
+  imageHeight?: number;
   imageAlt: string;
   topics: string[];
   intro: string[];
+  quickAnswer?: BlogRichText;
+  tableOfContents?: BlogLink[];
+  blogBreadcrumbLabel?: string;
+  currentBreadcrumbLabel?: string;
   introCta?: InlineCta;
   sections: BlogSection[];
   faqs: { question: string; answer: string }[];
+  faqHeading?: string;
+  faqId?: string;
   cta: {
     heading: string;
-    body: string;
+    body: BlogRichText;
+    additionalBody?: BlogRichText[];
     label: string;
     href: string;
   };
   internalLinks: BlogLink[];
+  relatedLinksHeading?: string;
+  relatedLinksAfterCta?: boolean;
 };
 
 const AUTHOR = 'Nova Home Remodeling & Design';
@@ -377,6 +406,10 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     internalLinks: [
       { label: 'Bathroom remodeling services', href: '/services/bathroom-remodeling' },
+      {
+        label: 'Bathroom updates without a full remodel',
+        href: '/blog/bathroom-updates-without-full-remodel',
+      },
       { label: 'Kitchen remodel costs', href: '/blog/kitchen-remodel-cost-houston' },
       { label: 'Flooring options', href: '/blog/best-flooring-options-texas-homes' },
       { label: 'Contact Nova', href: '/contact' },
@@ -1012,8 +1045,294 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: 'Contact Nova', href: '/contact' },
     ],
   },
+  {
+    status: 'published',
+    slug: 'bathroom-updates-without-full-remodel',
+    title: 'How to Update an Outdated Bathroom Without a Full Remodel',
+    seoTitle: 'Bathroom Updates Without a Full Remodel in Houston',
+    metaDescription:
+      'Update your bathroom without a full remodel. Explore paint, trim, mirrors, vanities, and flooring, with practical planning tips for Houston homeowners.',
+    excerpt:
+      'You may not need to replace everything to improve your bathroom. Learn which updates are worth considering, what affects the cost, and when to plan a bigger remodel.',
+    date: '2026-10-03',
+    category: 'Bathroom Updates',
+    readTime: '9 min read',
+    author: 'Nova Home Remodeling',
+    image: '/bathroom%20remodeling/zac-gudakov-FiKcg6EMneY-unsplash.jpg',
+    imageWidth: 2400,
+    imageHeight: 1600,
+    imageAlt:
+      'Bright bathroom with a green double vanity, two framed mirrors, brass hardware, and a glass shower.',
+    topics: [],
+    blogBreadcrumbLabel: 'Blog',
+    currentBreadcrumbLabel: 'Bathroom Updates',
+    intro: [
+      'Your bathroom may work just fine, but still feel overdue for an update. The wall color looks tired, the mirror feels too large, or the cabinet handles haven\'t changed since you moved in. None of that automatically means you need to tear out the shower and start over.',
+      'For Houston homeowners, a smaller bathroom update can be a practical way to improve the room while keeping the parts that still work. The key is knowing which changes will help and which problems need more than a new finish.',
+    ],
+    quickAnswer:
+      'You can often update a bathroom with fresh paint, wall repairs, new mirrors, cabinet hardware, and replacement trim. A vanity or flooring change may also be possible without a full remodel, although both need more planning. Keep the existing layout where it works, and address leaks or moisture damage before spending money on cosmetic improvements.',
+    tableOfContents: [
+      {
+        label: 'What can you update without remodeling the entire bathroom?',
+        href: '#what-can-you-update-without-remodeling-the-entire-bathroom',
+      },
+      {
+        label: 'Bathroom updates that can make a noticeable difference',
+        href: '#bathroom-updates-that-can-make-a-noticeable-difference',
+      },
+      {
+        label: 'What affects the cost of a bathroom update?',
+        href: '#what-affects-the-cost-of-a-bathroom-update',
+      },
+      {
+        label: 'When is a full remodel the better choice?',
+        href: '#when-is-a-full-remodel-the-better-choice',
+      },
+      {
+        label: 'Planning your bathroom update in Houston',
+        href: '#planning-your-bathroom-update-in-houston',
+      },
+      {
+        label: 'Common questions about bathroom updates',
+        href: '#common-questions-about-bathroom-updates',
+      },
+    ],
+    sections: [
+      {
+        id: 'what-can-you-update-without-remodeling-the-entire-bathroom',
+        heading: 'What Can You Update Without Remodeling the Entire Bathroom?',
+        body: [
+          'Start by separating what looks dated from what no longer works.',
+          'A solid vanity with a finish you dislike is different from a cabinet with a swollen bottom panel. An old mirror is mostly a style choice. A soft spot in the floor needs a closer look before you choose new flooring.',
+          'Walk through the bathroom and make three short lists:',
+        ],
+        bullets: [
+          [
+            { text: 'Keep:', strong: true },
+            { text: ' Items that are in good condition and work for your daily routine.' },
+          ],
+          [
+            { text: 'Update:', strong: true },
+            { text: ' Finishes or features you want to change, such as paint, mirrors, or handles.' },
+          ],
+          [
+            { text: 'Inspect:', strong: true },
+            { text: ' Leaks, recurring stains, loose flooring, or other signs of damage.' },
+          ],
+        ],
+        bodyAfterBullets: [
+          'This helps keep the project focused. If your tub, tile, and layout are in good shape, you can plan the rest of the room around them. Bring home paint samples and finish samples before buying everything. A color that looks right online may look very different beside your existing tile.',
+        ],
+      },
+      {
+        id: 'bathroom-updates-that-can-make-a-noticeable-difference',
+        heading: 'Bathroom Updates That Can Make a Noticeable Difference',
+        body: [
+          'You don\'t have to change every surface at once. Choose the updates that address what bothers you most, then make sure the colors, materials, and sizes work together.',
+        ],
+      },
+      {
+        heading: 'Repaint Walls and Repair Damaged Surfaces',
+        level: 3,
+        body: [
+          'Paint can change the feel of a bathroom, especially when the current walls are marked, poorly patched, or a color you no longer like. But the preparation matters as much as the color.',
+          'Old mounting holes, dents, and uneven patches should be repaired before painting. Where the walls have texture, the repaired areas should blend with the surrounding surface as closely as possible. Painting over a rough patch usually makes it easier to notice.',
+          'Choose a paint intended for bathroom conditions and follow the product\'s preparation and drying instructions. Satin and semi-gloss are common choices, but the right finish depends on the product and the condition of the walls. More shine can also make surface flaws stand out.',
+          'If paint is peeling or a stain keeps returning, find the cause first. A new coat won\'t solve an active leak or a ventilation problem.',
+          [
+            { text: 'Our ' },
+            {
+              text: 'interior painting services in Houston',
+              href: '/services/interior-painting',
+            },
+            {
+              text: ' cover the surface preparation and finish work that help a room look complete.',
+            },
+          ],
+        ],
+      },
+      {
+        heading: 'Update Mirrors and Cabinet Hardware',
+        level: 3,
+        body: [
+          'A different mirror can change the look of the vanity area without replacing the vanity itself. Pay attention to its width, height, and position in relation to the sink and existing lighting.',
+          'Before removing a large glued-on mirror, account for possible wall damage behind it. What looks like a quick swap may also need patching and paint.',
+          'Cabinet knobs and pulls are another small change worth considering. For replacement pulls, measure the distance between the centers of the existing screw holes. Choosing the same spacing can avoid filling old holes and drilling new ones.',
+          'You can also update towel bars, robe hooks, and the toilet paper holder. Choose their locations around how you use the room, and make sure each item has suitable support when installed.',
+        ],
+      },
+      {
+        heading: 'Replace Worn Baseboards and Trim',
+        level: 3,
+        body: [
+          'Chipped baseboards, open joints, and damaged door casing can make a bathroom feel unfinished even after the walls are painted.',
+          'If the trim is solid, minor repairs and repainting may be enough. Pieces that have swollen, softened, or lost their shape may need replacement. Check what caused the damage before covering the area with new trim.',
+          'Material choice matters near areas that get splashed. PVC trim does not absorb water like wood-based trim, which can make it useful in some bathroom locations. It still needs proper installation, and it won\'t fix a leak behind the wall.',
+          'Match the new trim to the rest of the room where possible. A simple profile with clean corners often looks more natural than adding decorative trim that doesn\'t fit the house.',
+        ],
+      },
+      {
+        heading: 'Consider a Vanity or Flooring Replacement',
+        level: 3,
+        body: [
+          'A vanity or floor can become the main focus of a smaller bathroom update. Both can make a visible difference, but they affect more than the surface you see.',
+          'Before buying a vanity, check its width and depth, drawer clearance, plumbing openings, and sink configuration. A replacement may expose unfinished flooring or an unpainted wall that the old cabinet covered. Keeping a similar footprint can simplify the work, but measurements still matter.',
+          'If the existing cabinet is sturdy and gives you enough storage, refinishing may also be worth discussing. Whether that makes sense depends on its material, finish, and overall condition.',
+          'Flooring needs a similar check. Porcelain tile and some luxury vinyl products are options for bathroom floors, but suitability depends on the specific product and installation requirements. The surface underneath must be in suitable condition before new flooring goes down. A product labeled waterproof doesn\'t make the whole room waterproof.',
+          'Plan vanity and flooring changes together. The order of installation depends on the flooring system, and choosing it early can help avoid redoing part of the work later.',
+        ],
+        image: {
+          src: '/bathroom%20remodeling/pexels-curtis-adams-1694007-10827408.jpg',
+          alt: 'Bathroom with a long gray vanity, marble-look countertop, frameless shower, and tile flooring.',
+        },
+      },
+      {
+        id: 'what-affects-the-cost-of-a-bathroom-update',
+        heading: 'What Affects the Cost of a Bathroom Update?',
+        body: [
+          'The size of the room is only part of the price. A small bathroom with damaged surfaces and difficult removal work can take more labor than a larger room that only needs painting and hardware.',
+          'The main cost factors include:',
+        ],
+        bullets: [
+          [
+            { text: 'Preparation and repairs:', strong: true },
+            { text: ' Wall patching, old adhesive removal, damaged trim, and floor preparation.' },
+          ],
+          [
+            { text: 'What stays in place:', strong: true },
+            { text: ' Keeping a usable layout and existing fixtures can limit the amount of work.' },
+          ],
+          [
+            { text: 'Material choices:', strong: true },
+            { text: ' Standard sizes and available finishes may be easier to source than custom items.' },
+          ],
+          [
+            { text: 'Connections and fit:', strong: true },
+            { text: ' A new vanity may need adjustments beyond setting the cabinet in place.' },
+          ],
+          [
+            { text: 'Work behind the finishes:', strong: true },
+            { text: ' Hidden damage can change the scope once an old item is removed.' },
+          ],
+          [
+            { text: 'Finishing and cleanup:', strong: true },
+            {
+              text: ' Painting around replacements, hauling away old materials, and completing the small details.',
+            },
+          ],
+        ],
+        bodyAfterBullets: [
+          'For a useful estimate, be specific about what you want to keep and replace. Mention whether you plan to buy any materials yourself, and confirm what is included in the work.',
+          'If the budget is limited, ask for the necessary repairs and optional upgrades to be listed separately. That makes it easier to decide what to handle now and what can wait.',
+        ],
+      },
+      {
+        id: 'when-is-a-full-remodel-the-better-choice',
+        heading: 'When Is a Full Remodel the Better Choice?',
+        body: [
+          'A smaller update makes sense when the bathroom is sound and the layout works. A larger remodel is worth considering when the problems go beyond worn finishes.',
+          'That may be the case if you have recurring leaks, damage around the shower, a floor that needs substantial repair, or a layout that makes the room difficult to use. Replacing paint and hardware won\'t address those problems.',
+          'Your goals matter, too. If you want to move the toilet, enlarge the shower, or change the arrangement of the room, you\'re planning a different level of work than a cosmetic refresh.',
+          'A problem in one area doesn\'t always mean the entire bathroom needs to be replaced. Have the condition assessed, then compare a focused repair with a broader remodel. The goal is to understand what needs work before buying finishes.',
+          [
+            { text: 'For projects involving a larger change, explore our ' },
+            {
+              text: 'bathroom remodeling services in Houston',
+              href: '/services/bathroom-remodeling',
+            },
+            { text: '.' },
+          ],
+        ],
+      },
+      {
+        id: 'planning-your-bathroom-update-in-houston',
+        heading: 'Planning Your Bathroom Update in Houston',
+        body: [
+          'Start with photos of the full room and close-ups of the areas you want to change. Include the vanity, flooring, wall damage, and anything you think may affect the work.',
+          'Then write down your priorities in plain terms. “Keep the shower, replace the mirror, repair the walls, and paint” is a helpful starting point. You don\'t need to have every material selected before asking for an estimate.',
+          'For a Houston bathroom, include moisture and ventilation in that first conversation. Note whether the room stays damp after showers, whether paint keeps peeling, and whether any stains return. Those details help separate a finish update from a problem that needs investigation.',
+          'Before work begins, confirm:',
+        ],
+        bullets: [
+          'Which items are staying and which are being removed.',
+          'Who is buying the materials and checking that they fit.',
+          'Whether repairs, painting, and disposal are included.',
+          'When the bathroom will be unavailable and what needs time to dry or cure.',
+          'How unexpected damage or additional work will be discussed.',
+        ],
+        bodyAfterBullets: [
+          [
+            {
+              text: 'If your list also includes a sticking door, loose trim, or wall repairs elsewhere in the house, mention those items when requesting the estimate. Nova\'s ',
+            },
+            { text: 'home repair services', href: '/handyman-services-houston' },
+            {
+              text: ' can be a starting point for discussing smaller projects alongside your bathroom update.',
+            },
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Can I Make My Bathroom Look Better Without Replacing the Tile?',
+        answer:
+          'Yes, if the tile is in good condition and you can work with its color. New wall paint, a different mirror, coordinated hardware, and repaired trim can change how the whole room looks. Choose samples beside the existing tile so the new finishes feel like they belong together.',
+      },
+      {
+        question: 'What Should I Update First on a Limited Budget?',
+        answer:
+          'Address leaks or damage first. After that, choose the change that will make the biggest difference to you. If marked walls are the main problem, start with repairs and paint. If the vanity area feels dated but the cabinet is solid, a mirror and hardware update may be enough. Price the work before buying accessories so the necessary repairs stay within your budget.',
+      },
+      {
+        question: 'How Long Does a Bathroom Update Take?',
+        answer:
+          'It depends on the work, material availability, and drying or curing time. A mirror and hardware change is a different schedule from wall repairs, painting, and a vanity replacement. Several small improvements may be grouped together, but that doesn\'t mean everything can be finished in one visit. Ask for a schedule based on your actual list of work and confirm when the bathroom can be used again.',
+      },
+    ],
+    faqHeading: 'Common Questions About Bathroom Updates',
+    faqId: 'common-questions-about-bathroom-updates',
+    cta: {
+      heading: 'Planning a Bathroom Update in Houston?',
+      body:
+        'Tell Nova Home Remodeling what you\'d like to change and what you\'d like to keep. Whether you\'re considering fresh paint and trim, a vanity replacement, or a larger bathroom remodel, we can discuss the work and help you plan the next step.',
+      additionalBody: [
+        'Send photos of your bathroom, your project location, and a short list of the improvements you have in mind.',
+      ],
+      label: 'Request a Bathroom Update Estimate',
+      href: '/contact',
+    },
+    internalLinks: [
+      {
+        label: 'How Long Does a Bathroom Remodel Usually Take?',
+        href: '/blog/how-long-does-bathroom-remodel-take',
+      },
+      {
+        label: 'Drywall Repair: When to Patch, Replace, or Repaint',
+        href: '/drywall-repair-patch-replace-repaint',
+      },
+      {
+        label: 'Small Home Repairs You Can Get Done in One Visit',
+        href: '/small-home-repairs-one-visit',
+      },
+    ],
+    relatedLinksHeading: 'Related Reading',
+    relatedLinksAfterCta: true,
+  },
 ];
 
 export function findPost(slug: string) {
   return BLOG_POSTS.find((post) => post.slug === slug);
+}
+
+export const PUBLISHED_BLOG_POSTS = BLOG_POSTS.filter(
+  (post): post is BlogPost & { date: string } => post.status !== 'draft' && Boolean(post.date),
+);
+
+export function isPublishedBlogLink(href: string) {
+  const match = href.match(/^\/blog\/([^/?#]+)\/?(?:[?#].*)?$/);
+  if (!match) return true;
+
+  return PUBLISHED_BLOG_POSTS.some((post) => post.slug === match[1]);
 }

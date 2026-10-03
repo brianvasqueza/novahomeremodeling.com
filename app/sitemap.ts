@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { BLOG_POSTS } from '@/data/blog';
+import { PUBLISHED_BLOG_POSTS } from '@/data/blog';
 import { CITY_PAGE_DATA } from '@/data/cities';
 import { SERVICE_PAGE_DATA } from '@/data/service-pages';
 import { SITE } from '@/data/site';
@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: city.slug === 'houston' ? 0.8 : 0.65,
   }));
 
-  const blogRoutes = BLOG_POSTS.map((post) => ({
+  const blogRoutes = PUBLISHED_BLOG_POSTS.map((post) => ({
     url: absoluteUrl(blogUrl(post.slug)),
     lastModified: new Date(post.modified ?? post.date),
     changeFrequency: 'yearly' as const,

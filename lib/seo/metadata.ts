@@ -6,6 +6,8 @@ type PageMetadataInput = {
   title?: string;
   description?: string;
   path?: string;
+  authorName?: string;
+  category?: string;
   image?: string;
   imageWidth?: number;
   imageHeight?: number;
@@ -20,6 +22,8 @@ export function createMetadata({
   title = SITE.title,
   description = SITE.description,
   path = '/',
+  authorName = SITE.legalName,
+  category = 'home remodeling',
   image = SITE.socialImage,
   imageWidth = 1200,
   imageHeight = 630,
@@ -40,10 +44,10 @@ export function createMetadata({
       canonical: absoluteUrl(path),
     },
     applicationName: SITE.legalName,
-    authors: [{ name: SITE.legalName, url: SITE.url }],
+    authors: [{ name: authorName, url: SITE.url }],
     creator: SITE.legalName,
     publisher: SITE.legalName,
-    category: 'home remodeling',
+    category,
     robots: noIndex
       ? { index: false, follow: false, googleBot: { index: false, follow: false } }
       : {

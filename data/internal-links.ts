@@ -1,4 +1,5 @@
 import { CITY_PAGE_DATA } from './cities';
+import { isPublishedBlogLink } from './blog';
 import { SERVICE_PAGE_DATA, type ServicePageData } from './service-pages';
 
 export type InternalLink = {
@@ -48,6 +49,12 @@ const SERVICE_GUIDE_LINKS: Record<string, InternalLink[]> = {
     },
   ],
   'bathroom-remodeling': [
+    {
+      href: '/blog/bathroom-updates-without-full-remodel',
+      label: 'Bathroom updates without a full remodel',
+      description:
+        'You may not need to replace everything to improve your bathroom. Learn which updates are worth considering, what affects the cost, and when to plan a bigger remodel.',
+    },
     {
       href: '/blog/how-long-does-bathroom-remodel-take',
       label: 'Bathroom remodel timeline guide',
@@ -110,7 +117,9 @@ const SERVICE_GUIDE_LINKS: Record<string, InternalLink[]> = {
 };
 
 export function getServiceGuideLinks(service: ServicePageData): InternalLink[] {
-  return SERVICE_GUIDE_LINKS[service.slug] ?? [];
+  return (SERVICE_GUIDE_LINKS[service.slug] ?? []).filter((link) =>
+    isPublishedBlogLink(link.href),
+  );
 }
 
 export function getCityServiceLinks(citySlug: string): InternalLink[] {

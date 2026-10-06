@@ -33,6 +33,12 @@ export function getServiceAreaLinks(service: ServicePageData): InternalLink[] {
 const SERVICE_GUIDE_LINKS: Record<string, InternalLink[]> = {
   'kitchen-remodeling': [
     {
+      href: '/blog/update-oak-kitchen-cabinets',
+      label: 'How to Update Oak Kitchen Cabinets Without Replacing Them',
+      description:
+        'Your oak cabinets may still have plenty of life left. Explore hardware, wall colors, backsplash ideas, and finish options before deciding to replace them.',
+    },
+    {
       href: '/blog/kitchen-remodel-cost-houston',
       label: 'Kitchen remodel cost guide',
       description: 'Budget ranges, cost drivers, and Houston-specific planning notes for kitchen remodels.',

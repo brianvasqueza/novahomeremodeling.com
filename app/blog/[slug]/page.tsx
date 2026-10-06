@@ -127,6 +127,11 @@ function renderSection(section: BlogSection) {
           </table>
         </div>
       )}
+      {section.bodyAfterTable?.map((paragraph, index) => (
+        <p key={`after-table-${index}`} style={index === 0 ? { marginTop: 24 } : undefined}>
+          {renderRichText(paragraph)}
+        </p>
+      ))}
       {section.callout && (
         <div className={`article-callout article-callout--${section.callout.type}`}>
           <span className="article-callout__label">{CALLOUT_LABELS[section.callout.type]}</span>
@@ -175,7 +180,11 @@ export default async function BlogPostPage({ params }: PageProps) {
   );
 
   const articleCta = (
-    <section className="article-cta">
+    <section
+      className="article-cta"
+      style={post.cta.id ? { scrollMarginTop: 112 } : undefined}
+      id={post.cta.id}
+    >
       <p className="eyebrow eyebrow--gold">Next step</p>
       <h2>{post.cta.heading}</h2>
       <p>{renderRichText(post.cta.body)}</p>

@@ -4,7 +4,8 @@ export type BlogCategory =
   | 'Process'
   | 'Permits'
   | 'Maintenance'
-  | 'Bathroom Updates';
+  | 'Bathroom Updates'
+  | 'Kitchen Updates';
 
 type BlogLink = {
   label: string;
@@ -43,6 +44,7 @@ export type BlogSection = {
   bullets?: BlogRichText[];
   bodyAfterBullets?: BlogRichText[];
   table?: BlogTable;
+  bodyAfterTable?: BlogRichText[];
   callout?: BlogCallout;
   image?: { src: string; alt: string; aspect?: 'wide' | 'portrait' };
   inlineCta?: InlineCta;
@@ -76,6 +78,7 @@ export type BlogPost = {
   faqHeading?: string;
   faqId?: string;
   cta: {
+    id?: string;
     heading: string;
     body: BlogRichText;
     additionalBody?: BlogRichText[];
@@ -1315,6 +1318,327 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         label: 'Small Home Repairs You Can Get Done in One Visit',
         href: '/small-home-repairs-one-visit',
+      },
+    ],
+    relatedLinksHeading: 'Related Reading',
+    relatedLinksAfterCta: true,
+  },
+  {
+    status: 'published',
+    slug: 'update-oak-kitchen-cabinets',
+    title: 'How to Update Oak Kitchen Cabinets Without Replacing Them',
+    seoTitle: 'How to Update Oak Kitchen Cabinets Without Replacing Them',
+    metaDescription:
+      'Explore ways to update oak kitchen cabinets without replacing them, from hardware and paint colors to backsplash changes. Tips for Houston homeowners.',
+    excerpt:
+      'Your oak cabinets may still have plenty of life left. Explore hardware, wall colors, backsplash ideas, and finish options before deciding to replace them.',
+    date: '2026-10-05',
+    category: 'Kitchen Updates',
+    readTime: '11 min read',
+    author: 'Nova Home Remodeling',
+    image: '/kitchenremodeling/kitchen-tune-up-aventura-fErbcauxyj8-unsplash.jpg',
+    imageWidth: 1600,
+    imageHeight: 2400,
+    imageAlt:
+      'White upper cabinets and light wood-tone lower cabinets with brass pulls, a pale backsplash, and a stainless steel dishwasher.',
+    topics: [],
+    blogBreadcrumbLabel: 'Blog',
+    currentBreadcrumbLabel: 'Kitchen Updates',
+    intro: [
+      'If your kitchen has oak cabinets, you may be wondering whether you have to replace them to make the room feel current. Maybe the finish looks too orange, the handles feel dated, or the cabinets no longer seem to work with the rest of the room.',
+      'Before you price out a new kitchen, take a closer look at what you already have. Cabinets that are sturdy, give you enough storage, and fit a useful layout may be worth keeping. Sometimes the bigger problem is the combination of wall color, backsplash, hardware, and worn details around them.',
+      'For Houston homeowners planning a smaller kitchen update, it helps to look at those choices together before deciding how much to replace.',
+    ],
+    quickAnswer:
+      'You can update oak kitchen cabinets without replacing them by changing the hardware, choosing wall colors that suit the wood, updating the backsplash, and repairing worn trim. If the finish itself needs attention, compare keeping the wood, refinishing, and painting. Start with the condition of the cabinets and the way the kitchen works, then choose the improvements that fit your budget.',
+    tableOfContents: [
+      {
+        label: 'Are your oak cabinets worth keeping?',
+        href: '#are-your-oak-cabinets-worth-keeping',
+      },
+      {
+        label: 'Ways to make oak cabinets look more modern',
+        href: '#ways-to-make-oak-cabinets-look-more-modern',
+      },
+      {
+        label: 'Should you keep the wood finish, refinish, or paint?',
+        href: '#should-you-keep-the-wood-finish-refinish-or-paint',
+      },
+      {
+        label: 'What affects the cost?',
+        href: '#what-affects-the-cost-of-updating-oak-cabinets',
+      },
+      {
+        label: 'When does replacement make more sense?',
+        href: '#when-does-cabinet-replacement-make-more-sense',
+      },
+      {
+        label: 'Common questions',
+        href: '#common-questions-about-updating-oak-cabinets',
+      },
+      {
+        label: 'Planning a kitchen update in Houston',
+        href: '#planning-a-kitchen-update-in-houston',
+      },
+    ],
+    sections: [
+      {
+        id: 'are-your-oak-cabinets-worth-keeping',
+        heading: 'Are Your Oak Cabinets Worth Keeping?',
+        body: [
+          'Open the doors and drawers before judging the cabinets by their color. Look at the cabinet boxes, the fixed sections attached to the walls and floor, as well as the doors and visible trim.',
+          'Check for swollen panels around the sink, loose joints, damaged drawer bottoms, and areas where the finish has worn away. A loose hinge is a different problem from a cabinet box that is coming apart. Also, an oak door doesn\'t necessarily mean the entire cabinet is solid oak; the interior and side panels may be made from other materials.',
+          'Then think about how you use the kitchen. Do you have enough storage? Can you reach the things you use every day? Do doors and drawers open without getting in each other\'s way?',
+          'Keeping the cabinets is worth considering when the structure is sound and your main concerns are appearance or small repairs. If you dislike the layout as much as the finish, look at both issues before investing in cosmetic work.',
+        ],
+      },
+      {
+        id: 'ways-to-make-oak-cabinets-look-more-modern',
+        heading: 'Ways to Make Oak Cabinets Look More Modern',
+        body: [
+          'Start with the changes that let you keep the wood finish. You may find that a different combination of colors and details gives you the look you wanted without touching the cabinet surfaces.',
+        ],
+      },
+      {
+        id: 'replace-cabinet-handles-and-knobs',
+        heading: 'Replace Cabinet Handles and Knobs',
+        level: 3,
+        body: [
+          'New handles can make a noticeable difference, especially when the old hardware is worn or more decorative than you prefer.',
+          'Try a few samples against an actual door. Brushed nickel can give a softer contrast, black can add definition, and warmer metal finishes can work with the warmth of the wood. There isn\'t one finish that suits every oak kitchen; consider the faucet, appliances, and nearby lighting too.',
+          'For pulls, measure the distance between the centers of the existing screw holes. Matching that spacing can avoid extra drilling and repair work. A larger handle may also uncover marks left by the old one, so check the surface before ordering a full set.',
+          'Choose something that feels comfortable in your hand. You\'ll notice how it works every day, long after you\'ve stopped thinking about the finish.',
+        ],
+        image: {
+          src: '/kitchenremodeling/josbra-design-1eWGq_l_DuU-unsplash.jpg',
+          alt:
+            'Light gray shaker cabinets with brass knobs and pulls, a white tile backsplash, and a stainless steel range.',
+        },
+      },
+      {
+        id: 'choose-wall-colors-that-work-with-oak',
+        heading: 'Choose Wall Colors That Work With Oak',
+        level: 3,
+        body: [
+          'Look at the cabinets beside your countertops and flooring before choosing paint. Honey oak may read as golden, orange, or reddish depending on the finish and the light in the room.',
+          'Warm whites, soft neutrals, and muted greens are reasonable colors to sample. Treat them as starting points rather than guaranteed matches. A white that looks gentle in the store can look stark beside your cabinet doors, while a gray may bring out more of the wood\'s orange tone than you expected.',
+          'View samples in the kitchen during the day and with the lights on at night. Place them near the cabinets and countertops instead of judging a small chip across the room.',
+          [
+            {
+              text:
+                'If you already like the cabinets but dislike the wall color, repainting the room may be a useful first step. Our ',
+            },
+            {
+              text: 'interior painting services in Houston',
+              href: '/services/interior-painting',
+            },
+            {
+              text: ' include the wall preparation and finish work that go along with that change.',
+            },
+          ],
+        ],
+      },
+      {
+        id: 'update-the-backsplash',
+        heading: 'Update the Backsplash',
+        level: 3,
+        body: [
+          'A busy or dark backsplash can compete with oak\'s visible grain. A simpler tile pattern may help the wood feel like an intentional part of the kitchen.',
+          'Bring home a tile sample and hold it against both the cabinet and countertop. Compare the grout color too. Strongly contrasting grout adds another pattern, while a closer match gives the tile a quieter look.',
+          'Ceramic and porcelain tile offer plenty of choices, from plain rectangular shapes to subtle texture. You don\'t have to choose an unusual shape to make the room feel updated. The combination matters more than any single material.',
+          'Check the condition of the wall behind the existing backsplash when planning the work. Removing tile can leave repairs that need to be included in the estimate. If you\'re also considering new countertops, settle that decision first so you don\'t install a backsplash that has to be disturbed later.',
+        ],
+      },
+      {
+        id: 'repair-worn-trim-and-cabinet-details',
+        heading: 'Repair Worn Trim and Cabinet Details',
+        level: 3,
+        body: [
+          'Crooked doors, loose handles, damaged toe kicks, and missing trim can make otherwise usable cabinets look neglected. The toe kick is the recessed section along the bottom of the base cabinets where your feet fit when you stand at the counter.',
+          'List those small problems before making finish decisions. Some may need adjustments or replacement hardware; others may need carpentry repairs. Fixing them helps you see the cabinets as they could look when they\'re properly put together.',
+          'For visible trim replacements, check the profile and finish against the existing wood. New oak won\'t necessarily match an older stained surface straight from the store. Agree on a sample before replacing several pieces.',
+          'Adding more decorative trim isn\'t always the answer. Simple, consistent details may suit the room better, particularly if the cabinet doors already have a strong pattern.',
+        ],
+      },
+      {
+        id: 'should-you-keep-the-wood-finish-refinish-or-paint',
+        heading: 'Should You Keep the Wood Finish, Refinish, or Paint?',
+        body: [
+          'The right choice depends on what bothers you about the cabinets. Is it the color, the wear, or the wood grain itself?',
+        ],
+        table: {
+          headers: [
+            'Option',
+            'When it is worth considering',
+            'What to think through',
+          ],
+          rows: [
+            [
+              'Keep the existing finish',
+              'The surface is in good condition and you like the wood',
+              'Test hardware, wall colors, and backsplash samples together before changing the cabinets',
+            ],
+            [
+              'Refinish the wood',
+              'You want to keep the wood appearance but the finish needs work',
+              'Have the existing surface assessed and approve a sample; the final color may not match an inspiration photo exactly',
+            ],
+            [
+              'Paint the cabinets',
+              'You want an opaque color and the cabinets are suitable for painting',
+              'Preparation, product choice, and the amount of visible grain affect the result',
+            ],
+          ],
+        },
+        bodyAfterTable: [
+          'Refinishing and painting aren\'t interchangeable. Refinishing usually means working on the existing finish to restore or change the wood\'s appearance. Painting covers the wood\'s color, though its texture can remain visible.',
+          'If you want to keep the wood, ask what can realistically be achieved with your particular doors and panels. A photo of pale wood cabinets may involve a different wood species or construction, so it isn\'t a promise of what your oak will look like.',
+          'For painting, cleaning, surface preparation, and a compatible coating system matter. Kitchen surfaces collect grease and residue, and new paint needs a properly prepared surface to adhere. Follow the chosen products\' drying and curing instructions; being dry to the touch doesn\'t necessarily mean the finish is ready for normal use.',
+          'Before approving either approach, review a sample and confirm how the doors, drawer fronts, visible sides, and trim will be handled. That is easier than trying to correct a finish you don\'t like after the whole kitchen is done.',
+        ],
+      },
+      {
+        id: 'what-affects-the-cost-of-updating-oak-cabinets',
+        heading: 'What Affects the Cost of Updating Oak Cabinets?',
+        body: [
+          'A hardware change and a full cabinet repaint are very different projects. The number of cabinets matters, but the condition of the surfaces and the amount of preparation can matter just as much.',
+          'The estimate may depend on:',
+        ],
+        bullets: [
+          [
+            {
+              text: 'The number of doors and drawers:',
+              strong: true,
+            },
+            {
+              text: ' More pieces mean more handling and finish work.',
+            },
+          ],
+          [
+            {
+              text: 'Repairs:',
+              strong: true,
+            },
+            {
+              text: ' Damaged panels, loose joints, and worn hardware need attention before cosmetic changes.',
+            },
+          ],
+          [
+            {
+              text: 'The finish you want:',
+              strong: true,
+            },
+            {
+              text: ' Keeping an existing finish involves different work from changing it.',
+            },
+          ],
+          [
+            {
+              text: 'Surrounding updates:',
+              strong: true,
+            },
+            {
+              text: ' Wall repairs, backsplash removal, trim work, and painting add to the scope.',
+            },
+          ],
+          [
+            {
+              text: 'Material choices:',
+              strong: true,
+            },
+            {
+              text: ' Hardware and tile prices vary, even within a simple design.',
+            },
+          ],
+          [
+            {
+              text: 'Protection and access:',
+              strong: true,
+            },
+            {
+              text: ' Ask how the kitchen will be protected and which areas will be unavailable during the work.',
+            },
+          ],
+        ],
+        bodyAfterBullets: [
+          'Request an estimate that separates the cabinet work from optional improvements. That makes it easier to choose what to do now without losing track of the overall plan.',
+          [
+            {
+              text:
+                'You don\'t need a price for a full kitchen remodel to start discussing a few targeted changes. If the project grows to include new cabinets or a different layout, our ',
+            },
+            {
+              text: 'Houston kitchen remodeling cost guide',
+              href: '/blog/kitchen-remodel-cost-houston',
+            },
+            {
+              text: ' covers the larger decisions that affect the budget.',
+            },
+          ],
+        ],
+      },
+      {
+        id: 'when-does-cabinet-replacement-make-more-sense',
+        heading: 'When Does Cabinet Replacement Make More Sense?',
+        body: [
+          'Replacement deserves a closer look when the cabinet boxes have substantial damage, the storage no longer meets your needs, or the layout makes the kitchen difficult to use.',
+          'A new finish won\'t create wider drawers or move an awkwardly placed cabinet. If those are the problems you want to solve, compare the cost of updating the existing cabinets with the work needed to change the layout.',
+          'There can also be a middle option: replacing doors and drawer fronts while keeping suitable cabinet boxes. This is often part of cabinet refacing, which also updates the visible exterior of the boxes. It still needs careful measurement and a clear plan for matching all the exposed surfaces.',
+          'Have the condition assessed before deciding. One damaged cabinet doesn\'t automatically mean every cabinet needs to go, but it should be accounted for before you pay to refinish the rest.',
+          [
+            {
+              text: 'Our ',
+            },
+            {
+              text: 'kitchen remodeling services in Houston',
+              href: '/services/kitchen-remodeling',
+            },
+            {
+              text: ' are a place to start if your plans extend beyond a finish update.',
+            },
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Can Honey Oak Cabinets Look Modern?',
+        answer:
+          'Yes. Honey oak can work with simpler hardware, a less busy backsplash, and wall colors that suit its warm tone. Look at the whole room before deciding the wood is the problem. You can keep the cabinets and still change the way the kitchen feels.',
+      },
+      {
+        question: 'Can I Update My Cabinets Without Painting Them?',
+        answer:
+          'Yes. You can keep the finish and focus on hardware, door adjustments, trim repairs, wall paint, and the backsplash. If the wood finish is worn, have it assessed before choosing a treatment. Cleaning or refinishing options depend on the condition and type of finish already on the cabinets.',
+      },
+      {
+        question: 'What Should I Update First on a Limited Budget?',
+        answer:
+          'Address damage and anything that doesn\'t work properly first. Then choose the improvement that solves your main complaint. If the room feels too busy, start by comparing paint and backsplash samples. If the cabinet finish looks good but the handles feel dated, try new hardware on one door before buying the full set. Work from a simple plan so each purchase fits the changes you may make later.',
+      },
+    ],
+    faqHeading: 'Common Questions About Updating Oak Cabinets',
+    faqId: 'common-questions-about-updating-oak-cabinets',
+    cta: {
+      id: 'planning-a-kitchen-update-in-houston',
+      heading: 'Planning a Kitchen Update in Houston?',
+      body:
+        'You don\'t need to have every finish picked out before asking for an estimate. Start with what you\'d like to keep and what you\'d like to change.',
+      additionalBody: [
+        'Send Nova Home Remodeling a few photos of the full kitchen, close-ups of the cabinet finish or damage, and a short list of your priorities. Include your project location and mention whether you\'re considering hardware, painting, trim, backsplash work, or a larger renovation.',
+        'We can discuss the work you\'re considering and help you plan the next step for your kitchen.',
+      ],
+      label: 'Request a Kitchen Update Estimate',
+      href: '/contact',
+    },
+    internalLinks: [
+      {
+        label: 'How Much Does a Kitchen Remodel Cost in Houston?',
+        href: '/blog/kitchen-remodel-cost-houston',
+      },
+      {
+        label: 'Best Kitchen Layout Ideas for Modern Houston Homes',
+        href: '/blog/best-kitchen-layout-ideas-houston',
       },
     ],
     relatedLinksHeading: 'Related Reading',

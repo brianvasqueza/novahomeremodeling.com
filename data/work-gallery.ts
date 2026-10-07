@@ -8,6 +8,7 @@ export interface WorkImage {
   status: WorkImageStatus;
   aspect?: WorkImageAspect;
   objectPosition?: string;
+  rotateLeft?: boolean;
 }
 
 export interface WorkVideo {
@@ -27,6 +28,11 @@ export interface WorkGroup {
   ctaHref: string;
   cover: WorkImage;
   images: WorkImage[];
+  comparison?: {
+    title: string;
+    beforeSrc: string;
+    afterSrc: string;
+  };
   video?: WorkVideo;
 }
 
@@ -35,8 +41,8 @@ const REAL_WORK = '/gallery_realwork';
 export const WORK_PAGE_TITLE = 'Real Remodeling & Home Repair Work in Houston';
 
 export const WORK_HERO = {
-  image: `${REAL_WORK}/houston-window-installation-exterior-repair.jpg`,
-  imageAlt: 'Front exterior of a two-story house after window installation and siding repair work.',
+  image: '/homepage/lotus-design-n-print-VgGD9EAV1HI-unsplash.jpg',
+  imageAlt: 'Bright living room with a stone fireplace, hardwood floors, and large windows.',
 } as const;
 
 export const WORK_PAGE_DESCRIPTION =
@@ -51,6 +57,11 @@ export const WORK_GROUPS: WorkGroup[] = [
       'Replacement windows installed with the surrounding siding and trim repair needed to properly finish each opening, shown on more than one visible side of the house.',
     ctaLabel: 'Need similar window or siding work?',
     ctaHref: '/services/window-installation',
+    comparison: {
+      title: 'Porch wall repair',
+      beforeSrc: `${REAL_WORK}/porch-wall-opening-before-repair-1.jpg`,
+      afterSrc: `${REAL_WORK}/porch-wall-siding-repair-after-2.jpg`,
+    },
     cover: {
       src: `${REAL_WORK}/rear-house-window-door-installed-siding-repair.jpg`,
       alt: 'Rear exterior of a house after window and door installation with siding repair around the openings.',
@@ -81,6 +92,7 @@ export const WORK_GROUPS: WorkGroup[] = [
         caption: 'Porch wall - before',
         status: 'Before',
         objectPosition: 'center',
+        rotateLeft: true,
       },
       {
         src: `${REAL_WORK}/porch-wall-siding-repair-after-2.jpg`,
@@ -88,6 +100,7 @@ export const WORK_GROUPS: WorkGroup[] = [
         caption: 'Porch wall - after',
         status: 'Completed',
         objectPosition: 'center',
+        rotateLeft: true,
       },
     ],
     video: {
@@ -106,6 +119,11 @@ export const WORK_GROUPS: WorkGroup[] = [
       'New cabinet boxes, doors, and hardware installed alongside sink, faucet, and appliances in place - shown here from bare walls through to a finished kitchen area.',
     ctaLabel: 'Need cabinets or a kitchen refresh?',
     ctaHref: '/services/kitchen-remodeling',
+    comparison: {
+      title: 'From cabinet installation to a finished kitchen',
+      beforeSrc: `${REAL_WORK}/kitchen-cabinet-installation-progress-a.jpg`,
+      afterSrc: `${REAL_WORK}/kitchen-cabinet-appliance-installation.jpg`,
+    },
     cover: {
       src: `${REAL_WORK}/kitchen-cabinet-appliance-installation.jpg`,
       alt: 'Kitchen with white cabinets, stainless appliances, tile floor, and finish work near completion.',
@@ -172,6 +190,11 @@ export const WORK_GROUPS: WorkGroup[] = [
       'A concrete stepping-stone walkway with a gravel border, built from form and pour through to a finished path, plus a new wood gate at the fence line.',
     ctaLabel: 'Need a walkway, gate, or fence repair?',
     ctaHref: '/services/fence-installation',
+    comparison: {
+      title: 'Walkway installation',
+      beforeSrc: `${REAL_WORK}/walkway-installation-progress.jpg`,
+      afterSrc: `${REAL_WORK}/concrete-walkway-gravel-path-after.jpg`,
+    },
     cover: {
       src: `${REAL_WORK}/exterior-walkway-gate-improvement.jpg`,
       alt: 'Concrete stepping-stone walkway with gravel leading to a newly built wood gate.',
@@ -201,6 +224,11 @@ export const WORK_GROUPS: WorkGroup[] = [
       'Railing framed and installed on an elevated deck, from rough framing to a finished wood rail fitted along the house exterior.',
     ctaLabel: 'Need a deck or railing built?',
     ctaHref: '/services/deck-construction',
+    comparison: {
+      title: 'From railing framing to the finished rail',
+      beforeSrc: `${REAL_WORK}/second-story-deck-rail-framing-progress.jpg`,
+      afterSrc: `${REAL_WORK}/deck-railing-construction.jpg`,
+    },
     cover: {
       src: `${REAL_WORK}/deck-railing-construction.jpg`,
       alt: 'Newly installed wood railing on an elevated deck beside an exterior stair opening.',

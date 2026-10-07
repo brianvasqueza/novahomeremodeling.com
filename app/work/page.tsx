@@ -23,8 +23,8 @@ import { createMetadata } from '@/lib/seo/metadata';
 import { absoluteUrl } from '@/lib/seo/urls';
 import type { ServiceVisualStory } from '@/data/service-visuals';
 
-const WORK_HERO_IMAGE_WIDTH = 4080;
-const WORK_HERO_IMAGE_HEIGHT = 1884;
+const WORK_HERO_IMAGE_WIDTH = 2400;
+const WORK_HERO_IMAGE_HEIGHT = 1600;
 
 export const metadata: Metadata = createMetadata({
   title: WORK_PAGE_TITLE,

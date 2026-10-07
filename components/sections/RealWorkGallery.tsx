@@ -14,6 +14,7 @@ type LightboxItem = {
   alt: string;
   caption: string;
   status: WorkImage['status'];
+  rotateLeft?: boolean;
 };
 
 function imageStyle(image: WorkImage): CSSProperties {
@@ -26,15 +27,19 @@ function WorkPhoto({
   image,
   sizes,
   className = '',
-  showCaption = true,
+  statusLabel,
   onOpen,
 }: {
   image: WorkImage;
   sizes: string;
   className?: string;
-  showCaption?: boolean;
+  statusLabel?: string;
   onOpen: () => void;
 }) {
+  const picture = (
+    <ResponsiveImage src={image.src} alt={image.alt} sizes={sizes} className="real-work-photo__img" />
+  );
+
   return (
     <figure
       className={[
@@ -44,20 +49,20 @@ function WorkPhoto({
       ].filter(Boolean).join(' ')}
       style={imageStyle(image)}
     >
-      <button
-        type="button"
-        className="real-work-photo__trigger"
-        onClick={onOpen}
-        aria-label={`Zoom in on: ${image.caption}`}
-      >
-        <ResponsiveImage src={image.src} alt={image.alt} sizes={sizes} className="real-work-photo__img" />
-      </button>
-      <span className="ba__label real-work-photo__badge">{image.status}</span>
-      {showCaption && (
-        <figcaption className="port-img__cap real-work-photo__caption">
-          <span className="port-img__cap-title">{image.caption}</span>
-        </figcaption>
-      )}
+      <div className="real-work-photo__media">
+        <button
+          type="button"
+          className={`real-work-photo__trigger${image.rotateLeft ? ' real-work-photo__trigger--rotate-left' : ''}`}
+          onClick={onOpen}
+          aria-label={`Zoom in on: ${image.caption} (${image.status})`}
+        >
+          {image.rotateLeft ? <span className="real-work-photo__rotated-media">{picture}</span> : picture}
+        </button>
+        <span className="ba__label real-work-photo__badge">{statusLabel ?? image.status}</span>
+      </div>
+      <figcaption className="port-img__cap real-work-photo__caption">
+        <span className="port-img__cap-title">{image.caption}</span>
+      </figcaption>
     </figure>
   );
 }
@@ -89,16 +94,42 @@ function RealWorkSection({
   group: WorkGroup;
   onOpenPhoto: (src: string) => void;
 }) {
+  const photos = [group.cover, ...group.images];
+  const before = photos.find((image) => image.src === group.comparison?.beforeSrc);
+  const after = photos.find((image) => image.src === group.comparison?.afterSrc);
+  const hasComparison = Boolean(before && after);
+  const supportingPhotos = hasComparison
+    ? photos.filter((image) => image.src !== before?.src && image.src !== after?.src)
+    : group.images;
+
   return (
     <article className="real-work__item reveal" id={group.id}>
-      <div className="real-work__feature">
-        <WorkPhoto
-          image={group.cover}
-          sizes="(max-width: 1100px) calc(100vw - 48px), (max-width: 1600px) 46vw, 650px"
-          className="real-work__cover"
-          showCaption={false}
-          onOpen={() => onOpenPhoto(group.cover.src)}
-        />
+      <div className={`real-work__feature${hasComparison ? ' real-work__feature--comparison' : ''}`}>
+        {before && after ? (
+          <div className="real-work__comparison" role="group" aria-label={`${group.comparison?.title}: ${before.status} and after`}>
+            <p className="real-work__comparison-title">{group.comparison?.title}</p>
+            <div className="real-work__comparison-photos">
+              <WorkPhoto
+                image={before}
+                sizes="(max-width: 1100px) calc((100vw - 64px) / 2), (max-width: 1600px) 30vw, 440px"
+                onOpen={() => onOpenPhoto(before.src)}
+              />
+              <WorkPhoto
+                image={after}
+                statusLabel="After"
+                sizes="(max-width: 1100px) calc((100vw - 64px) / 2), (max-width: 1600px) 30vw, 440px"
+                onOpen={() => onOpenPhoto(after.src)}
+              />
+            </div>
+          </div>
+        ) : (
+          <WorkPhoto
+            image={group.cover}
+            sizes="(max-width: 1100px) calc(100vw - 48px), (max-width: 1600px) 46vw, 650px"
+            className="real-work__cover"
+            onOpen={() => onOpenPhoto(group.cover.src)}
+          />
+        )}
         <div className="real-work__copy">
           <span className="real-work__category">{group.category}</span>
           <h2 className="real-work__title">{group.title}</h2>
@@ -108,9 +139,9 @@ function RealWorkSection({
           </CtaLink>
         </div>
       </div>
-      {(group.images.length > 0 || group.video) && (
+      {(supportingPhotos.length > 0 || group.video) && (
         <div className="real-work__support" aria-label={`${group.title} supporting photos`}>
-          {group.images.map((image) => (
+          {supportingPhotos.map((image) => (
             <WorkPhoto
               key={image.src}
               image={image}
@@ -129,14 +160,14 @@ export function RealWorkGallery({ groups }: RealWorkGalleryProps) {
   const items = useMemo<LightboxItem[]>(() => {
     const flat: LightboxItem[] = [];
     for (const group of groups) {
-      flat.push({
-        src: group.cover.src,
-        alt: group.cover.alt,
-        caption: group.cover.caption,
-        status: group.cover.status,
-      });
-      for (const image of group.images) {
-        flat.push({ src: image.src, alt: image.alt, caption: image.caption, status: image.status });
+      const photos = [group.cover, ...group.images];
+      const before = photos.find((image) => image.src === group.comparison?.beforeSrc);
+      const after = photos.find((image) => image.src === group.comparison?.afterSrc);
+      const orderedPhotos = before && after
+        ? [before, after, ...photos.filter((image) => image.src !== before.src && image.src !== after.src)]
+        : photos;
+      for (const image of orderedPhotos) {
+        flat.push({ src: image.src, alt: image.alt, caption: image.caption, status: image.status, rotateLeft: image.rotateLeft });
       }
     }
     return flat;
@@ -177,6 +208,15 @@ export function RealWorkGallery({ groups }: RealWorkGalleryProps) {
   }, [openIndex, close, showPrev, showNext]);
 
   const activeItem = openIndex === null ? null : items[openIndex];
+  const lightboxImage = activeItem ? (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={activeItem.src}
+      alt={activeItem.alt}
+      className="real-work-lightbox__img"
+      onClick={(event) => event.stopPropagation()}
+    />
+  ) : null;
 
   return (
     <section className="real-work section" aria-label="Real Nova work photo sections">
@@ -212,13 +252,9 @@ export function RealWorkGallery({ groups }: RealWorkGalleryProps) {
           >
             &#8249;
           </button>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={activeItem.src}
-            alt={activeItem.alt}
-            className="real-work-lightbox__img"
-            onClick={(event) => event.stopPropagation()}
-          />
+          {activeItem.rotateLeft ? (
+            <div className="real-work-lightbox__media--rotate-left">{lightboxImage}</div>
+          ) : lightboxImage}
           <button
             type="button"
             className="real-work-lightbox__nav real-work-lightbox__nav--next"

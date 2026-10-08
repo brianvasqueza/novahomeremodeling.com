@@ -162,7 +162,7 @@ export function ServiceConsultation({ content }: LandingProps) {
               <li key={step}>{step}</li>
             ))}
           </ol>
-          <CtaLink href="#contact">Request a Free Estimate</CtaLink>
+          <CtaLink href="#contact">Request an Estimate</CtaLink>
         </div>
         <nav className="svc-consult__links" aria-label="Helpful project links">
           {authorityLinks.map((link) => (

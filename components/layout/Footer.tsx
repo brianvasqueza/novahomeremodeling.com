@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             <div className="footer__wm">NOVA</div>
             <p className="footer__motto">
-              A residential remodeling company serving {SITE.serviceAreaDisplay}.
+              A remodeling company serving {SITE.serviceAreaDisplay}.
               <br />
               Kitchens, bathrooms, painting, drywall, flooring, whole-home work, and the smaller repairs in between.
             </p>
@@ -53,7 +53,7 @@ export function Footer() {
         </div>
         <div className="footer__bot">
           <div>
-            © 2009 — 2026 {SITE.legalName} · {SITE.serviceAreaDisplay} · Bonded &amp; insured · Website by{' '}
+            © 2026 {SITE.legalName} · {SITE.serviceAreaDisplay} · Remodeling &amp; repairs · Website by{' '}
             <a href="https://vasquezwebstudio.com" target="_blank" rel="noopener noreferrer">
               Vasquez Web Studio
             </a>

@@ -2,7 +2,8 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import { Eyebrow } from '@/components/ui/Eyebrow';
-import { STEPS, PHASE_LABELS } from '@/data/content';
+import { STEPS } from '@/data/content';
+import type { ProcessContent } from '@/data/service-process';
 import {
   ScrollStepContent,
   StickySection,
@@ -13,26 +14,33 @@ import {
 const PROCESS_VISUALS = [
   {
     src: '/homepage/michael-brown-0xp3aw009eo-unsplash.jpg',
-    alt: 'Luxury remodeled living space used during the consultation and planning phase.',
+    alt: 'Interior inspiration showing an open living space.',
   },
   {
     src: '/kitchenremodeling/prydumano-design-KyWwFZkcaUU-unsplash.jpg',
-    alt: 'Detailed kitchen finishes and cabinetry representing the planning and material selection phase.',
+    alt: 'Kitchen inspiration with cabinetry and coordinated finishes.',
   },
   {
     src: '/kitchenremodeling/franco-debartolo-JxBwFjX-8hU-unsplash.jpg',
-    alt: 'Warm kitchen remodel showing cabinetry, stone counters, and finish work during construction.',
+    alt: 'Kitchen inspiration showing wood cabinetry and stone counters.',
   },
   {
     src: '/bathroom%20remodeling/patrick-bohn-PoXaUHUa-Tg-unsplash.jpg',
-    alt: 'Finished bathroom remodel with marble shower and brass fixtures ready for final walkthrough.',
+    alt: 'Bathroom inspiration with a marble-look shower and brass fixtures.',
   },
 ];
 
-export function Process() {
+const DEFAULT_CONTENT: ProcessContent = {
+  title: 'A remodeling process',
+  audience: 'Houston homeowners',
+  lede: 'Start with the rooms involved and the changes you want to make. A clear scope helps you compare estimates, plan access, and understand which decisions are needed before work begins.',
+  steps: STEPS,
+};
+
+export function Process({ content = DEFAULT_CONTENT }: { content?: ProcessContent } = {}) {
   const [active, setActive] = useState(0);
   const storySteps = useMemo<StickyStoryStep[]>(() => {
-    return STEPS.map((step, index) => ({
+    return content.steps.map((step, index) => ({
       id: step.n,
       eyebrow: step.n,
       title: step.title,
@@ -40,7 +48,7 @@ export function Process() {
       meta: step.duration,
       image: PROCESS_VISUALS[index] ?? PROCESS_VISUALS[0],
     }));
-  }, []);
+  }, [content.steps]);
   const handleActive = useCallback((index: number) => setActive(index), []);
 
   return (
@@ -50,26 +58,21 @@ export function Process() {
           <div className="process__head-l">
             <Eyebrow dark gold>07 — Process</Eyebrow>
             <h2 className="process__h">
-              A remodeling process
+              {content.title}
               <br />
-              Houston homeowners <em>can follow.</em>
+              {content.audience} <em>can follow.</em>
             </h2>
           </div>
           <div className="process__head-r">
             <p className="process__lede">
-              One crew per Houston remodeling project, start to finish. The same people who frame
-              your kitchen are the ones who set the tile, repair drywall, install flooring, and hang
-              the cabinets. No handoffs, no strangers mid-project, no timeline surprises.
+              {content.lede}
             </p>
           </div>
         </div>
 
         <StickySection className="process-sticky-wrap">
           <StickyVisualPanel
-            steps={storySteps.map((step, index) => ({
-              ...step,
-              title: PHASE_LABELS[index] ?? step.title,
-            }))}
+            steps={storySteps}
             activeIndex={active}
           />
           <div className="process-steps-scroll">

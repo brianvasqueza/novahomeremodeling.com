@@ -54,11 +54,8 @@ export function organizationJsonLd() {
       email: SITE.email,
       contactType: 'customer service',
       areaServed: SITE.serviceAreaDisplay,
-      availableLanguage: ['English', 'Spanish'],
     },
-    priceRange: '$$$',
     slogan: SITE.shortDescription,
-    foundingDate: '2009',
     knowsAbout: ['Houston home remodeling', ...serviceOfferNames, 'Houston residential remodeling'],
     address: {
       '@type': 'PostalAddress',
@@ -131,9 +128,9 @@ export function serviceJsonLd(service: ServicePageData, content?: ServiceLanding
     areaServed: serviceAreaPlaces(),
     audience: {
       '@type': 'Audience',
-      audienceType: 'Houston-area homeowners',
+      audienceType: service.slug === 'commercial-remodeling' ? 'Houston-area businesses and property managers' : 'Houston-area homeowners',
     },
-    category: 'Residential remodeling',
+    category: service.slug === 'commercial-remodeling' ? 'Commercial remodeling' : 'Residential remodeling',
     serviceType: service.title,
     hasOfferCatalog: content
       ? {

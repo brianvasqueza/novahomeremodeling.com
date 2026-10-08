@@ -71,9 +71,9 @@ const sharedAuthorityLinks: ServiceLandingContent['authorityLinks'] = [
     body: 'See how Nova moves from feasibility, scope, and material selections into construction.',
   },
   {
-    label: 'View real Nova work',
+    label: 'View project photos',
     href: '/work',
-    body: 'See completed and in-progress Nova project photos, from interior updates to exterior repairs and carpentry details.',
+    body: 'Browse project photos, from interior updates to exterior repairs and carpentry details.',
   },
   {
     label: 'Start a project conversation',
@@ -258,7 +258,7 @@ const categoryDefaults: Record<ServicePageData['category'], LandingSeed> = {
       title: 'Whole-home work shaped by neighborhood, permitting, and lifestyle.',
       body: 'A renovation in River Oaks has different constraints than a Katy family home or a Meyerland mid-century property. The work should respect the architecture, the approval path, and the way the homeowner lives.',
       neighborhoods: ['Houston', 'River Oaks', 'Memorial', 'Meyerland', 'Katy', 'Sugar Land'],
-      note: 'Permit paths, material lead times, and HOA requirements vary significantly across Houston neighborhoods. We know the differences.',
+      note: 'Discuss any property restrictions, approvals, and material availability that affect the proposed scope.',
     },
     consultation: {
       eyebrow: 'Consultation',
@@ -433,13 +433,45 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
     seoDescription: 'Whole-home remodeling in Houston with cohesive planning for kitchens, bathrooms, flooring, cabinetry, paint, lighting, and major renovations.',
     heroTitle: 'Whole Home Remodeling in Houston',
     heroDescription: 'Whole-home remodeling in Houston with cohesive planning across kitchens, bathrooms, flooring, cabinetry, paint, lighting, structural work, and finish details.',
+    includes: {
+      eyebrow: 'Home renovations scope',
+      title: 'What home renovations can include.',
+      items: [
+        'Kitchen and bathroom updates within the agreed scope',
+        'Flooring, paint, trim, and finish coordination',
+        'Layout changes with the required professional input',
+        'Planning for phased work and access to living areas'
+      ]
+    }
   },
+
   'outdoor-remodeling': {
     seoTitle: 'Outdoor Remodeling in Houston, TX',
-    seoDescription: 'Houston outdoor living remodeling for covered patios, exterior upgrades, shade, materials, drainage, and year-round entertaining spaces.',
+    seoDescription: 'Houston outdoor remodeling with planning for patios, shade, drainage, materials, and the way you use the space.',
     heroTitle: 'Outdoor Living Remodeling in Houston',
-    heroDescription: 'Outdoor living remodeling in Houston for covered patios, shade, drainage, exterior materials, lighting, and year-round entertaining spaces.',
+    heroDescription: 'Outdoor living remodeling in Houston with planning for patios, shade, drainage, exterior materials, lighting, and access.',
+    includes: {
+      eyebrow: 'Outdoor remodeling scope',
+      title: 'What outdoor remodeling can include.',
+      items: [
+        'Patio and hardscape updates',
+        'Shade and covered-space options',
+        'Drainage considerations and connections to the home',
+        'Utility needs for outdoor cooking or lighting'
+      ]
+    },
+    consultation: {
+      eyebrow: 'Getting started',
+      title: 'Start with how you want to use the space.',
+      body: 'Share photos, the features you want to keep, and the changes you are considering. Include any known drainage problems, access limits, or HOA requirements.',
+      steps: [
+        'Describe seating, cooking, and shade needs',
+        'Review existing surfaces, drainage, and access',
+        'Clarify structures, utilities, and approval responsibilities'
+      ]
+    }
   },
+
   'patio-remodeling': {
     seoTitle: 'Patio Remodeling in Houston, TX',
     seoDescription: 'Patio remodeling in Houston with shade planning, durable materials, drainage, lighting, and outdoor living details.',
@@ -450,8 +482,95 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
   },
   'custom-carpentry': {
     seoTitle: 'Custom Carpentry in Houston, TX',
-    seoDescription: 'Custom carpentry in Houston for built-ins, millwork, trim, shelving, architectural details, and detailed interior remodeling.',
+    seoDescription: 'Custom carpentry in Houston for built-ins, millwork, trim, shelving, and architectural details sized for the room.',
+    heroDescription: 'Custom carpentry in Houston for storage, built-ins, shelving, and millwork planned around the space and how you use it.',
+    includes: {
+      eyebrow: 'Custom carpentry scope',
+      title: 'What custom carpentry can include.',
+      items: [
+        'Built-in bookshelves and storage',
+        'Window seats, benches, and mudroom pieces',
+        'Shelving, doors, drawers, and hardware',
+        'Material and finish selection to suit the room'
+      ]
+    },
+    problem: {
+      eyebrow: 'What to consider',
+      title: 'A custom piece starts with what it needs to do.',
+      paragraphs: [
+        'A built-in can look good and still be awkward to use if shelves are out of reach or doors open into nearby furniture. Start with what you need to store and how you move through the room.',
+        'Dimensions, wall irregularities, outlets, and installation access all affect the design. Discuss these constraints before settling on a drawing or finish.'
+      ],
+      reassurance: 'Bring measurements, photos, and examples of the items the piece needs to hold.',
+      proofPoints: [
+        {
+          label: 'Fit',
+          value: 'Actual opening and adjacent trim'
+        },
+        {
+          label: 'Use',
+          value: 'Storage, reach, and clearances'
+        },
+        {
+          label: 'Finish',
+          value: 'Painted or stained options'
+        }
+      ]
+    },
+    transformation: {
+      eyebrow: 'What changes',
+      title: 'Storage that fits the room and your routine.',
+      before: 'An unused alcove, freestanding storage that does not fit, or shelves that are difficult to reach.',
+      after: 'A piece planned around the available space, storage needs, and surrounding finishes.',
+      outcomes: [
+        'Storage sized for the items you use',
+        'Clearances considered before fabrication',
+        'Materials and hardware chosen for the purpose'
+      ]
+    },
+    craft: {
+      eyebrow: 'Materials and details',
+      title: 'Fit, materials, and moving parts all matter.',
+      intro: 'Review how the piece will be built and used, as well as how it will look.',
+      items: [
+        {
+          title: 'Dimensions and access',
+          body: 'Check the opening, nearby trim, outlets, and the route into the room.'
+        },
+        {
+          title: 'Materials and connections',
+          body: 'Discuss panel materials, exposed edges, shelf support, and the connections appropriate to the piece.'
+        },
+        {
+          title: 'Finish and hardware',
+          body: 'Compare finish samples and review drawer, door, and hardware choices before approval.'
+        }
+      ]
+    },
+    local: {
+      eyebrow: 'Houston-area planning',
+      title: 'Carpentry that fits an existing Houston home.',
+      body: 'Existing walls and trim may be uneven or differ from room to room. Photos and measurements help explain what the new piece needs to work around.',
+      neighborhoods: [
+        'Houston',
+        'The Heights',
+        'Memorial',
+        'Katy'
+      ],
+      note: 'Include the project location and access details when requesting an estimate.'
+    },
+    consultation: {
+      eyebrow: 'Getting started',
+      title: 'Bring the space, the need, and a few examples.',
+      body: 'Tell Nova what the piece needs to do. Photos, rough dimensions, and inspiration images can help start the conversation without committing you to a finished design.',
+      steps: [
+        'Describe what needs to be stored or displayed',
+        'Share the opening and surrounding room details',
+        'Discuss materials, finish, and design responsibilities'
+      ]
+    }
   },
+
   'interior-painting': {
     seoTitle: 'Interior Painting in Houston, TX',
     seoDescription: 'Interior painting in Houston with detailed prep, trim painting, wall repair, mineral and limewash finishes, and color planning before the first coat.',
@@ -853,60 +972,184 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
 
   'fence-installation': {
     seoTitle: 'Fence Installation in Houston, TX',
-    seoDescription: 'Cedar, steel, and composite fence installation in Houston — posts set in concrete for clay soil, galvanized or stainless fasteners, and gates engineered for the span.',
+    seoDescription: 'Fence installation in Houston with planning for materials, boundary references, post supports, gates, and property access.',
+    heroDescription: 'Fence installation in Houston with planning for privacy, materials, gates, site access, and the proposed fence line.',
+    includes: {
+      eyebrow: 'Fence installation scope',
+      title: 'What fence installation can include.',
+      items: [
+        'Fence-line and material planning',
+        'Removal of existing sections where included',
+        'Posts, rails, panels, and compatible hardware',
+        'Gates planned for pedestrian or equipment access'
+      ]
+    },
     problem: {
-      eyebrow: 'Why Houston fences fail early',
-      title: 'Houston clay soil shrinks in the dry and swells in the wet. A post without concrete moves with it.',
+      eyebrow: 'What to consider',
+      title: 'Plan the fence line before choosing panels.',
       paragraphs: [
-        "Houston's soil is some of the most expansive in the country. When it rains, it swells. When it dries, it contracts. A fence post set in packed soil follows that movement — and within two to three years, the fence is leaning.",
-        "We set every post in concrete, sized for the span and height. The concrete cures for 48 hours before any panel load is applied. And we use galvanized or stainless fasteners throughout — the cost difference per panel is small; the performance difference over ten years in Houston's humidity is significant.",
+        'Privacy, appearance, access, and maintenance all influence the choice of fence. Gate locations and changes in ground level can affect the layout as much as the panel style.',
+        'Use a reliable boundary reference and discuss easements, shared sections, and any HOA requirements before settling on the line. Confirm what existing fence removal is included.'
       ],
-      reassurance: 'A fence is a long-term decision. The methods and materials we use are designed to look honest and stand straight for twenty years, not five.',
+      reassurance: 'A fence estimate should explain the proposed materials, supports, gates, and exclusions.',
       proofPoints: [
-        { label: 'Post setting', value: 'Concrete only — no packed soil' },
-        { label: 'Cure time', value: '48 hours before panel load' },
-        { label: 'Fasteners', value: 'Galvanized or stainless throughout' },
-      ],
+        {
+          label: 'Layout',
+          value: 'Boundary reference and gate locations'
+        },
+        {
+          label: 'Materials',
+          value: 'Appearance and maintenance needs'
+        },
+        {
+          label: 'Site',
+          value: 'Access and existing conditions'
+        }
+      ]
     },
     transformation: {
       eyebrow: 'What changes',
-      title: 'From a fence that leans and rusts to a property line built to stay where it was set.',
-      before: 'Posts that have begun to lean, cedar rusting at the fasteners, and gates that sag and drag — signs of installation that did not account for Houston conditions.',
-      after: 'A fence that is plumb, concrete-anchored, and fastened with hardware that holds its finish in Houston\'s humidity. Built honestly and meant to stay that way.',
-      outcomes: ['Posts concrete-set to hold in clay soil movement', 'Galvanized or stainless fasteners that will not rust or stain the cedar', 'Gates engineered for the span, not sized by convention'],
+      title: 'A fence layout that fits the property’s use.',
+      before: 'Damaged sections, limited privacy, or gates that no longer suit the way you access the yard.',
+      after: 'A replacement layout and material choice planned around privacy, access, and maintenance.',
+      outcomes: [
+        'Gate locations considered before installation',
+        'Support and hardware choices included in the scope',
+        'Removal and finishing responsibilities clarified'
+      ]
+    },
+    craft: {
+      eyebrow: 'Materials and details',
+      title: 'Supports, hardware, and gates deserve attention.',
+      intro: 'The fence design needs to suit the material and the site rather than follow one specification for every property.',
+      items: [
+        {
+          title: 'Post supports',
+          body: 'Review the proposed support system, site conditions, and installation requirements.'
+        },
+        {
+          title: 'Compatible hardware',
+          body: 'Confirm fasteners and connectors that suit the selected posts, rails, and panels.'
+        },
+        {
+          title: 'Gate operation',
+          body: 'Discuss width, weight, swing, and clearance for the people or equipment using each gate.'
+        }
+      ]
+    },
+    local: {
+      eyebrow: 'Houston-area planning',
+      title: 'Fence planning for Houston-area properties.',
+      body: 'Lot boundaries, access, HOA restrictions, and existing fence conditions vary by property. Include a survey or boundary reference and photos with the project details.',
+      neighborhoods: [
+        'Houston',
+        'Cypress',
+        'Katy',
+        'Sugar Land'
+      ],
+      note: 'Confirm boundary and approval questions before installation; a construction estimate does not replace a survey.'
     },
     consultation: {
       eyebrow: 'Getting started',
-      title: 'A site walk and a property line conversation before any post is located.',
-      body: 'Fence installation begins with a conversation about the boundary reference, HOA requirements if applicable, and the material direction. We walk the line with you before anything is laid out.',
-      steps: ['Walk the property line and confirm boundary reference points', 'Discuss material, height, and HOA requirements', 'Confirm post spacing, gate locations, and permit path'],
-    },
+      title: 'A fence-line conversation before installation.',
+      body: 'Share the proposed line, approximate length, gate needs, and material preferences. Include access limits and any existing fence that needs removal.',
+      steps: [
+        'Review boundary references and existing conditions',
+        'Discuss height, materials, and gates',
+        'Clarify supports, removal, access, and approvals'
+      ]
+    }
   },
 
   'siding-repair': {
     seoTitle: 'Siding Repair in Houston, TX',
-    seoDescription: 'Siding repair and rot remediation in Houston — moisture source identified before replacement, profile matched to existing, and paint blended across the repair zone.',
+    seoDescription: 'Siding repair in Houston with assessment of damaged areas, possible water entry, replacement profiles, and finish matching.',
+    heroDescription: 'Siding repair in Houston with attention to damaged areas, surrounding conditions, replacement options, and finish matching.',
+    includes: {
+      eyebrow: 'Siding repair scope',
+      title: 'What siding repair can include.',
+      items: [
+        'Review of visible damage and surrounding transitions',
+        'Replacement of affected siding within the agreed scope',
+        'Review of exposed sheathing and weather protection',
+        'Profile, texture, and paint-matching considerations'
+      ]
+    },
     problem: {
-      eyebrow: 'The moisture behind the wall',
-      title: 'A siding repair that does not address the water source will fail again in three years.',
+      eyebrow: 'What to consider',
+      title: 'Look at the condition behind the visible damage.',
       paragraphs: [
-        "In Houston's climate, siding damage is almost always a moisture story. Failed caulk at a window frame. A missing kick-out flashing at a roof transition. A Z-bar that was never installed at a horizontal seam. The siding is where the story ends — not where it starts.",
-        "We find the source before touching the siding. Moisture readings on the surrounding boards and sheathing, probe tests for soft spots, visual inspection of every transition point above the damage. Then we repair.",
+        'Cracked, loose, or deteriorated siding needs more than a color match. Discuss the condition of nearby boards and the transitions around windows, roofs, and trim.',
+        'Opening an affected area may reveal work that was not visible during the initial review. Clarify how those findings will be discussed and how any additional repairs will be priced.'
       ],
-      reassurance: 'A repair that matches the existing profile and addresses the source should be invisible from the street and outlast the rest of the siding.',
+      reassurance: 'A useful estimate distinguishes visible repairs from work that depends on conditions behind the siding.',
       proofPoints: [
-        { label: 'Source first', value: 'Moisture entry identified before repair' },
-        { label: 'Profile match', value: 'Sourced or milled to existing reveal' },
-        { label: 'Houston factor', value: 'Humidity cycles, mold, and rot progression' },
-      ],
+        {
+          label: 'Inspection',
+          value: 'Damage and nearby transitions'
+        },
+        {
+          label: 'Matching',
+          value: 'Profile, reveal, and texture'
+        },
+        {
+          label: 'Scope',
+          value: 'Visible and concealed conditions'
+        }
+      ]
     },
     transformation: {
       eyebrow: 'What changes',
-      title: 'From a damaged section that announces the problem to a repair that disappears into the wall.',
-      before: 'Rotted boards, moisture staining, and a patch that does not match the surrounding profile — often with the original water entry point still active.',
-      after: 'A repair that matches the existing siding in profile, texture, and painted finish — and stays dry because the source was fixed, not covered.',
-      outcomes: ['Water entry point found and sealed before new siding is installed', 'Profile and reveal matched to the existing wall surface', 'Paint blended across the repair zone to transition with the surrounding finish'],
+      title: 'Repair the affected area with the surrounding wall in mind.',
+      before: 'Damaged boards, staining, or a previous repair that differs from the existing siding.',
+      after: 'Replacement materials and a finish approach chosen with the surrounding wall and any underlying repair needs in mind.',
+      outcomes: [
+        'A repair scope based on the condition',
+        'Matching options reviewed before material selection',
+        'Paint blending or repainting discussed where needed'
+      ]
     },
+    craft: {
+      eyebrow: 'Materials and details',
+      title: 'The replacement board is only part of the repair.',
+      intro: 'Profile, fastening requirements, weather protection, and the final coating all need consideration.',
+      items: [
+        {
+          title: 'Existing siding profile',
+          body: 'Compare board dimensions, reveal, and texture with available replacement materials.'
+        },
+        {
+          title: 'Behind the siding',
+          body: 'Review the exposed area and discuss any sheathing or weather-barrier repairs needed before covering it.'
+        },
+        {
+          title: 'Finish matching',
+          body: 'Weathering can affect the color and sheen. Discuss how large an area needs painting for an acceptable transition.'
+        }
+      ]
+    },
+    local: {
+      eyebrow: 'Houston-area planning',
+      title: 'Siding repairs for existing Houston-area homes.',
+      body: 'The existing siding product, previous repairs, and exposure vary from house to house. Include photos of the damaged area and the surrounding wall when requesting an estimate.',
+      neighborhoods: [
+        'Houston',
+        'Katy',
+        'Cypress',
+        'Sugar Land'
+      ],
+      note: 'Share any known leaks and previous repair details; an exact material or paint match may not be available.'
+    },
+    consultation: {
+      eyebrow: 'Getting started',
+      title: 'Start with the damaged area and what you know about it.',
+      body: 'Send the location, photos, and a description of when you noticed the problem. Include known leaks or previous repairs so the initial conversation can focus on the likely scope.',
+      steps: [
+        'Review damage and surrounding siding',
+        'Discuss repair extent and replacement options',
+        'Clarify finish work and how hidden damage will be handled'
+      ]
+    }
   },
 
   'pergolas': {
@@ -963,29 +1206,96 @@ const landingOverrides: Record<string, Partial<LandingSeed>> = {
 
   'commercial-remodeling': {
     seoTitle: 'Commercial Remodeling in Houston, TX',
-    seoDescription: 'Small commercial renovation in Houston — offices, retail, and mixed-use spaces managed with fixed scope, single project manager, and residential-quality finish standards.',
+    seoDescription: 'Small commercial remodeling in Houston with review of the proposed scope, business access, landlord requirements, and finish selections.',
+    heroTitle: 'Commercial Remodeling in Houston',
+    heroDescription: 'Commercial remodeling for Houston offices, retail, and mixed-use spaces, with planning around the proposed work and business operations.',
+    includes: {
+      eyebrow: 'Commercial remodeling scope',
+      title: 'What commercial remodeling can include.',
+      items: [
+        'Interior finish updates within the agreed scope',
+        'Flooring, painting, trim, and millwork considerations',
+        'Work-area and access planning',
+        'Coordination of project requirements and responsibilities'
+      ]
+    },
     problem: {
-      eyebrow: 'Commercial work at a residential standard',
-      title: 'Most commercial renovation is high-volume and low-margin. Ours is neither.',
+      eyebrow: 'What to consider',
+      title: 'The space has to serve the business during and after the work.',
       paragraphs: [
-        "We take commercial projects selectively — typically for clients we know from residential work, or for spaces that require the same caliber of finish detail and management that a fine residence does. High-volume tenant improvement is not our model.",
-        "Commercial projects carry different constraints than residential ones: business continuity during construction, after-hours access requirements, ADA compliance, different permitting paths. We plan for all of these at the start — not when they become problems mid-construction.",
+        'A commercial update affects staff, customers, deliveries, and access. Identify which areas can close and which functions need to remain available before choosing a construction sequence.',
+        'Landlord requirements, proposed use, and the work itself influence which plans and approvals need review. Clarify those responsibilities rather than assuming they are all part of a finish-work estimate.'
       ],
-      reassurance: 'Fixed scope, single project manager, weekly reporting — the same structure we bring to every residential project, adapted for commercial schedule pressures.',
+      reassurance: 'Share operating hours and access constraints when discussing scheduling options.',
       proofPoints: [
-        { label: 'Project volume', value: 'Selective — quality over volume' },
-        { label: 'Schedule', value: 'After-hours available for critical phases' },
-        { label: 'Management', value: 'Same discipline as residential work' },
-      ],
+        {
+          label: 'Use',
+          value: 'Staff and customer needs'
+        },
+        {
+          label: 'Access',
+          value: 'Work areas and business operations'
+        },
+        {
+          label: 'Approvals',
+          value: 'Landlord and project requirements'
+        }
+      ]
     },
     transformation: {
       eyebrow: 'What changes',
-      title: 'From a commercial space built to a budget to one built to a standard.',
-      before: 'A tenant improvement managed like one of forty projects — schedules that slip, change orders at the end, and finish work that shows the shortcuts taken along the way.',
-      after: 'A commercial space managed with full attention, fixed scope, and finish work that reflects the standard the business presents to its clients every day.',
-      outcomes: ['After-hours construction where business continuity requires it', 'ADA and code compliance built into the scope from design through permitting', 'The same finish crew and management model as our residential work'],
+      title: 'A workspace planned around its daily use.',
+      before: 'Worn finishes, awkward circulation, or a layout that no longer supports the business.',
+      after: 'An agreed update to the layout or finishes, with business access and approval responsibilities considered before work begins.',
+      outcomes: [
+        'Finish selections suited to the use of the space',
+        'Access arrangements discussed with the project team',
+        'Scope and approval responsibilities clarified'
+      ]
     },
+    craft: {
+      eyebrow: 'Materials and details',
+      title: 'Commercial finishes need to suit the space.',
+      intro: 'Consider traffic, cleaning, access, and adjacent finishes when comparing materials.',
+      items: [
+        {
+          title: 'Materials and use',
+          body: 'Discuss flooring, paint, and millwork in the context of the people and activities the space supports.'
+        },
+        {
+          title: 'Connections to existing work',
+          body: 'Review transitions to retained floors, walls, doors, and fixtures so the estimate includes the necessary finish repairs.'
+        },
+        {
+          title: 'Work areas and access',
+          body: 'Clarify delivery routes, protected areas, and any business functions that must remain available.'
+        }
+      ]
+    },
+    local: {
+      eyebrow: 'Houston-area planning',
+      title: 'Commercial remodeling in the Houston area.',
+      body: 'Requirements depend on the property, proposed use, landlord, and local approval process. Share the project address and any existing plans so the scope can be reviewed in context.',
+      neighborhoods: [
+        'Houston',
+        'Katy',
+        'Sugar Land',
+        'Cypress'
+      ],
+      note: 'Confirm who provides any required professional review, drawings, permits, and inspections.'
+    },
+    consultation: {
+      eyebrow: 'Getting started',
+      title: 'Start with the business needs and proposed changes.',
+      body: 'Send Nova the location, type of space, photos, and a description of the work. Include landlord requirements and preferred timing to help identify the next steps.',
+      steps: [
+        'Describe the business and proposed work',
+        'Share plans, requirements, and access constraints',
+        'Discuss scope, scheduling options, and responsibilities'
+      ]
+    }
   },
+
 };
 
 function mergeLandingContent(service: ServicePageData): ServiceLandingContent {
@@ -1013,7 +1323,7 @@ function mergeLandingContent(service: ServicePageData): ServiceLandingContent {
       `${service.title} for Houston homes and surrounding areas, planned with a clear scope, careful sequencing, and durable finish standards.`,
     imageAlt:
       merged.imageAlt ??
-      `${service.title} project detail for a Houston-area remodeling service page by Nova Home Remodeling & Design.`,
+      `Design inspiration for ${service.title.toLowerCase()}.`,
     includes: merged.includes ?? {
       eyebrow: `${service.title} scope`,
       title: `What our ${service.title.toLowerCase()} work can include.`,

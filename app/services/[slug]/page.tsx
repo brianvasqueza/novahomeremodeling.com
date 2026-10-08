@@ -29,6 +29,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { SERVICE_PAGE_DATA, findServicePage } from '@/data/service-pages';
 import { findServiceVisualStory } from '@/data/service-visuals';
 import { getServiceLandingContent } from '@/data/service-landing';
+import { getServiceProcessContent } from '@/data/service-process';
 import { getServiceAreaLinks, getServiceGuideLinks } from '@/data/internal-links';
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd, serviceWebPageJsonLd } from '@/lib/seo/json-ld';
 import { createMetadata } from '@/lib/seo/metadata';
@@ -86,7 +87,7 @@ export default async function ServicePage({ params }: PageProps) {
           description={landingContent.heroDescription}
           image={service.heroImage}
           imageAlt={landingContent.imageAlt}
-          ctaLabel={isKitchenRemodeling ? 'Start a kitchen project' : 'Get a Free Estimate'}
+          ctaLabel={isKitchenRemodeling ? 'Start a kitchen project' : 'Request an Estimate'}
           ctaHref="#contact"
         />
         <Breadcrumbs items={breadcrumbs} />
@@ -102,7 +103,7 @@ export default async function ServicePage({ params }: PageProps) {
             <ServiceFeatures service={service} />
             {visualStory && <ServiceProcessVisual visualStory={visualStory} />}
             <ServiceCraft content={landingContent} />
-            <Process />
+            <Process content={getServiceProcessContent(service)} />
             {visualStory && <ServiceMicroGallery visualStory={visualStory} />}
           </>
         )}

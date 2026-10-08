@@ -26,12 +26,19 @@ export function getServiceAreaLinks(service: ServicePageData): InternalLink[] {
   return selectedCities.map((city) => ({
     href: `/cities/${city.slug}`,
     label: `${city.name} remodeling`,
-    description: city.character,
+    description: service.slug === 'commercial-remodeling'
+      ? `Review the project location, business access, and local requirements for ${city.name}.`
+      : city.character,
   }));
 }
 
 const SERVICE_GUIDE_LINKS: Record<string, InternalLink[]> = {
   'kitchen-remodeling': [
+    {
+      href: '/blog/best-kitchen-layout-ideas-houston',
+      label: 'Kitchen layout ideas',
+      description: 'Compare kitchen layouts, storage, circulation, and the work involved in changing the space.',
+    },
     {
       href: '/blog/update-oak-kitchen-cabinets',
       label: 'How to Update Oak Kitchen Cabinets Without Replacing Them',
@@ -41,7 +48,7 @@ const SERVICE_GUIDE_LINKS: Record<string, InternalLink[]> = {
     {
       href: '/blog/kitchen-remodel-cost-houston',
       label: 'Kitchen remodel cost guide',
-      description: 'Budget ranges, cost drivers, and Houston-specific planning notes for kitchen remodels.',
+      description: 'Project scopes, cost drivers, and estimate considerations for kitchen remodels.',
     },
     {
       href: '/blog/open-concept-remodeling-ideas',

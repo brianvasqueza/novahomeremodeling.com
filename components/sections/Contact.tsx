@@ -31,7 +31,7 @@ const EMPTY_FORM: FormState = {
 function ContactForm() {
   const [form, setForm] = useState<FormState>(EMPTY_FORM);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
-  const [sent, setSent] = useState(false);
+  const [draftPrepared, setDraftPrepared] = useState(false);
 
   const set = <K extends keyof FormState>(k: K, v: FormState[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
@@ -48,7 +48,7 @@ function ContactForm() {
     if (!form.email.trim()) e.email = 'We need an email to reply to.';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
       e.email = "That doesn't look like an email.";
-    if (form.scope.length === 0) e.scope = 'Select the rooms you are working on.';
+    if (form.scope.length === 0) e.scope = 'Select the project type that fits best.';
     if (!form.budget) e.budget = 'Select the range that fits your scope.';
     if (!form.message.trim() || form.message.trim().length < 12)
       e.message = 'A sentence about the home is enough to get started.';
@@ -73,7 +73,7 @@ function ContactForm() {
     ].join('\n');
 
     window.location.href = `${SITE.emailHref}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSent(true);
+    setDraftPrepared(true);
   };
 
   const stepDone = {
@@ -82,30 +82,30 @@ function ContactForm() {
     c: !!form.message,
   };
 
-  if (sent) {
+  if (draftPrepared) {
     return (
       <div className="form form__success">
-        <span className="form__success-eyebrow">Received — file no. 128</span>
+        <span className="form__success-eyebrow">Next step — send your email</span>
         <h3 className="form__success-h">
           Thank you, {form.name.split(' ')[0] || 'friend'}.
           <br />
-          We&apos;ll be in touch <em>this week.</em>
+          Review and <em>send your email.</em>
         </h3>
         <p className="form__success-body">
-          Your email app should open with the project details addressed to {SITE.email}. Once sent,
-          expect a real reply within three business days — a few questions, and a proposed time to
-          walk the project together.
+          Your email app should open with the project details addressed to {SITE.email}.
+          Review the draft, attach any photos, and send it to complete your inquiry.
+          If no draft opens, email {SITE.email} directly or call {SITE.phoneDisplay}.
         </p>
         <div style={{ marginTop: 24 }}>
           <Button
             variant="tertiary"
             as="button"
             onClick={() => {
-              setSent(false);
+              setDraftPrepared(false);
               setForm(EMPTY_FORM);
             }}
           >
-            Send another
+            Prepare another
           </Button>
         </div>
       </div>
@@ -259,7 +259,7 @@ function ContactForm() {
           id="f-message"
           className="form__textarea"
           rows={4}
-          placeholder="Year built, rooms involved, kitchen or bath goals, painting, drywall, flooring, or the feeling you're after."
+          placeholder="Describe the repair or remodel, the areas involved, known issues, and what you would like to change."
           required
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? 'f-message-error' : undefined}
@@ -272,12 +272,13 @@ function ContactForm() {
       <div className="form__trust-strip">
         <span>{SITE.serviceAreaDisplay}</span>
         <span>{SITE.hoursDisplay}</span>
-        <span>Est. 2009 · 17 years local</span>
-        <span>Private — never shared</span>
+        <span>Project details by email</span>
+        <span>Photos welcome by email</span>
       </div>
       <div className="form__submit-row">
         <p className="form__hint">
-          Every inquiry is read by a senior member of our team. We reply within three business days — a few questions, then a free in-home estimate at a time that works for you.
+          This form prepares an email draft. Review it, add any photos, and send it from your email
+          app to request an estimate. You can also email {SITE.email} directly or call {SITE.phoneDisplay}.
         </p>
         <Button variant="primary" as="button" type="submit">
           Request a Remodeling Estimate
@@ -297,12 +298,13 @@ export function Contact() {
             Tell us about your <em>Houston remodel.</em>
           </h2>
           <p>
-            Got a repair instead of a full remodel? Send photos of your repair for a faster
-            estimate — drywall patches, door fixes, trim, caulking, and fence repairs all count.
+            Tell Nova the project location, what you would like to change, and any known issues.
+            For a repair, photos of the affected area and the surrounding space can help explain
+            the work you are considering.
           </p>
           <div className="contact__info">
             <div className="contact__info-group">
-              <span className="label">Office</span>
+              <span className="label">Service area</span>
               <span className="value">
                 {SITE.address}
                 <br />

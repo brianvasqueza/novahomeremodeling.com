@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
     'Contact Nova Home Remodeling & Design for Houston kitchen, bathroom, flooring, painting, and whole-home remodeling consultations.',
   path: '/contact',
   image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2000&q=82&auto=format&fit=crop',
-  imageAlt: 'Warm remodeled Houston home interior with kitchen and living space.',
+  imageAlt: 'Interior inspiration with a kitchen and living space.',
 });
 
 const breadcrumbs = [
@@ -29,9 +29,9 @@ export default function ContactPage() {
         <PageHero
           eyebrow="Contact"
           title="Start a Remodeling Conversation"
-          description="Tell us what you are planning, where the home is located, and what decisions you are trying to make next."
+          description="Tell Nova what you are planning, where the property is located, and what you would like included in an estimate."
           image="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2000&q=82&auto=format&fit=crop"
-          imageAlt="Warm remodeled Houston home interior with kitchen and living space."
+          imageAlt="Interior inspiration with a kitchen and living space."
         />
         <Breadcrumbs items={breadcrumbs} />
         <Contact />

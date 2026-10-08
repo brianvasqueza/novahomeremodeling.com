@@ -98,16 +98,17 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'How Much Does a Kitchen Remodel Cost in Houston?',
     seoTitle: 'How Much Does a Kitchen Remodel Cost in Houston?',
     excerpt:
-      'Planning a kitchen remodel in Houston? Get real cost breakdowns by project size, material tier, and what actually moves the needle on your budget.',
+      'Planning a kitchen remodel in Houston? Compare project scopes, material choices, and the decisions that shape an estimate.',
     date: '2026-05-20',
+    modified: '2026-10-08',
     category: 'Planning',
     readTime: '9 min read',
     author: AUTHOR,
     image: 'https://images.pexels.com/photos/36777538/pexels-photo-36777538.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1333&fit=crop',
-    imageAlt: 'Finished Houston kitchen remodel with quartz counters, custom cabinetry, and open sightlines.',
+    imageAlt: 'Design inspiration: Finished kitchen remodel with quartz counters, custom cabinetry, and open sightlines.',
     topics: ['kitchen remodeling', 'Houston remodel costs', 'project planning'],
     intro: [
-      'If you have been searching kitchen remodel costs online and getting answers anywhere from $12,000 to $100,000, that range is not imaginary. The problem is that most cost guides skip the context that makes those numbers useful.',
+      'Online kitchen remodel prices can be difficult to compare because they often describe different scopes. A finish refresh and a layout change involve different work, even in kitchens of the same size.',
       'The right number depends on the size of the kitchen, whether the layout changes, the cabinet package, countertop material, appliance tier, and the age of the home. Here is what Houston homeowners should know before setting a budget.',
     ],
     introCta: {
@@ -117,30 +118,30 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     sections: [
       {
-        heading: 'The Short Answer: Houston Kitchen Remodel Cost Ranges',
+        heading: 'How Kitchen Remodel Scope Affects the Budget',
         table: {
-          headers: ['Project level', 'Typical cost range', 'What is usually included'],
+          headers: ['Project level', 'Budget considerations', 'What is usually included'],
           rows: [
-            ['Minor refresh', '$10,000 - $25,000', 'Cabinet refacing, new countertops, fixtures, paint'],
-            ['Mid-range remodel', '$30,000 - $60,000', 'Semi-custom cabinets, new appliances, tile backsplash, same layout'],
-            ['Full remodel', '$65,000 - $120,000+', 'Custom cabinets, layout changes, high-end appliances, electrical and plumbing work'],
+            ['Minor refresh', 'Retained cabinets and limited layout changes', 'Cabinet refacing, new countertops, fixtures, paint'],
+            ['Mid-range remodel', 'Cabinet and appliance selections', 'Semi-custom cabinets, new appliances, tile backsplash, same layout'],
+            ['Full remodel', 'Layout, structure, utilities, and finish level', 'Custom cabinets, layout changes, high-end appliances, electrical and plumbing work'],
           ],
         },
         body: [
-          'These ranges assume a standard Houston kitchen between roughly 150 and 300 square feet. Larger kitchens, structural work, slab plumbing changes, and premium materials move the number toward the upper end.',
+          'Kitchen size is only part of the estimate. Compare cabinet quantities, materials, appliances, demolition, finish repairs, and any structural or utility work included in each proposal.',
         ],
       },
       {
         heading: 'What Actually Drives Your Kitchen Remodel Budget',
         body: [
           'Layout changes are often the biggest budget fork. Moving a sink, adding an island, or opening a wall means coordinating plumbing, electrical, framing, and sometimes engineering.',
-          'Cabinets usually represent 30-40% of the total kitchen budget. Stock cabinets can keep costs down, semi-custom cabinets offer better fit and finish, and full custom cabinetry brings the most flexibility and detail.',
+          'Cabinets can be a substantial part of the budget. Stock, semi-custom, and custom options differ in sizing, configuration, finish, and installation needs.',
           'Countertops also swing widely. Laminate can be the budget choice, granite and quartz sit in the middle, and quartzite or marble can push a kitchen into a premium tier quickly.',
           'Appliance packages can range from a reliable mid-grade suite to professional-style brands. Most Houston homeowners should decide the appliance tier before final cabinet drawings are completed.',
         ],
       },
       {
-        heading: 'Minor Kitchen Refresh: $10,000 - $25,000',
+        heading: 'Minor Kitchen Refresh',
         body: [
           'This scope fits when the cabinets are structurally sound and the layout works, but the kitchen feels dated.',
         ],
@@ -150,14 +151,14 @@ export const BLOG_POSTS: BlogPost[] = [
           'Sink, faucet, lighting, paint, and backsplash updates',
           'A limited appliance swap',
         ],
-        callout: { type: 'timeline', text: 'Typical timeline: 2–4 weeks. Most of this scope can be completed with minimal disruption to daily life.' },
+        callout: { type: 'timeline', text: 'Ask which parts of the kitchen will be unavailable and how the proposed work will be sequenced. Even a finish refresh needs planning for access and drying or curing time.' },
         image: {
           src: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1600&q=82&auto=format&fit=crop',
-          alt: 'Kitchen refresh with repainted cabinets, updated hardware, and new countertops — a budget-friendly upgrade for Houston homeowners.',
+          alt: 'Design inspiration: Kitchen with light cabinetry, updated hardware, and countertops.',
         },
       },
       {
-        heading: 'Mid-Range Kitchen Remodel: $30,000 - $60,000',
+        heading: 'Mid-Range Kitchen Remodel',
         body: [
           'This is where many Houston homeowners land: new cabinets, new counters, new appliances, and a more complete finish package, while keeping the footprint mostly intact.',
         ],
@@ -168,14 +169,14 @@ export const BLOG_POSTS: BlogPost[] = [
           'Tile backsplash, lighting, and plumbing or electrical updates as needed',
           'Flooring in the kitchen area when it is not tied to a whole-home floor project',
         ],
-        callout: { type: 'timeline', text: 'Typical timeline: 6–10 weeks. Semi-custom cabinet lead times of 4–8 weeks are usually the biggest schedule variable — lock in your selections early.' },
+        callout: { type: 'timeline', text: 'Confirm cabinet and appliance availability before setting a start date. The estimate should distinguish ordering time from work in the home.' },
         image: {
           src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=82&auto=format&fit=crop',
-          alt: 'Mid-range kitchen remodel with white shaker cabinets, quartz countertops, and subway tile backsplash.',
+          alt: 'Design inspiration: Mid-range kitchen remodel with white shaker cabinets, quartz countertops, and subway tile backsplash.',
         },
       },
       {
-        heading: 'Full Kitchen Remodel: $65,000 - $120,000+',
+        heading: 'Full Kitchen Remodel',
         body: [
           'A full remodel usually means the layout is changing, walls are opening, an island is being added, or the finish level is high across the board.',
         ],
@@ -186,10 +187,10 @@ export const BLOG_POSTS: BlogPost[] = [
           'High-end appliance package and custom range hood',
           'Full plumbing and electrical rough-in',
         ],
-        callout: { type: 'timeline', text: 'Typical timeline: 10–16 weeks. Projects at this scope require permits, inspections, and multi-trade coordination across framing, plumbing, and electrical.' },
+        callout: { type: 'timeline', text: 'Discuss any required approvals, inspections, and trade coordination before agreeing on a construction sequence.' },
         image: {
           src: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=1600&q=82&auto=format&fit=crop',
-          alt: 'Full custom kitchen remodel with floor-to-ceiling cabinetry, oversized island, and professional-grade appliance package.',
+          alt: 'Design inspiration: Full custom kitchen remodel with floor-to-ceiling cabinetry, oversized island, and professional-grade appliance package.',
         },
       },
       {
@@ -199,9 +200,9 @@ export const BLOG_POSTS: BlogPost[] = [
           'Older homes in neighborhoods such as Meyerland, Bellaire, and the Heights can reveal galvanized plumbing, older wiring, or legacy materials once walls and floors are opened.',
           'Most Houston homes sit on slab foundations, which makes moving plumbing more involved than in homes with a crawl space or basement. Sink and prep sink moves should be scoped clearly before the budget is finalized.',
         ],
-        callout: { type: 'tip', text: 'Budget a $2,000–$8,000 contingency for older Houston homes. Galvanized plumbing, older wiring, and legacy materials in floors or texture are common discoveries once demo begins.' },
+        callout: { type: 'tip', text: 'Discuss an allowance for unexpected conditions in an older home. Ask how concealed damage or outdated systems will be assessed, priced, and approved if discovered.' },
         inlineCta: {
-          body: 'Have questions about an older Houston home? We work in Meyerland, the Heights, Bellaire, and throughout the city — and we know what to look for before demo starts.',
+          body: 'Have questions about an older Houston home? Share the location, known issues, and proposed changes so the work can be discussed before demolition.',
           label: 'Talk to a Local Remodeler',
           href: '/contact',
         },
@@ -220,17 +221,17 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         question: 'How long does a kitchen remodel take in Houston?',
         answer:
-          'Minor refreshes often take 2-4 weeks, mid-range remodels often take 6-10 weeks, and full gut remodels can take 10-16 weeks. Cabinet lead time is usually the biggest schedule variable.',
+          'Timing depends on scope, product availability, approvals, and conditions found during the work. Ask for a sequence that separates preparation and ordering from construction.',
       },
       {
         question: 'Do I need permits for a kitchen remodel in Houston?',
         answer:
-          'Structural work, plumbing relocation, and major electrical changes usually require permits. Cosmetic work such as cabinet replacement, countertop swaps, and paint may not, depending on scope.',
+          'Permit requirements depend on the work and the property location. Confirm the requirements for the proposed scope with the local permitting authority and clarify who will handle them.',
       },
       {
         question: 'What is the ROI on a kitchen remodel in Houston?',
         answer:
-          'A well-planned mid-range kitchen remodel can improve resale appeal significantly. Actual return depends on the home, neighborhood, scope, and market conditions.',
+          'Resale return depends on the home, neighborhood, scope, and market conditions. Consider how the kitchen will serve you as well as the expectations of buyers in your area.',
       },
       {
         question: 'Can I live in my home during a kitchen remodel?',
@@ -425,18 +426,19 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'Picking flooring for a Texas home is not the same as anywhere else. Humidity, heat, and slab foundations change the equation.',
     date: '2026-05-20',
+    modified: '2026-10-08',
     category: 'Materials',
     readTime: '8 min read',
     author: AUTHOR,
     image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2000&q=82&auto=format&fit=crop',
-    imageAlt: 'Open Houston living area with warm wide-plank flooring and natural light.',
+    imageAlt: 'Design inspiration: Open living area with warm wide-plank flooring and natural light.',
     topics: ['flooring', 'Texas homes', 'material selection'],
     intro: [
       'Texas homes ask a lot from flooring: humidity, heat, slab foundations, heavy traffic, pets, kids, and the everyday dust that comes with active homes.',
       'The flooring that looks great in a showroom may not be the right call for a Houston bungalow, Katy new build, or Sugar Land renovation. Here is how the main options compare.',
     ],
     introCta: {
-      body: 'Not sure which flooring makes sense for your rooms? We can walk your space, test slab moisture, and talk through the tradeoffs before you order anything.',
+      body: 'Not sure which flooring makes sense for your rooms? Share the room use, existing floor, and any known moisture issues to start comparing options.',
       label: 'Book a Flooring Consultation',
       href: '/contact',
     },
@@ -448,26 +450,26 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        heading: 'Luxury Vinyl Plank: The Top Pick for Many Houston Homes',
+        heading: 'Luxury Vinyl Plank: An Option',
         body: [
-          'Luxury vinyl plank has become popular because it handles moisture, traffic, and slab installations well at a practical price point.',
+          'Luxury vinyl plank is an option to compare for appearance, maintenance, comfort, and the installation requirements of the specific product.',
         ],
         bullets: [
-          'Waterproof and humidity stable',
+          'Review the specific product’s water and temperature limits',
           'Works well over concrete slabs with proper prep',
           'Comfortable underfoot compared with tile',
           'Available in durable wear layers for high-traffic rooms',
         ],
-        callout: { type: 'cost', text: 'Installed cost: $5–$10/sq ft. Look for 12 mil or 20 mil wear layers in high-traffic rooms — cheap LVP telegraphs every subfloor imperfection and wears through faster.' },
+        callout: { type: 'cost', text: 'Compare wear-layer specifications, subfloor preparation, underlayment requirements, and removal costs when reviewing LVP estimates.' },
         image: {
           src: 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1600&q=82&auto=format&fit=crop',
-          alt: 'Modern Houston living area with warm-toned wide-plank luxury vinyl flooring and natural light.',
+          alt: 'Design inspiration: Modern living area with warm-toned wide-plank luxury vinyl flooring and natural light.',
         },
       },
       {
         heading: 'Porcelain Tile: The Texas Workhorse',
         body: [
-          'Porcelain tile handles humidity, heat, kitchens, bathrooms, laundry rooms, and covered transitions better than most materials.',
+          'Porcelain tile is an option for kitchens, bathrooms, laundry rooms, and entries. Compare the tile and the complete installation system for the intended use.',
         ],
         bullets: [
           'Moisture-resistant and highly durable',
@@ -475,10 +477,10 @@ export const BLOG_POSTS: BlogPost[] = [
           'Excellent for wet rooms and entries',
           'Higher labor cost than floating floors',
         ],
-        callout: { type: 'cost', text: 'Installed cost: $8–$18/sq ft. Large-format tile (24×48 and above) and complex patterns such as herringbone push toward the upper end.' },
+        callout: { type: 'cost', text: 'Tile size, pattern, substrate preparation, edges, and transitions can affect the amount of installation work. Compare those items in each estimate.' },
         image: {
           src: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&q=82&auto=format&fit=crop',
-          alt: 'Porcelain tile flooring in a Houston home — moisture-resistant and low-maintenance, well-suited for Texas humidity and slab foundations.',
+          alt: 'Design inspiration: Interior with a tile floor.',
         },
         inlineCta: {
           body: 'Comparing flooring materials for a Houston remodel? We can help you weigh moisture performance, durability, and cost in the context of your actual space.',
@@ -489,20 +491,20 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'Engineered Hardwood: Real Wood With Better Stability',
         body: [
-          'If you want real wood in Houston, engineered hardwood is usually the stronger choice. The plywood core resists movement better than solid wood and can be installed over slab with the right moisture barrier.',
+          'Engineered wood is one option for a real-wood floor. Suitability over a slab depends on the selected product, moisture conditions, and approved installation method.',
         ],
-        callout: { type: 'cost', text: 'Installed cost: $10–$18/sq ft. Requires a vapor barrier over concrete slab and good humidity control — keep your home between 35–55% relative humidity.' },
+        callout: { type: 'cost', text: 'Follow the selected flooring and adhesive manufacturers’ requirements for moisture testing, preparation, and indoor conditions. There is no single humidity range or installation system for every product.' },
         image: {
           src: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1600&q=82&auto=format&fit=crop',
-          alt: 'Engineered hardwood flooring in a Houston living room — real wood character with better moisture stability than solid hardwood on slab.',
+          alt: 'Design inspiration: Interior with wood-tone flooring.',
         },
       },
       {
         heading: 'Solid Hardwood: Possible, But With Caveats',
         body: [
-          'Solid hardwood can work in the right home, especially above grade, but it requires more humidity control and greater acceptance of seasonal movement. On Houston slabs, it is generally higher risk.',
+          'Solid hardwood needs a suitable installation system and indoor conditions. Review the chosen product and site before deciding whether it belongs in the room.',
         ],
-        callout: { type: 'warning', text: 'On most Houston slabs, solid hardwood carries meaningful risk of cupping, gapping, and moisture-related failure. Engineered hardwood gives you real wood character with far better performance in this climate.' },
+        callout: { type: 'warning', text: 'Before choosing solid wood over a slab, confirm the product’s approved installation method and the moisture-control requirements for the site.' },
       },
       {
         heading: 'Carpet and Polished Concrete',
@@ -510,19 +512,19 @@ export const BLOG_POSTS: BlogPost[] = [
           'Carpet still makes sense in bedrooms, bonus rooms, and offices where comfort and acoustics matter. Avoid it near wet areas or exterior doors.',
           'Polished concrete can be compelling in contemporary remodels when the slab is in good condition. It is durable and easy to clean, but hard underfoot and visually dependent on the quality of the existing slab.',
         ],
-        callout: { type: 'cost', text: 'Carpet installed: $4–$10/sq ft. Polished concrete: $3–$10/sq ft depending on polish level, staining, and scoring detail.' },
+        callout: { type: 'cost', text: 'For carpet, compare removal, pad, transitions, and installation. For polished concrete, ask how slab repairs and the desired finish affect the scope.' },
       },
       {
         heading: 'Flooring Comparison for Texas Homeowners',
         table: {
-          headers: ['Material', 'Waterproof', 'Good on slab', 'Humidity stable', 'Installed cost'],
+          headers: ['Material', 'Water exposure', 'Slab considerations', 'Care and conditions', 'Estimate considerations'],
           rows: [
-            ['LVP', 'Yes', 'Yes', 'Yes', '$5-$10/sq ft'],
-            ['Porcelain tile', 'Yes', 'Yes', 'Yes', '$8-$18/sq ft'],
-            ['Engineered hardwood', 'No', 'With barrier', 'Mostly', '$10-$18/sq ft'],
-            ['Solid hardwood', 'No', 'Risky', 'No', '$12-$25/sq ft'],
-            ['Carpet', 'No', 'With barrier', 'Partly', '$4-$10/sq ft'],
-            ['Polished concrete', 'Yes', 'Yes', 'Yes', '$3-$10/sq ft'],
+            ['LVP', 'Check product limits', 'Check moisture and preparation requirements', 'Follow product care and temperature limits', 'Prep, underlayment, removal, and transitions'],
+            ['Porcelain tile', 'Review the complete installation system', 'Review substrate and installation system', 'Tile and grout care', 'Size, pattern, preparation, and edges'],
+            ['Engineered hardwood', 'Avoid assuming waterproof performance', 'Confirm approved method and moisture requirements', 'Follow product humidity and care requirements', 'Product, preparation, adhesive, and trim'],
+            ['Solid hardwood', 'Moisture-sensitive', 'Requires a suitable product and installation system', 'Review indoor conditions and maintenance', 'Installation system and preparation'],
+            ['Carpet', 'Avoid wet locations', 'Review slab, pad, and product requirements', 'Cleaning and stain care', 'Pad, removal, fitting, and transitions'],
+            ['Polished concrete', 'Discuss finish and moisture conditions', 'Existing slab condition matters', 'Follow finish-specific care', 'Repairs, finish, and detailing'],
           ],
         },
       },
@@ -539,19 +541,19 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     faqs: [
       {
-        question: 'What is the most popular flooring in Houston homes right now?',
+        question: 'How should I compare flooring samples?',
         answer:
-          'Wide-plank LVP in warm oak and neutral tones is very popular because it handles climate, traffic, and budget constraints well.',
+          'View samples in your room’s light and compare texture, cleaning instructions, product limits, and installation needs. Appearance is only one part of the choice.',
       },
       {
         question: 'Can you install hardwood floors on a slab in Houston?',
         answer:
-          'Engineered hardwood can be installed over slab with proper moisture testing and a vapor barrier. Solid hardwood on slab is much riskier.',
+          'Some engineered wood products allow slab installation when their moisture and installation requirements are met. Confirm the selected product and system rather than assuming a barrier alone makes it suitable.',
       },
       {
         question: 'How long does flooring installation take?',
         answer:
-          'A single room may take 1-2 days. A whole-home flooring project often takes 3-7 days depending on square footage, prep, and material.',
+          'Timing depends on removal, preparation, room access, product requirements, and the amount of flooring. Ask whether the schedule includes any acclimation or curing time needed for the selected system.',
       },
       {
         question: 'What flooring is easiest to maintain in Texas?',
@@ -580,11 +582,12 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'Thinking about opening up your home layout? Learn what to know before removing a wall, including structure, costs, and design ideas that work.',
     date: '2026-05-20',
+    modified: '2026-10-08',
     category: 'Planning',
     readTime: '9 min read',
     author: AUTHOR,
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2000&q=82&auto=format&fit=crop',
-    imageAlt: 'Open concept Houston living space with kitchen, dining, and living areas connected.',
+    imageAlt: 'Design inspiration: Open concept living space with kitchen, dining, and living areas connected.',
     topics: ['open concept', 'whole-home remodeling', 'kitchen remodeling'],
     intro: [
       'Walk into many older Houston homes and you will notice the same pattern: the kitchen is closed off, the dining room is separate, and the living room is disconnected from where people actually gather.',
@@ -613,18 +616,18 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'What Does an Open Concept Remodel Cost in Houston?',
         table: {
-          headers: ['Scope', 'Typical cost range'],
+          headers: ['Scope', 'Items to include in the estimate'],
           rows: [
-            ['Non-load-bearing wall removal with finish work', '$3,000 - $8,000'],
-            ['Load-bearing wall removal with beam', '$10,000 - $25,000'],
-            ['Kitchen/living/dining open concept with kitchen updates', '$40,000 - $90,000+'],
-            ['Whole-home layout reconfiguration', '$80,000 - $150,000+'],
+            ['Non-load-bearing wall removal with finish work', 'Wall removal, utilities, and surrounding finish repairs'],
+            ['Load-bearing wall removal with beam', 'Structural review, support work, approvals, and finish repairs'],
+            ['Kitchen/living/dining open concept with kitchen updates', 'Wall work, cabinets, appliances, and continuous finishes'],
+            ['Whole-home layout reconfiguration', 'Connected room, structural, utility, and finish scopes'],
           ],
         },
         body: [
           'The wall removal is rarely the only cost. Ceiling patching, flooring extension, paint, electrical, HVAC rerouting, and kitchen updates often shape the final number.',
         ],
-        callout: { type: 'tip', text: 'The structural work is rarely the largest line item. Budget carefully for what comes after: ceiling patching, continuous flooring, HVAC rerouting, and kitchen updates that are now visible from the entire living area.' },
+        callout: { type: 'tip', text: 'Include the work after wall removal: ceiling patching, flooring, paint, and any utility changes. Ask which of these are included in the estimate.' },
       },
       {
         heading: 'Houston-Specific Surprises Inside Walls',
@@ -635,7 +638,7 @@ export const BLOG_POSTS: BlogPost[] = [
           'HVAC ducts or returns running through walls that seemed simple from the outside',
         ],
         inlineCta: {
-          body: 'Before committing to a layout change, it helps to know what is inside those walls. We assess structural conditions and give you a realistic scope before demo starts.',
+          body: 'Before committing to a layout change, discuss how the wall’s structure and utilities will be assessed and what professional input is needed.',
           label: 'Talk to a Local Expert',
           href: '/contact',
         },
@@ -648,7 +651,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         image: {
           src: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?w=1600&q=82&auto=format&fit=crop',
-          alt: 'Open concept Houston home with connected kitchen, dining, and living areas in warm neutral tones.',
+          alt: 'Design inspiration: Open concept home with connected kitchen, dining, and living areas in warm neutral tones.',
         },
       },
       {
@@ -662,7 +665,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         image: {
           src: 'https://images.unsplash.com/photo-1556912998-c57cc6b63cd7?w=1600&q=82&auto=format&fit=crop',
-          alt: 'Kitchen island with pendant lights defining the zone between cooking and living space in a Houston open concept remodel.',
+          alt: 'Design inspiration: Kitchen island and pendant lights between cooking and living areas.',
         },
       },
       {
@@ -680,7 +683,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         image: {
           src: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1600&q=82&auto=format&fit=crop',
-          alt: 'Open concept kitchen viewed from the living area — cabinetry, range hood, and island all in full sight of the main living space.',
+          alt: 'Design inspiration: Open concept kitchen viewed from the living area — cabinetry, range hood, and island all in full sight of the main living space.',
         },
       },
       {
@@ -688,7 +691,7 @@ export const BLOG_POSTS: BlogPost[] = [
         body: [
           'Open plans carry noise and cooking smells. Rugs, upholstered furniture, drapery, and built-ins help soften sound. A real range hood with appropriate capacity is especially important when the kitchen opens to the whole living area.',
         ],
-        callout: { type: 'tip', text: 'For an open-concept kitchen, invest in a range hood rated 400–600+ CFM. A decorative piece with a 200 CFM blower will not contain cooking smells in an open layout — ventilation is the one spec you will notice every single day.' },
+        callout: { type: 'tip', text: 'Choose ventilation around the cooking equipment, hood specifications, and available duct route. Discuss the complete installation requirements with the appropriate professional rather than choosing airflow from the room style alone.' },
       },
       {
         heading: 'Open Concept Pros and Cons',
@@ -707,7 +710,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         question: 'Do I need a permit to remove a wall in Houston?',
         answer:
-          'If the wall is load-bearing, yes. Structural modifications require permits, engineering drawings, and inspections. Non-load-bearing work depends on the exact scope.',
+          'Confirm the requirements for the proposed removal with the local permitting authority. Clarify any required structural review, drawings, permits, and inspections before work begins.',
       },
       {
         question: 'How do I know if my home is a good candidate for open concept?',
@@ -717,12 +720,12 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         question: 'Will open concept hurt resale value?',
         answer:
-          'A well-executed open concept remodel often helps resale appeal in Houston, but removing too much wall space can make furniture planning harder. Balance matters.',
+          'Resale appeal depends on the home and buyer preferences. Consider the tradeoffs in noise, privacy, and furniture placement as well as the connection between rooms.',
       },
       {
         question: 'How long does an open concept remodel take?',
         answer:
-          'A simple partition wall removal can take 1-2 weeks. Load-bearing wall work may take 2-4 weeks plus finish work. A larger kitchen/living/dining remodel can take 8-14 weeks.',
+          'Timing depends on structural work, utility changes, approvals, and the repairs needed after removal. Ask for a sequence that includes ceiling, floor, and wall finishes.',
       },
     ],
     cta: {
@@ -742,23 +745,24 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'best-kitchen-layout-ideas-houston',
     title: 'Best Kitchen Layout Ideas for Modern Houston Homes',
-    seoTitle: 'Best Kitchen Layout Ideas for Modern Houston Homes | Nova Home Remodeling',
+    seoTitle: 'Best Kitchen Layout Ideas for Modern Houston Homes',
     excerpt:
       'Discover the best kitchen layout ideas for modern Houston homes — open-concept designs, kitchen islands, storage solutions, and remodeling ideas that improve functionality and flow.',
     date: '2026-05-23',
+    modified: '2026-10-08',
     category: 'Planning',
     readTime: '11 min read',
     author: AUTHOR,
     image: '/kitchenremodeling/ariel-domenden-k1fe40cx2EU-unsplash.jpg',
-    imageAlt: 'Modern open-concept kitchen in a Houston home with quartz island, custom cabinetry, and warm pendant lighting.',
+    imageAlt: 'Design inspiration: Modern open-concept kitchen with quartz island, custom cabinetry, and warm pendant lighting.',
     topics: ['kitchen layout', 'kitchen remodeling', 'open concept', 'kitchen island'],
     intro: [
-      'Most kitchen problems are not design problems — they are layout problems. The wrong layout means you are walking in circles while cooking, the island is in the way instead of in the workflow, and there is never enough counter space even though the kitchen is technically large.',
-      'We have remodeled kitchens across Houston — from older ranch homes in Meyerland and Bellaire to newer builds in The Woodlands and Sugar Land — and the conversation almost always starts the same way: the homeowners just want their kitchen to actually work. Layout is where that starts. Get it right and the rest falls into place.',
+      'A kitchen can look good and still be awkward to use. If the island blocks your route, the storage is out of reach, or you run out of prep space, the layout deserves attention before you choose new finishes.',
+      'Whether the home has a closed kitchen or an existing open plan, start with how the space works for you. Identify the daily frustrations before deciding which layout changes are worth considering.',
     ],
     introCta: {
       body: 'Not sure which layout makes sense for your kitchen? We can walk your space, talk through what is possible within your footprint and budget, and give you a realistic picture before work begins.',
-      label: 'Get a Free Kitchen Consultation',
+      label: 'Discuss Your Kitchen Layout',
       href: '/contact',
     },
     sections: [
@@ -767,20 +771,20 @@ export const BLOG_POSTS: BlogPost[] = [
         bullets: [
           'Two people cannot be in the kitchen at once without bumping into each other — clearances are too tight or work zones overlap.',
           'You run out of counter space the moment you start cooking, even in a technically large kitchen.',
-          'The fridge, sink, and stove are far apart — each leg of the work triangle should fall between 4 and 9 feet.',
+          'The fridge, sink, and stove are awkward to move between, or the route crosses busy traffic areas.',
           'The pantry or trash is in an awkward spot that creates daily friction during prep and cleanup.',
-          'The kitchen feels closed off from where the family gathers, which is increasingly out of step with how Houston families actually live.',
+          'The kitchen feels closed off from where the family gathers.',
           'There is a clunky peninsula or half-wall that interrupts flow — a common feature in older Houston homes.',
         ],
         callout: {
           type: 'tip',
-          text: 'We always do a walkthrough before recommending a layout direction. Roughly a third of the time, the problem can be solved by reconfiguring one zone or removing one wall — not by gutting the whole kitchen. Diagnosing first saves real money.',
+          text: 'A layout review can help distinguish a focused improvement from a larger renovation. Consider whether changing one storage or work zone would address the problem before planning a full rebuild.',
         },
       },
       {
         heading: 'Why Layout Matters More Than Materials',
         body: [
-          'You can upgrade your countertops for $10,000 and still hate your kitchen if the workflow is broken. A well-planned layout — even with mid-range materials — will make cooking feel effortless and the kitchen feel bigger than it is.',
+          'New countertops will not fix an awkward workflow. Review how you cook, store items, and move through the room before selecting finish materials.',
           'The industry talks about the work triangle: the path between your refrigerator, stove, and sink. Modern kitchens have expanded this to include multiple cooks, dedicated prep zones, coffee stations, and charging areas. The goal is a layout where every zone has its place and nothing gets in the way of anything else.',
           'Houston homes add a few more variables: open floor plans are the norm in newer builds, humidity affects material choices and ventilation planning, large families and frequent entertaining are common, and slab foundations constrain where plumbing can go without additional cost.',
         ],
@@ -795,23 +799,23 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: 'The Open-Concept Layout',
         level: 3,
         body: [
-          'If there is a dominant direction in Houston kitchen remodeling right now, this is it. Tearing down the wall between the kitchen and the living or dining room creates a space that feels fundamentally different. The cook is no longer isolated, and the space handles the relaxed, multi-person flow that has become standard in Houston homes.',
-          'From a resale perspective, open-concept kitchens consistently perform well in the Houston market. If you are remodeling with eventual resale in mind, this layout direction is hard to argue against.',
+          'Removing a wall between the kitchen and living or dining space can improve connection. It also changes privacy, noise, storage, and the work needed for surrounding finishes.',
+          'Consider the layout in the context of your home and how long you plan to use it. An open plan is one option, not a guaranteed resale improvement.',
         ],
         bullets: [
           'Structural assessment of any walls between kitchen and adjacent spaces',
           'Load-bearing wall removal when applicable — requires engineering and a proper beam',
           'Flooring continuity throughout the combined space',
           'HVAC reconfiguration for the newly open area',
-          'A range hood with real CFM capacity — 400 CFM minimum, not a decorative piece',
+          'Ventilation selected for the cooking equipment and installation requirements',
         ],
         callout: {
           type: 'tip',
-          text: 'The most common mistake in open-concept kitchen remodels is underestimating the range hood. When cooking smells can travel to your living room, a 200 CFM hood is not going to cut it. We always spec 400 to 600 CFM for true open layouts.',
+          text: 'Discuss the hood, cooking equipment, duct route, and installation requirements together. An open floor plan alone does not establish the right ventilation specification.',
         },
         image: {
           src: '/homepage/point3d-commercial-imaging-ltd-WIPVrs5meCA-unsplash.jpg',
-          alt: 'Open-concept kitchen flowing into the living and dining area in a modern Houston home — continuous flooring, large island, and connected sightlines.',
+          alt: 'Design inspiration: Open-concept kitchen flowing into the living and dining area — continuous flooring, large island, and connected sightlines.',
         },
       },
       {
@@ -828,7 +832,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         image: {
           src: '/kitchenremodeling/lotus-design-n-print--Vfa35ueUCo-unsplash.jpg',
-          alt: 'L-shaped kitchen in a contemporary Houston home with two-tone cabinetry, marble countertops, and hardwood floors.',
+          alt: 'Design inspiration: L-shaped kitchen with two-tone cabinetry, marble countertops, and hardwood floors.',
         },
       },
       {
@@ -836,20 +840,20 @@ export const BLOG_POSTS: BlogPost[] = [
         level: 3,
         body: [
           'An island is not a layout — it is an addition to a layout. But it deserves its own category because the island decision shapes almost everything else in a kitchen remodel.',
-          'Done right, a kitchen island adds prep space, seating, storage, and a visual anchor to the room. Done wrong, it blocks traffic and makes a functional kitchen feel smaller. You need a minimum of 42 inches of clearance between the island and the perimeter counters — 48 inches if multiple people cook simultaneously.',
+          'An island can add prep space, seating, and storage, but it can also block traffic. Check appliance doors, drawer access, walking routes, and working space around it before committing to the layout.',
         ],
         table: {
-          headers: ['Island type', 'Best for', 'Typical size'],
+          headers: ['Island type', 'Best for', 'What to review'],
           rows: [
-            ['Prep island (no sink)', 'Extra counter space and storage', '3 x 5 ft minimum'],
-            ['Island with sink', 'Main prep zone with dishwasher nearby', '4 x 6 ft minimum'],
-            ['Island with seating', 'Casual dining and entertaining', '4 x 7 ft minimum'],
-            ['Waterfall island', 'Design statement and durable edges', 'Any size'],
+            ['Prep island (no sink)', 'Extra counter space and storage', 'Prep area and traffic clearances'],
+            ['Island with sink', 'Main prep zone with dishwasher nearby', 'Sink, dishwasher, and utility locations'],
+            ['Island with seating', 'Casual dining and entertaining', 'Seat count, legroom, and walking routes'],
+            ['Waterfall island', 'Design statement and durable edges', 'Fabrication, edges, and access'],
           ],
         },
         callout: {
           type: 'tip',
-          text: 'In Houston, many clients try to squeeze an island into a kitchen that cannot support one. If you are under 180 square feet of kitchen floor space, a peninsula almost always makes more sense than a freestanding island.',
+          text: 'An island should fit the room’s shape and circulation, not just its total square footage. If the space is tight, compare a peninsula or another storage layout.',
         },
       },
       {
@@ -861,7 +865,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         bullets: [
           'Integrated appliances and handleless cabinetry eliminate visual clutter and make the space feel intentional rather than cramped',
-          'Ceiling height matters: 9-foot ceilings with upper cabinets to the top transform storage capacity and perceived scale',
+          'Consider ceiling height and shelf access when deciding how high the upper cabinets should extend',
           'A skylight or window wall at one end is the difference between a working galley and a dim corridor',
         ],
       },
@@ -869,10 +873,10 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: 'The U-Shaped Kitchen',
         level: 3,
         body: [
-          'Three walls of cabinetry and counter space. No layout gives you more linear footage to work with. In a larger kitchen — 200 or more square feet — the U-shape is a serious working kitchen configuration.',
+          'Three walls of cabinetry and counter space provide several work zones. The U-shape can suit a room with enough space for comfortable movement and access to both corner cabinets.',
         ],
         bullets: [
-          'Maximum counter and storage space of any residential layout',
+          'Counter and storage space along three walls',
           'Natural separation of cooking, prep, and cleanup zones',
           'A peninsula extending from one leg creates casual seating without closing the kitchen off',
           'Solve the two corner cabinets intentionally: full-access pull-out systems, diagonal lazy Susan, or open shelving in the upper corners',
@@ -887,49 +891,54 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        heading: 'What Each Layout Costs in Houston',
+        heading: 'What Affects the Cost of Each Layout',
         table: {
-          headers: ['Layout', 'Typical project range', 'Key cost drivers'],
+          headers: ['Layout', 'Scope to compare', 'Key cost drivers'],
           rows: [
-            ['One-wall + peninsula', '$25,000 – $45,000', 'Fewest cabinets, no wall removal'],
-            ['Galley', '$30,000 – $55,000', 'Two cabinet runs, efficient footprint'],
-            ['L-shaped', '$35,000 – $65,000', 'Two walls of cabinetry, optional island'],
-            ['L-shaped + island', '$45,000 – $80,000', 'Added island, often added plumbing'],
-            ['U-shaped', '$50,000 – $90,000', 'Maximum cabinetry, corner solutions'],
-            ['Open-concept with wall removal', '$55,000 – $120,000+', 'Structural work, beam, HVAC, flooring'],
+            ['One-wall + peninsula', 'Cabinet run and peninsula details', 'Fewest cabinets, no wall removal'],
+            ['Galley', 'Cabinet runs and room access', 'Two cabinet runs, efficient footprint'],
+            ['L-shaped', 'Cabinets and corner storage', 'Two walls of cabinetry, optional island'],
+            ['L-shaped + island', 'Island cabinetry and utility needs', 'Added island, often added plumbing'],
+            ['U-shaped', 'Three cabinet runs and corners', 'Maximum cabinetry, corner solutions'],
+            ['Open-concept with wall removal', 'Structural and utility changes', 'Structural work, beam, HVAC, flooring'],
           ],
         },
         body: [
-          'Houston kitchen remodeling generally runs $150 to $400 per square foot depending on material quality, appliance selections, and labor complexity. Layout reconfiguration and structural work sit at the higher end of that range.',
-          'Moving plumbing matters more in Houston than in most markets. Because most homes sit on a slab, relocating a sink or adding an island sink means cutting concrete — add $1,500 to $4,000 and a few days to the schedule.',
+          'Cabinet quantities, appliance choices, materials, and installation work shape the estimate. Compare the included scope rather than assuming one layout has a fixed price.',
+          'In a slab-foundation home, relocating plumbing may involve work through the concrete. Discuss the proposed route and finish repairs before comparing estimates.',
         ],
         callout: {
           type: 'cost',
-          text: 'The single biggest swing factor is structural work. Removing a load-bearing wall for an open concept adds engineering, a properly sized beam, temporary shoring, and HVAC rerouting — easily $10,000 to $25,000 on top of kitchen finishes.',
+          text: 'A wall removal can involve structural assessment, utility changes, and repairs to floors, ceilings, and walls. Confirm which items are included in the proposed scope.',
         },
       },
       {
-        heading: 'Modern Kitchen Trends Shaping Houston Layouts in 2026',
+        heading: 'Finish Ideas to Consider With Your Layout',
         body: [
-          'Warm neutrals are replacing gray. The cool-gray kitchen that dominated the last decade is fading fast. Houston kitchens are moving toward soft whites, greige, natural wood tones, and earthy accents — with gold and brass hardware, matte black fixtures, and natural stone backsplashes with warm veining.',
-          'Waterfall-edge islands are the most-requested feature in Houston luxury remodels. A countertop that runs down the sides of the island to the floor is a clean, architectural statement that also protects cabinet ends from wear.',
+          'Soft whites, warm neutrals, natural wood tones, and earthy accents can work with a range of kitchen layouts. Compare samples with the existing rooms and the light in your home.',
+          'A waterfall edge carries the countertop material down the sides of an island. Consider its appearance, fabrication needs, and effect on seating or access before choosing it.',
           'Two-tone cabinetry — lighter uppers paired with a darker or wood-toned lower or island — adds depth and warmth without committing the whole kitchen to one color. Integrated appliances let the kitchen read as clean cabinetry rather than a wall of stainless steel, which matters most in open-concept layouts where the kitchen is always visible from the living space.',
         ],
         image: {
           src: '/kitchenremodeling/lotus-design-n-print-RwXneIyqxAw-unsplash.jpg',
-          alt: 'Modern Houston kitchen featuring two-tone cabinetry, brass hardware, waterfall quartzite island, and warm natural materials.',
+          alt: 'Design inspiration: Modern kitchen featuring two-tone cabinetry, brass hardware, waterfall quartzite island, and warm natural materials.',
         },
       },
       {
         heading: 'Countertop and Material Recommendations by Layout',
         body: [
-          'For islands in any layout: quartz and quartzite dominate Houston island installations. Quartz is non-porous and handles heavy daily use. Quartzite offers natural stone beauty with better durability than marble. Both perform well on waterfall edges and resist chipping at exposed corners.',
-          'For U-shaped and L-shaped working kitchens: durability is the priority. Quartz is the practical default. If you want natural stone, granite holds up better to Houston heat and humidity than marble and requires less maintenance.',
+          'For an island, compare the appearance, care requirements, edges, and fabrication details of the materials you are considering. Ask how the selected material will suit the island’s shape and use.',
+          'For U-shaped and L-shaped kitchens, think about daily prep, cleaning, and how seams or edges will meet the layout. Review care instructions for the actual countertop product.',
           'For open-concept kitchens: the countertops are visible from the living and dining areas. This is where investing in a statement material pays off — a dramatic quartzite or book-matched stone island becomes a focal point for the whole connected space.',
+          [
+            { text: 'For quartz surfaces, use a trivet or hot pad under hot cookware. See ' },
+            { text: 'Caesarstone’s care instructions', href: 'https://www.caesarstone.com/care-maintenance/quartz-mineral-surfaces/' },
+            { text: ' and follow the guidance for your selected product.' },
+          ],
         ],
         callout: {
           type: 'tip',
-          text: 'Natural stone near the sink needs proper sealing in Houston humidity. If you do not want to think about your counters, engineered quartz is the lowest-maintenance choice that still looks high-end.',
+          text: 'Care needs depend on the countertop material and finish. Review the supplier’s guidance on cleaning, sealing where applicable, and protecting the surface from hot cookware.',
         },
       },
       {
@@ -946,7 +955,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         image: {
           src: '/kitchenremodeling/lisa-anna-cnU1eDXGKL4-unsplash.jpg',
-          alt: 'Custom kitchen cabinetry with integrated pull-out drawers, pantry organization, and soft-close hardware in a Houston remodel.',
+          alt: 'Design inspiration: Kitchen cabinetry and countertop details.',
         },
       },
       {
@@ -955,8 +964,8 @@ export const BLOG_POSTS: BlogPost[] = [
           'Most kitchens are built with a single overhead fixture or a grid of recessed lights — and that is not enough. A well-lit kitchen has three distinct layers.',
         ],
         bullets: [
-          'Ambient lighting: recessed LED downlights spaced every 4 feet, dimmer-controlled, at 2700 to 3000 K for a warm tone.',
-          'Task lighting: under-cabinet LED strips illuminate the counter directly where you are working, eliminate shadows from upper cabinets, and are the highest-ROI lighting upgrade in a kitchen.',
+          'Ambient lighting: plan general room lighting around ceiling height, fixture specifications, and the room layout; compare light color in the actual space.',
+          'Task lighting: under-cabinet lights can help illuminate working surfaces. Review placement, glare, controls, and compatibility with the selected cabinets.',
           'Decorative lighting: pendant lights over the island, a statement fixture over a connected dining area, interior lighting in glass-front cabinets — what makes a kitchen feel finished rather than just functional.',
         ],
         callout: {
@@ -967,13 +976,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'Houston-Specific Considerations for Kitchen Remodels',
         body: [
-          'Slab plumbing: most Houston homes are on a concrete slab. If the new layout moves the sink or adds a prep sink, the plumber will need to cut the slab to reroute drain lines. It is not a dealbreaker — we do it regularly — but it adds $1,500 to $4,000 and a few days to the schedule.',
-          'Ventilation is non-negotiable in Houston humidity. For open-concept kitchens especially, an underpowered hood means cooking smells throughout the home. Minimum 400 CFM for an open plan, more if you cook frequently or use high-heat methods.',
-          'Older homes in established Houston neighborhoods — Bellaire, the Heights, Meyerland, Briargrove — often have galvanized plumbing, aluminum wiring, or outdated panels. A kitchen remodel frequently surfaces these issues. Budget a 10 to 15 percent contingency and work with a contractor who will not be caught off guard.',
+          'Slab plumbing: if the home has a concrete slab, a sink relocation may require additional access and repair work. Include that possibility in the estimate before choosing the layout.',
+          'Ventilation: review the hood and cooking equipment together, including the duct route and any installation requirements, rather than selecting a fixed airflow number for every open plan.',
+          'Older homes: existing plumbing, wiring, and previous alterations may affect the proposed layout. Discuss known conditions and how unexpected work will be reviewed and approved.',
         ],
         callout: {
           type: 'warning',
-          text: 'Homes built before 1985 in Houston frequently have galvanized plumbing, older wiring, and legacy materials that are only discovered once demo begins. Budget a contingency before committing to a scope.',
+          text: 'Older homes can contain materials or previous alterations that need further assessment. Discuss any known concerns before demolition and how unexpected findings will affect the scope.',
         },
       },
       {
@@ -982,62 +991,62 @@ export const BLOG_POSTS: BlogPost[] = [
           'Start with the workflow, not the aesthetics. How many people cook at once? Do you bake seriously? Is the kitchen a social space or a focused work zone? The answers shape the layout more than any inspiration image.',
           'Do not move plumbing unless you have to. Keeping the sink in place avoids slab penetration costs and schedule impact.',
           'Plan storage before you finalize cabinet counts. A pantry pull-out system may let you do more with fewer cabinets. Drawer stacks change how you spec base cabinets.',
-          'Budget for lighting properly. Under-cabinet lighting, dimmers, and proper recessed placement add a few thousand dollars — homeowners who skip this almost always regret it.',
-          'Select materials early. Cabinet lead times in Houston run 4 to 10 weeks for semi-custom, longer for full custom. Locking in selections before demo starts is the single biggest schedule lever you control.',
+          'Include lighting in the estimate. Review task lighting, controls, fixture placement, and any wiring or finish repairs needed.',
+          'Select materials early and confirm availability. Cabinet and appliance ordering can affect when construction should begin.',
         ],
         inlineCta: {
-          body: 'We offer free in-home consultations for Houston homeowners. We will walk your kitchen, assess the current layout, and give you a realistic picture of what is actually possible.',
-          label: 'Schedule a Free Consultation',
+          body: 'Contact Nova with your kitchen location, photos, priorities, and any layout ideas you are considering. Discuss what needs review before requesting an estimate.',
+          label: 'Discuss Your Project',
           href: '/contact',
         },
       },
     ],
     faqs: [
       {
-        question: 'What is the most popular kitchen layout for Houston homes?',
+        question: 'How do I choose a kitchen layout for my home?',
         answer:
-          'Open-concept kitchen layouts are the most requested in Houston right now, particularly in homes from the 1970s and 80s where the original floor plan isolated the kitchen. For newer homes that already have open floor plans, the L-shaped kitchen with an island is the most common configuration we build.',
+          'Start with the room’s shape, traffic routes, storage, and how many people cook. Compare layouts against those needs rather than choosing solely from a trend.',
       },
       {
         question: 'How much does a kitchen layout change cost in Houston?',
         answer:
-          'A cosmetic remodel that keeps the layout in place typically runs $30,000 to $60,000 for a mid-range project. A full layout reconfiguration — moving plumbing, removing a wall, adding an island — adds $15,000 to $40,000 or more depending on scope.',
+          'The cost depends on the cabinets, materials, utilities, structural work, and finish repairs included. Ask for an estimate that separates keeping the layout from the additional work involved in changing it.',
       },
       {
         question: 'Can I add a kitchen island if my kitchen is small?',
         answer:
-          'It depends on the floor space. You need a minimum of 42 inches of clearance between the island and the perimeter cabinets — 48 inches if more than one person cooks. If your kitchen cannot accommodate those clearances, a peninsula is a much better option.',
+          'It depends on the room’s dimensions, appliance doors, traffic, and working clearances. Have those conditions reviewed before choosing an island; a peninsula may be an alternative.',
       },
       {
         question: 'What is the best kitchen layout for entertaining in Houston?',
         answer:
-          'Open-concept with an island, consistently. The island creates a natural gathering point where guests can sit and interact while cooking is happening. The open connection to the living and dining areas means nobody is isolated in a back room.',
+          'An open plan with island seating can suit entertaining, but the right choice depends on circulation, seating needs, and whether you want separation from cooking noise and smells.',
       },
       {
         question: 'How long does a full kitchen layout remodel take in Houston?',
         answer:
-          'A mid-range full kitchen remodel typically runs 8 to 12 weeks from demo to completion. Projects involving structural work or slab penetration add 2 to 3 weeks. Cabinet lead time — which can run 4 to 10 weeks — is the biggest schedule variable.',
+          'Timing depends on scope, selections, material availability, professional review, and conditions found during work. Ask for a sequence that separates ordering and approvals from construction.',
       },
       {
         question: 'What is the best countertop material for a Houston kitchen?',
         answer:
-          'Quartz is the most practical choice for most Houston kitchens — non-porous, never needs sealing, and handles heat and humidity without issue. Quartzite is the go-to for homeowners who want natural stone with strong durability, especially for statement islands and waterfall edges. Granite is a solid mid-range option. Marble requires real maintenance in Houston climate and we usually steer clients toward quartzite for a similar look with far less upkeep.',
+          'Compare appearance, maintenance, and the care instructions for the actual product. Quartz can be an option, but hot cookware needs a trivet or hot pad; natural stone has its own care requirements.',
       },
       {
         question: 'Do I need a permit for a kitchen remodel in Houston?',
         answer:
-          'Structural work, plumbing relocation, and major electrical changes require permits. Cosmetic work such as cabinet replacement and countertop swaps typically does not, depending on the exact scope.',
+          'Confirm the requirements for the proposed scope with the local permitting authority. Clarify which drawings, permits, and inspections are needed and who handles them.',
       },
       {
         question: 'Does a kitchen remodel add value to a Houston home?',
         answer:
-          'Yes, consistently. A mid-range kitchen remodel typically returns 65 to 80 percent of its cost in resale value and significantly improves how quickly the home sells. Functionally, a well-executed kitchen remodel also tends to be the renovation homeowners get the most daily satisfaction from.',
+          'A remodel may affect resale appeal, but the return depends on the home, neighborhood, scope, and market. Avoid planning around a guaranteed recovery percentage or faster sale.',
       },
     ],
     cta: {
       heading: 'Ready to Rethink Your Kitchen Layout?',
-      body: 'We offer free in-home consultations for Houston homeowners. We will walk your space, assess the current layout, talk through what is actually possible within your footprint and budget, and give you a realistic picture of what is involved.',
-      label: 'Schedule a Free Kitchen Consultation',
+      body: 'Contact Nova with your kitchen location, photos, priorities, and any layout ideas you are considering. Discuss what needs review before requesting an estimate.',
+      label: 'Discuss Your Kitchen Project',
       href: '/contact',
     },
     internalLinks: [

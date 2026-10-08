@@ -50,31 +50,31 @@ export interface ProcessStep {
 export const STEPS: ProcessStep[] = [
   {
     n: '01',
-    title: 'Brief',
-    body: 'A long conversation, in your home. We walk every room, measure what matters, and listen before we offer a single idea. Observation first.',
-    duration: 'Weeks 1–4',
+    title: 'Review',
+    body: 'Discuss the rooms involved, what is not working, and the changes you want to make. Share any known issues and the priorities for your home.',
+    duration: 'Initial conversation',
   },
   {
     n: '02',
-    title: 'Planning',
-    body: 'Every cabinet measured on site before anything is ordered. Materials confirmed, scope locked, sequence mapped. Nothing moves to production until the plan is solid.',
-    duration: 'Weeks 2–6',
+    title: 'Scope',
+    body: 'Review what is included in the estimate, material choices, exclusions, and any decisions still needed before construction.',
+    duration: 'Before work begins',
   },
   {
     n: '03',
-    title: 'Build',
-    body: 'Our in-house crew handles framing, cabinetry, tile, and finish work. Same people, start to finish. No handoffs, no surprises.',
-    duration: 'Varies by scope',
+    title: 'Coordinate',
+    body: 'Discuss access, protection, and the order of work. Agree on how unexpected conditions and proposed changes will be reviewed.',
+    duration: 'During the project',
   },
   {
     n: '04',
-    title: 'Sign',
-    body: "We sign the inside of a drawer face when we leave. Initials, date, and a number you can call for the rest of the house's life.",
-    duration: 'After keys',
+    title: 'Walkthrough',
+    body: 'Review the agreed scope together, identify remaining items, and discuss care instructions for the selected materials.',
+    duration: 'Completion review',
   },
 ];
 
-export const PHASE_LABELS = ['Brief', 'Planning', 'Build', 'Sign'];
+export const PHASE_LABELS = ['Review', 'Scope', 'Coordinate', 'Walkthrough'];
 
 export interface CraftItem {
   n: string;

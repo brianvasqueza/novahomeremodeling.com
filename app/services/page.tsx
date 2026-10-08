@@ -281,12 +281,13 @@ export default function ServicesIndexPage() {
                 Services built for <em>Houston homeowners.</em>
               </h2>
               <p className="svc-index__lede">
-                Each service is handled by the same in-house crew — no subcontractors for finish work, no
-                project handoffs, no strangers mid-remodel. Below is an overview of the work we take on
-                and what to expect from each service.
+                Explore the services below and discuss which work fits your property. You can also
+                review{' '}<Link className="link link--gold" href="/services/siding-repair">siding repair</Link>,{' '}
+                <Link className="link link--gold" href="/services/fence-installation">fence installation</Link>, and{' '}
+                <Link className="link link--gold" href="/services/commercial-remodeling">commercial remodeling</Link>.
                 {' '}
                 <Link className="link link--gold" href="/work">
-                  View real Nova work.
+                  View project photos.
                 </Link>
               </p>
             </div>

@@ -87,7 +87,7 @@ export function Nav({ light = false, showProgress = true }: NavProps) {
             arrow={false}
             onClick={closeMenu}
           >
-            Free Estimate
+            Request Estimate
           </Button>
           <button
             className="nav__hamburger"
@@ -119,11 +119,11 @@ export function Nav({ light = false, showProgress = true }: NavProps) {
             ))}
           </nav>
           <div className="nav__mobile-cta">
-            <span className="nav__mobile-cta-label">Call for a free estimate</span>
+            <span className="nav__mobile-cta-label">Call to discuss your project</span>
             <a className="nav__mobile-cta-number" href={SITE.phoneHref} onClick={closeMenu}>
               {SITE.phoneDisplay}
             </a>
-            <span className="nav__mobile-cta-meta">Houston, TX &nbsp;·&nbsp; Licensed &amp; Insured</span>
+            <span className="nav__mobile-cta-meta">Houston, TX &nbsp;·&nbsp; Remodeling &amp; repairs</span>
           </div>
         </div>
       </div>

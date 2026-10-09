@@ -19,6 +19,7 @@ const SEO_TITLE = 'Small Home Repairs Done in One Visit';
 const DESCRIPTION =
   'From drywall patches to sticky doors and paint touch-ups, see which small home repairs can often be handled in one visit and how to get a faster estimate.';
 const DATE = '2026-06-27';
+const MODIFIED = '2026-10-09';
 
 export const metadata: Metadata = createMetadata({
   title: SEO_TITLE,
@@ -28,7 +29,7 @@ export const metadata: Metadata = createMetadata({
   imageAlt: HERO_ALT,
   type: 'article',
   publishedTime: DATE,
-  modifiedTime: DATE,
+  modifiedTime: MODIFIED,
 });
 
 const breadcrumbs = [
@@ -68,7 +69,7 @@ const articleJsonLd = {
     caption: HERO_ALT,
   },
   datePublished: DATE,
-  dateModified: DATE,
+  dateModified: MODIFIED,
   author: {
     '@type': 'Organization',
     name: 'Nova Home Remodeling & Design',
@@ -190,6 +191,13 @@ export default function SmallHomeRepairsOneVisitPage() {
                   misalignment, or a door edge that needs adjustment. Trim and caulking issues are
                   usually slower-moving: a baseboard pulls away, a casing joint opens, or tub caulk
                   fails and needs to be removed cleanly before a new bead is applied.
+                </p>
+                <p>
+                  If you are weighing a repair against a new door, read{' '}
+                  <Link href="/blog/interior-door-repair-vs-replacement">
+                    Should You Repair or Replace Your Interior Doors?
+                  </Link>
+                  .
                 </p>
                 <p>
                   Paint touch-ups are often part of the same repair visit. The best result comes

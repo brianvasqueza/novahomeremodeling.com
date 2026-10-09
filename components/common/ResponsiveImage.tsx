@@ -7,6 +7,7 @@ type ResponsiveImageProps = {
   priority?: boolean;
   className?: string;
   quality?: number;
+  objectPosition?: string;
 };
 
 export function ResponsiveImage({
@@ -16,6 +17,7 @@ export function ResponsiveImage({
   priority = false,
   className,
   quality = 82,
+  objectPosition,
 }: ResponsiveImageProps) {
   return (
     <Image
@@ -27,6 +29,7 @@ export function ResponsiveImage({
       loading={priority ? 'eager' : 'lazy'}
       quality={quality}
       className={className}
+      style={objectPosition ? { objectPosition } : undefined}
     />
   );
 }

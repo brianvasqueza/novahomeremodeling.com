@@ -194,6 +194,11 @@ export default async function BlogPostPage({ params }: PageProps) {
       <Link className="btn btn--primary" href={post.cta.href}>
         {post.cta.label}
       </Link>
+      {post.cta.bodyAfterButton?.map((paragraph, index) => (
+        <p key={`after-button-${index}`} style={{ marginTop: 32, marginBottom: 0 }}>
+          {renderRichText(paragraph)}
+        </p>
+      ))}
     </section>
   );
 
@@ -213,6 +218,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           description={post.excerpt}
           image={post.image}
           imageAlt={post.imageAlt}
+          imagePosition={post.heroImagePosition}
           ctaLabel={post.cta.label}
           ctaHref={post.cta.href}
         />

@@ -11,13 +11,13 @@ const PAGE_LAST_MODIFIED: Partial<Record<string, string>> = {
   '/work': '2026-10-07', // Gallery comparisons and imagery updated.
   '/services': '2026-10-08', // Contextual service links added.
   '/cities': '2026-05-20',
-  '/blog': '2026-10-08', // Published guide excerpt updated.
+  '/blog': '2026-10-09', // Interior door repair/replacement article added to the listing.
   '/contact': '2026-10-08', // Email-draft instructions and confirmation corrected.
 
-  // These standalone pages were added on June 27; their main content is unchanged.
+  // Retain the June 27 publication dates unless page content or links changed.
   '/handyman-services-houston': '2026-06-27',
   '/drywall-repair-houston': '2026-06-27',
-  '/small-home-repairs-one-visit': '2026-06-27',
+  '/small-home-repairs-one-visit': '2026-10-09', // Contextual door-guide link added.
   '/drywall-repair-patch-replace-repaint': '2026-06-27',
 
   // The kitchen guide links changed; the other services received rewritten

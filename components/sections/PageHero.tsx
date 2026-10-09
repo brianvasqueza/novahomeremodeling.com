@@ -7,6 +7,7 @@ type PageHeroProps = {
   description: string;
   image: string;
   imageAlt?: string;
+  imagePosition?: string;
   ctaLabel?: string;
   ctaHref?: string;
   secondaryLabel?: string;
@@ -19,6 +20,7 @@ export function PageHero({
   description,
   image,
   imageAlt = '',
+  imagePosition,
   ctaLabel,
   ctaHref,
   secondaryLabel,
@@ -27,7 +29,13 @@ export function PageHero({
   return (
     <section className="hero page-hero" id="top">
       <div className="hero__bg">
-        <ResponsiveImage src={image} alt={imageAlt} sizes="100vw" priority />
+        <ResponsiveImage
+          src={image}
+          alt={imageAlt}
+          sizes="100vw"
+          priority
+          objectPosition={imagePosition}
+        />
       </div>
       <div className="hero__overlay" />
       <div className="hero__index">{eyebrow}</div>

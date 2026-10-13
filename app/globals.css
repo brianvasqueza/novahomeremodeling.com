@@ -258,7 +258,8 @@ textarea:focus-visible {
   position: fixed;
   top: 0; left: 0; right: 0;
   max-width: 100vw;
-  overflow-x: clip;
+  /* The mobile panel extends below the header and must remain visible and tappable. */
+  overflow: visible;
   z-index: 80;
   transition: background var(--dur-base) var(--ease-out),
               backdrop-filter var(--dur-base) var(--ease-out),
@@ -442,7 +443,7 @@ textarea:focus-visible {
   color: var(--ink-400);
 }
 
-.nav.is-light { color: var(--paper); }
+.nav.is-light:not(.menu-open) { color: var(--paper); }
 .nav.is-light.is-stuck { color: var(--ink-900); }
 
 /* Scroll progress hairline */

@@ -1968,6 +1968,16 @@ textarea:focus-visible {
   white-space: normal;
   line-height: 1.5;
 }
+.real-work__note {
+  margin: 0 0 24px;
+  padding: 12px 16px;
+  border-left: 2px solid var(--gold-700);
+  background: var(--paper-2);
+  color: var(--fg-2);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 42ch;
+}
 .real-work__copy .btn svg {
   flex: 0 0 auto;
 }
@@ -2039,13 +2049,6 @@ textarea:focus-visible {
 .real-work-photo:hover .real-work-photo__img {
   transform: scale(1.04);
 }
-.real-work-photo--video:hover .real-work-photo__video {
-  transform: none;
-}
-.real-work-photo__video {
-  display: block;
-  background: #000;
-}
 .real-work-photo__badge {
   right: 24px;
   z-index: 2;
@@ -2065,6 +2068,23 @@ textarea:focus-visible {
   inset: auto;
   aspect-ratio: 3 / 4;
 }
+.real-work__comparison-photos .real-work-photo--wide .real-work-photo__media {
+  aspect-ratio: 4 / 3;
+}
+.real-work__comparison-photos .real-work-photo--comparison-wide {
+  grid-column: 1 / -1;
+}
+.real-work__comparison-photos .real-work-photo--comparison-wide .real-work-photo__media {
+  aspect-ratio: 2 / 1;
+}
+.real-work__comparison-photos .real-work-photo--portrait .real-work-photo__media {
+  aspect-ratio: var(--work-aspect-ratio);
+}
+.real-work-photo--portrait .real-work-photo__img,
+.real-work-photo--portrait:hover .real-work-photo__img {
+  object-fit: cover;
+  transform: none;
+}
 .real-work__comparison-photos .real-work-photo__badge {
   top: 16px;
   left: 16px;
@@ -2080,6 +2100,94 @@ textarea:focus-visible {
   color: var(--fg-2);
   line-height: 1.6;
   letter-spacing: 0.12em;
+}
+
+/* A dedicated player separates walkthroughs from the still-photo gallery. */
+.real-work__support > .real-work-video { grid-column: 1 / -1; }
+.real-work-video {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: center;
+  gap: 40px;
+  margin: 16px 0 0;
+  padding-top: 32px;
+  border-top: 1px solid var(--line-1);
+}
+.real-work-video__copy { grid-column: 1 / 7; }
+.real-work-video__eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+.real-work-video__title {
+  margin: 14px 0 0;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  max-width: 22ch;
+}
+.real-work-video__description {
+  margin: 18px 0 0;
+  font-size: 15px;
+  line-height: 1.72;
+  color: var(--fg-2);
+  max-width: 42ch;
+}
+.real-work-video__player {
+  grid-column: 8 / 12;
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  justify-self: center;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--r-2);
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+.real-work-video__media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.real-work-video__play {
+  position: absolute;
+  inset: 0 0 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  padding: 24px;
+  border: 0;
+  background: none;
+  color: var(--fg-inverse);
+  cursor: pointer;
+}
+.real-work-video__play-icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--bg-dark);
+  transition: background var(--dur-base) var(--ease-out);
+}
+.real-work-video__play-icon svg { width: 32px; height: 32px; }
+.real-work-video__play-label {
+  padding: 8px 12px;
+  background: var(--bg-dark);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.real-work-video__play:hover .real-work-video__play-icon { background: var(--accent-hover); }
+.real-work-video__play:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -4px;
 }
 
 /* ============ REAL WORK LIGHTBOX ============ */
@@ -2769,6 +2877,9 @@ body.no-italic-accents em {
 
 /* ============ Responsive ============ */
 @media (max-width: 1100px) {
+  .real-work-video { gap: 24px; }
+  .real-work-video__copy,
+  .real-work-video__player { grid-column: 1 / -1; }
   .approach__grid, .services__head, .projects__head, .ba__head, .process__head, .craft__head, .areas__grid, .philo__grid, .contact__grid {
     grid-template-columns: 1fr; gap: 32px;
   }

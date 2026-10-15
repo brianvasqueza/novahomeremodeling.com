@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { ResponsiveImage } from '@/components/common/ResponsiveImage';
 import { CtaLink } from '@/components/ui/CTA';
 import type { WorkGroup, WorkImage, WorkVideo } from '@/data/work-gallery';
@@ -8,6 +8,9 @@ import type { WorkGroup, WorkImage, WorkVideo } from '@/data/work-gallery';
 type RealWorkGalleryProps = {
   groups: WorkGroup[];
 };
+
+const COMPARISON_IMAGE_SIZES = '(max-width: 1100px) calc((100vw - 64px) / 2), (max-width: 1600px) 30vw, 440px';
+const WIDE_COMPARISON_IMAGE_SIZES = '(max-width: 1100px) calc(100vw - 48px), (max-width: 1600px) 60vw, 880px';
 
 type LightboxItem = {
   src: string;
@@ -20,6 +23,7 @@ type LightboxItem = {
 function imageStyle(image: WorkImage): CSSProperties {
   return {
     '--work-object-position': image.objectPosition ?? 'center',
+    '--work-aspect-ratio': image.aspectRatio ?? '9 / 16',
   } as CSSProperties;
 }
 
@@ -45,6 +49,7 @@ function WorkPhoto({
       className={[
         'real-work-photo media-reveal',
         image.aspect === 'wide' && 'real-work-photo--wide',
+        image.aspect === 'portrait' && 'real-work-photo--portrait',
         className,
       ].filter(Boolean).join(' ')}
       style={imageStyle(image)}
@@ -68,23 +73,73 @@ function WorkPhoto({
 }
 
 function WorkVideoTile({ video }: { video: WorkVideo }) {
+  const playerRef = useRef<HTMLVideoElement>(null);
+  const [showPlay, setShowPlay] = useState(true);
+  const [playError, setPlayError] = useState(false);
+
+  const playVideo = () => {
+    setPlayError(false);
+    playerRef.current?.play().catch(() => setPlayError(true));
+  };
+
   return (
-    <figure className="real-work-photo real-work-photo--video media-reveal">
-      <video
-        className="real-work-photo__img real-work-photo__video"
-        src={video.src}
-        poster={video.poster}
-        controls
-        preload="none"
-        playsInline
-        aria-label={video.alt}
-      />
-      <span className="ba__label real-work-photo__badge">{video.status}</span>
-      <figcaption className="port-img__cap real-work-photo__caption">
-        <span className="port-img__cap-title">{video.caption}</span>
+    <figure className="real-work-video">
+      <figcaption className="real-work-video__copy">
+        <span className="real-work-video__eyebrow">Video walkthrough</span>
+        <h3 className="real-work-video__title">{video.caption}</h3>
+        {video.description && <p className="real-work-video__description">{video.description}</p>}
+        {playError && (
+          <p className="real-work-video__description" role="status">
+            Playback couldn&apos;t start. <a className="link" href={video.src}>Open the walkthrough</a>.
+          </p>
+        )}
       </figcaption>
+      <div className="real-work-video__player">
+        <video
+          ref={playerRef}
+          className="real-work-video__media"
+          src={video.src}
+          poster={video.poster}
+          controls
+          preload="none"
+          playsInline
+          aria-label={video.alt}
+          onPlay={() => {
+            setShowPlay(false);
+            setPlayError(false);
+          }}
+          onEnded={() => setShowPlay(true)}
+          onError={() => setPlayError(true)}
+        />
+        {showPlay && (
+          <button
+            type="button"
+            className="real-work-video__play"
+            onClick={playVideo}
+            aria-label={`Play video: ${video.caption}`}
+          >
+            <span className="real-work-video__play-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+            </span>
+            <span className="real-work-video__play-label">Play video</span>
+          </button>
+        )}
+      </div>
     </figure>
   );
+}
+
+function comparisonPhotos(group: WorkGroup) {
+  const photos = [group.cover, ...group.images];
+  const before = photos.find((image) => image.src === group.comparison?.beforeSrc);
+  const afterSources = group.comparison
+    ? [group.comparison.afterSrc, ...(group.comparison.additionalAfterSrcs ?? [])]
+    : [];
+  const afters = afterSources.flatMap((src) => {
+    const image = photos.find((photo) => photo.src === src);
+    return image ? [image] : [];
+  });
+  return { before, afters };
 }
 
 function RealWorkSection({
@@ -95,31 +150,50 @@ function RealWorkSection({
   onOpenPhoto: (src: string) => void;
 }) {
   const photos = [group.cover, ...group.images];
-  const before = photos.find((image) => image.src === group.comparison?.beforeSrc);
-  const after = photos.find((image) => image.src === group.comparison?.afterSrc);
-  const hasComparison = Boolean(before && after);
-  const supportingPhotos = hasComparison
-    ? photos.filter((image) => image.src !== before?.src && image.src !== after?.src)
+  const { before, afters } = comparisonPhotos(group);
+  const hasComparison = Boolean(before && afters.length > 0);
+  const portraitPair = !hasComparison && group.photoLayout === 'portrait-pair';
+  const beforeAbove = group.comparison?.layout === 'before-above';
+  const supportingPhotos = portraitPair ? [] : hasComparison
+    ? photos.filter((image) => image.src !== before?.src && !afters.some((after) => after.src === image.src))
     : group.images;
 
   return (
     <article className="real-work__item reveal" id={group.id}>
-      <div className={`real-work__feature${hasComparison ? ' real-work__feature--comparison' : ''}`}>
-        {before && after ? (
+      <div className={`real-work__feature${hasComparison || portraitPair ? ' real-work__feature--comparison' : ''}`}>
+        {before && afters.length > 0 ? (
           <div className="real-work__comparison" role="group" aria-label={`${group.comparison?.title}: ${before.status} and after`}>
             <p className="real-work__comparison-title">{group.comparison?.title}</p>
             <div className="real-work__comparison-photos">
               <WorkPhoto
                 image={before}
-                sizes="(max-width: 1100px) calc((100vw - 64px) / 2), (max-width: 1600px) 30vw, 440px"
+                className={beforeAbove ? 'real-work-photo--comparison-wide' : ''}
+                sizes={beforeAbove ? WIDE_COMPARISON_IMAGE_SIZES : COMPARISON_IMAGE_SIZES}
                 onOpen={() => onOpenPhoto(before.src)}
               />
-              <WorkPhoto
-                image={after}
-                statusLabel="After"
-                sizes="(max-width: 1100px) calc((100vw - 64px) / 2), (max-width: 1600px) 30vw, 440px"
-                onOpen={() => onOpenPhoto(after.src)}
-              />
+              {afters.map((after, index) => (
+                <WorkPhoto
+                  key={after.src}
+                  image={after}
+                  statusLabel="After"
+                  className={index > 0 && !beforeAbove ? 'real-work-photo--comparison-wide' : ''}
+                  sizes={index > 0 && !beforeAbove ? WIDE_COMPARISON_IMAGE_SIZES : COMPARISON_IMAGE_SIZES}
+                  onOpen={() => onOpenPhoto(after.src)}
+                />
+              ))}
+            </div>
+          </div>
+        ) : portraitPair ? (
+          <div className="real-work__comparison" role="group" aria-label={`${group.title} photos`}>
+            <div className="real-work__comparison-photos">
+              {photos.map((image) => (
+                <WorkPhoto
+                  key={image.src}
+                  image={image}
+                  sizes={COMPARISON_IMAGE_SIZES}
+                  onOpen={() => onOpenPhoto(image.src)}
+                />
+              ))}
             </div>
           </div>
         ) : (
@@ -134,13 +208,14 @@ function RealWorkSection({
           <span className="real-work__category">{group.category}</span>
           <h2 className="real-work__title">{group.title}</h2>
           <p className="real-work__body">{group.body}</p>
+          {group.note && <p className="real-work__note">{group.note}</p>}
           <CtaLink href={group.ctaHref} variant="tertiary">
             {group.ctaLabel}
           </CtaLink>
         </div>
       </div>
       {(supportingPhotos.length > 0 || group.video) && (
-        <div className="real-work__support" aria-label={`${group.title} supporting photos`}>
+        <div className="real-work__support" aria-label={`${group.title} additional media`}>
           {supportingPhotos.map((image) => (
             <WorkPhoto
               key={image.src}
@@ -161,10 +236,9 @@ export function RealWorkGallery({ groups }: RealWorkGalleryProps) {
     const flat: LightboxItem[] = [];
     for (const group of groups) {
       const photos = [group.cover, ...group.images];
-      const before = photos.find((image) => image.src === group.comparison?.beforeSrc);
-      const after = photos.find((image) => image.src === group.comparison?.afterSrc);
-      const orderedPhotos = before && after
-        ? [before, after, ...photos.filter((image) => image.src !== before.src && image.src !== after.src)]
+      const { before, afters } = comparisonPhotos(group);
+      const orderedPhotos = before && afters.length > 0
+        ? [before, ...afters, ...photos.filter((image) => image.src !== before.src && !afters.some((after) => after.src === image.src))]
         : photos;
       for (const image of orderedPhotos) {
         flat.push({ src: image.src, alt: image.alt, caption: image.caption, status: image.status, rotateLeft: image.rotateLeft });

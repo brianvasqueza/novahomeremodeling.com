@@ -26,14 +26,22 @@ import type { ServiceVisualStory } from '@/data/service-visuals';
 const WORK_HERO_IMAGE_WIDTH = 2400;
 const WORK_HERO_IMAGE_HEIGHT = 1600;
 
+// A sharing-sized copy of WORK_HERO.image; the visible page hero stays unchanged.
+const WORK_SHARE_IMAGE = {
+  url: '/social/work-hero-1200x630.jpg',
+  width: 1200,
+  height: 630,
+  alt: WORK_HERO.imageAlt,
+} as const;
+
 export const metadata: Metadata = createMetadata({
   title: WORK_PAGE_TITLE,
   description: WORK_PAGE_DESCRIPTION,
   path: '/work',
-  image: WORK_HERO.image,
-  imageWidth: WORK_HERO_IMAGE_WIDTH,
-  imageHeight: WORK_HERO_IMAGE_HEIGHT,
-  imageAlt: WORK_HERO.imageAlt,
+  image: WORK_SHARE_IMAGE.url,
+  imageWidth: WORK_SHARE_IMAGE.width,
+  imageHeight: WORK_SHARE_IMAGE.height,
+  imageAlt: WORK_SHARE_IMAGE.alt,
 });
 
 const breadcrumbs = [

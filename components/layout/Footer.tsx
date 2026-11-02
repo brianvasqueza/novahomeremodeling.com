@@ -22,6 +22,7 @@ export function Footer() {
               <li><Link href="/#process">Process</Link></li>
               <li><Link href="/#craft">Craft</Link></li>
               <li><Link href="/blog">Journal</Link></li>
+              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
             </ul>
           </div>
           <div className="footer__col">

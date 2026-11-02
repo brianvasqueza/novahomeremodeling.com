@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Button } from '@/components/ui/Button';
 import { SCOPE_OPTIONS, BUDGET_OPTIONS } from '@/data/content';
@@ -139,7 +140,7 @@ function ContactForm() {
   }
 
   return (
-    <form className="form" onSubmit={onSubmit} noValidate aria-busy={status === 'sending'}>
+    <form className="form" onSubmit={onSubmit} noValidate aria-busy={status === 'sending'} aria-describedby="contact-privacy-notice">
       <fieldset className="form__fields" disabled={!ready || status === 'sending'}>
         <div className="form__honeypot" aria-hidden="true">
           <label htmlFor="f-website">Leave this field blank</label>
@@ -328,10 +329,16 @@ function ContactForm() {
           </div>
         )}
         <div className="form__submit-row">
-          <p className="form__hint">
-            Send your project details directly to Nova. We&apos;ll email you a confirmation;
-            reply to it to add photos or more information.
-          </p>
+          <div className="form__submission-notes">
+            <p className="form__hint">
+              Send your project details directly to Nova. We&apos;ll email you a confirmation;
+              reply to it to add photos or more information.
+            </p>
+            <p className="form__privacy-notice" id="contact-privacy-notice">
+              We use your information to respond to your requested project. Your inquiry does
+              not subscribe you to promotions. Read our <Link href="/privacy-policy">Privacy Policy</Link>.
+            </p>
+          </div>
           <Button variant="primary" as="button" type="submit" disabled={status === 'sending'}>
             {status === 'sending' ? 'Sending your request…' : 'Request a Remodeling Estimate'}
           </Button>

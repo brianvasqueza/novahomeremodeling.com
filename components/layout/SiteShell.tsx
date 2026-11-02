@@ -7,15 +7,16 @@ import { AnimationsProvider } from '@/components/providers/AnimationsProvider';
 type SiteShellProps = {
   children: ReactNode;
   navLight?: boolean;
+  showStickyMobileCTA?: boolean;
 };
 
-export function SiteShell({ children, navLight = false }: SiteShellProps) {
+export function SiteShell({ children, navLight = false, showStickyMobileCTA = true }: SiteShellProps) {
   return (
     <>
       <Nav light={navLight} showProgress />
       {children}
       <Footer />
-      <StickyMobileCTA />
+      {showStickyMobileCTA && <StickyMobileCTA />}
       <AnimationsProvider />
     </>
   );

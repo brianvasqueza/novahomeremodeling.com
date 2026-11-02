@@ -13,6 +13,7 @@ const PAGE_LAST_MODIFIED: Partial<Record<string, string>> = {
   '/cities': '2026-05-20',
   '/blog': '2026-10-09', // Interior door repair/replacement article added to the listing.
   '/contact': '2026-10-08', // Email-draft instructions and confirmation corrected.
+  '/privacy-policy': '2026-11-02', // Planned publication of the privacy policy.
 
   // Retain the June 27 publication dates unless page content or links changed.
   '/handyman-services-houston': '2026-06-27',
@@ -63,7 +64,7 @@ const PAGE_LAST_MODIFIED: Partial<Record<string, string>> = {
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ['/', '/work', '/services', '/cities', '/blog', '/contact'].map((path) => ({
+  const staticRoutes = ['/', '/work', '/services', '/cities', '/blog', '/contact', '/privacy-policy'].map((path) => ({
     url: absoluteUrl(path),
     lastModified: PAGE_LAST_MODIFIED[path],
     changeFrequency: 'monthly' as const,
